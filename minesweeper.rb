@@ -40,13 +40,12 @@ class Board
   end
 
   def [](x,y)
-    debugger
-    @tiles[x][y]
+    @tiles[y][x]
   end
 end
 
 class Tile
-  attr_accessor :revealed, :flagged, :bomb, :coordinates
+  attr_accessor :revealed, :flagged, :bomb, :coordinates, :neighbors
 
   def initialize(bomb, coordinates)
     @revealed = true
@@ -75,16 +74,25 @@ class Tile
   def get_neighbors(board)
     x = @coordinates[0]
     y = @coordinates[1]
-    @neighbors = [
-    board[x+1, y+1],
-    board[x-1, y+1],
-    board[x+1, y-1],
-    board[x-1, y-1],
-    board[x, y+1],
-    board[x, y-1],
-    board[x+1, y],
-    board[x-1, y],
-    ]
-    @neighbors.select! { |neighbor| neighbor }
+    a = x + 1
+    b = x
+    c = x - 1
+    d = y + 1
+    e = y
+    f = y - 1
+    possible_xs = [a, b, c]
+    possible_ys = [d, e, f]
+    possible_xs.select! do |coord|
+      coord.between?(0,8)
+    end
+    possible_ys.select! do |coord|
+      coord.between?(0,8)
+    end
+    possible_xs.each do |x|
+      possible_ys.each do |y|
+        next if [x,y] == @coordinates
+        @neighbors << board[x,y]
+      end
+    end
   end
 end
