@@ -168,7 +168,7 @@ class Tile
     @revealed = true
     unflag
     if self.fringe_num == 0
-      target.neighbors.each do |tile|
+      neighbors.each do |tile|
         tile.reveal unless tile.revealed || tile.flagged
       end
     end
@@ -202,27 +202,15 @@ class Tile
   end
 
   def get_neighbors(board)
-    x = @coordinates[0]
-    y = @coordinates[1]
-    a = x + 1
-    b = x
-    c = x - 1
-    d = y + 1
-    e = y
-    f = y - 1
-    possible_xs = [a, b, c]
-    possible_ys = [d, e, f]
-    possible_xs.select! do |coord|
-      coord.between?(0,8)
+
+    deltas =
+    [[0,1], [1,0], [0,-1], [-1,0], [1,1], [-1,-1], [1,-1], [-1,1]]
+
+    deltas.each do |delta|
+      x = @coordinates[0] + delta[0]
+      y = @coordinates[1] + delta[1]
+      @neighbors << board[x,y] if x.between?(0,8) && y.between?(0,8)
     end
-    possible_ys.select! do |coord|
-      coord.between?(0,8)
-    end
-    possible_xs.each do |x|
-      possible_ys.each do |y|
-        next if [x,y] == @coordinates
-        @neighbors << board[x,y]
-      end
-    end
+
   end
 end
