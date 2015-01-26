@@ -8,15 +8,19 @@ class Game
 
   def play
     board.populate_board
+    start = Time.now
     until board.game_over?
       display_board
       process_input(get_input)
     end
+    finish = Time.now
+    game_time = finish - start
     if board.won?
       puts "YOU WIN! CONGRATULATIONS."
     else
       puts "BOOM!"
     end
+    puts "It took you #{game_time} seconds."
   end
 
   def get_input
@@ -97,7 +101,7 @@ class Board
   end
 
   def game_over?
-    count_bomb_tiles.all? { |tile| tile.flagged }
+    count_bomb_tiles.all? { |tile| tile.flagged } ||
     count_bomb_tiles.any? { |tile| tile.revealed }
   end
 
