@@ -1,4 +1,51 @@
 require 'byebug'
+class Game
+  attr_reader :board
+
+  def initialize
+    @board = Board.new
+  end
+
+  def play
+    board.populate_board
+    until board.game_over?
+      display_board
+      process_input(get_input)
+    end
+    if board.won?
+      puts "YOU WIN! CONGRATULATIONS."
+    else
+      puts "BOOM!"
+    end
+  end
+
+  def get_input
+    print "Enter coordinates (x,y): "
+    user_coordinates = gets.chomp.split(",").map(&:to_i)
+    print "Reveal, flag or unflag? ('r', 'f', or 'u'): "
+    user_action = gets.chomp
+    return [user_coordinates, user_action]
+  end
+
+  def process_input(input)
+    case input[1].downcase
+    when "f" then board.flag_tile(input[0])
+    when "r" then board.reveal_tile(input[0])
+    when "u" then board.unflag_tile(input[0])
+    end
+  end
+
+  def display_board
+    board.tiles.each do |row|
+      print row
+      print "\n"
+    end
+  end
+
+
+end
+
+
 class Board
   attr_reader :tiles
 
@@ -35,15 +82,46 @@ class Board
     end
   end
 
+  def won?
+    count_bomb_tiles.all? { |tile| tile.flagged }
+  end
+
+  def count_bomb_tiles
+    bomb_tiles = []
+    tiles.each do |row|
+      row.each do |tile|
+        bomb_tiles << tile if tile.bomb
+      end
+    end
+    bomb_tiles
+  end
+
+  def game_over?
+    count_bomb_tiles.all? { |tile| tile.flagged }
+    count_bomb_tiles.any? { |tile| tile.revealed }
+  end
+
   def reveal_tile(coordinates)
     target = self[coordinates[0],coordinates[1]]
     target.revealed = true
+    target.flagged = false
     if target.fringe_num == 0
       target.neighbors.each do |tile|
-        reveal_tile(tile.coordinates) unless tile.revealed == true
+        reveal_tile(tile.coordinates) unless tile.revealed || tile.flagged
       end
     end
   end
+
+  def flag_tile(coordinates)
+    target = self[coordinates[0],coordinates[1]]
+    target.flagged = true
+  end
+
+  def unflag_tile(coordinates)
+    target = self[coordinates[0],coordinates[1]]
+    target.flagged = false
+  end
+
 
   def []=(coordinates, tile)
     @tiles[coordinates[1]][coordinates[0]] = tile
@@ -70,10 +148,10 @@ class Tile
   end
 
   def inspect
-    if !@revealed
-      return "*"
-    elsif @flagged
+    if @flagged
       return "F"
+    elsif !@revealed
+      return "*"
     elsif @bomb
       return "B"
     elsif fringe_num == 0
