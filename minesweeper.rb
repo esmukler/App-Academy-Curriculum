@@ -57,8 +57,12 @@ class Game
       puts "Game saved!"
     end
 
-    print "Enter coordinates (x,y): "
-    user_coordinates = gets.chomp.split(",").map(&:to_i)
+    user_coordinates = [-1,-1]
+    until user_coordinates[0].between?(0, board.width) &&
+      user_coordinates[1].between?(0, board.height)
+      print "Enter coordinates (x,y): "
+      user_coordinates = gets.chomp.split(",").map(&:to_i)
+    end
 
     print "Reveal, flag or unflag? ('r', 'f', or 'u'): "
     user_action = gets.chomp
@@ -90,18 +94,21 @@ class Board
     medium: [16, 16, 40],
     hard: [16, 30, 99]
   }
-  attr_reader :tiles, :size, :setting
+  attr_reader :tiles, :size, :setting, :height, :width, :num_of_bombs
 
   def initialize(setting)
     @setting = setting
-    @tiles = Array.new(SETTINGS[setting][0]) { Array.new(SETTINGS[setting][1]) { nil } }
+    @height = SETTINGS[setting][0]
+    @width = SETTINGS[setting][1]
+    @num_of_bombs = SETTINGS[setting][2]
+    @tiles = Array.new(height) { Array.new(width) { nil } }
   end
 
   def set_random_bombs
     bomb_tiles = []
 
-    until bomb_tiles.count == SETTINGS[setting][2]
-      bomb_tile = [rand(SETTINGS[setting][1]), rand(SETTINGS[setting][0])]
+    until bomb_tiles.count == num_of_bombs
+      bomb_tile = [rand(width), rand(height)]
       bomb_tiles << bomb_tile unless bomb_tiles.include?(bomb_tile)
     end
 
@@ -214,9 +221,9 @@ class Tile
     [[0,1], [1,0], [0,-1], [-1,0], [1,1], [-1,-1], [1,-1], [-1,1]]
 
     deltas.each do |delta|
-      x, x_setting = @coordinates[0] + delta[0], Board::SETTINGS[board.setting][1]
-      y, y_setting = @coordinates[1] + delta[1], Board::SETTINGS[board.setting][0]
-      if x.between?(0, x_setting - 1) && y.between?(0, y_setting - 1)
+      x = @coordinates[0] + delta[0]
+      y = @coordinates[1] + delta[1]
+      if x.between?(0, board.width - 1) && y.between?(0, board.height - 1)
         @neighbors << board[x,y]
       end
     end
