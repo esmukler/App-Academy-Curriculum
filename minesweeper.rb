@@ -5,10 +5,11 @@ class Game
   attr_reader :board
 
   def initialize
-    @board = Board.new
   end
 
   def play
+    print "Enter your difficulty level ('easy', 'medium', 'hard'): "
+    @board = Board.new(gets.chomp.to_sym)
     board.populate_board
     start = Time.now
     load_game
@@ -84,17 +85,23 @@ end
 
 
 class Board
-  attr_reader :tiles
+  SETTINGS = {
+    easy: [9, 9, 10],
+    medium: [16, 16, 40],
+    hard: [16, 30, 99]
+  }
+  attr_reader :tiles, :size, :setting
 
-  def initialize
-    @tiles = Array.new(9) { Array.new(9) { nil } }
+  def initialize(setting)
+    @setting = setting
+    @tiles = Array.new(SETTINGS[setting][0]) { Array.new(SETTINGS[setting][1]) { nil } }
   end
 
   def set_random_bombs
     bomb_tiles = []
 
-    until bomb_tiles.count == 10
-      bomb_tile = [rand(9), rand(9)]
+    until bomb_tiles.count == SETTINGS[setting][2]
+      bomb_tile = [rand(SETTINGS[setting][1]), rand(SETTINGS[setting][0])]
       bomb_tiles << bomb_tile unless bomb_tiles.include?(bomb_tile)
     end
 
@@ -207,9 +214,11 @@ class Tile
     [[0,1], [1,0], [0,-1], [-1,0], [1,1], [-1,-1], [1,-1], [-1,1]]
 
     deltas.each do |delta|
-      x = @coordinates[0] + delta[0]
-      y = @coordinates[1] + delta[1]
-      @neighbors << board[x,y] if x.between?(0,8) && y.between?(0,8)
+      x, x_setting = @coordinates[0] + delta[0], Board::SETTINGS[board.setting][1]
+      y, y_setting = @coordinates[1] + delta[1], Board::SETTINGS[board.setting][0]
+      if x.between?(0, x_setting - 1) && y.between?(0, y_setting - 1)
+        @neighbors << board[x,y]
+      end
     end
 
   end
