@@ -35,6 +35,16 @@ class Board
     end
   end
 
+  def reveal_tile(coordinates)
+    target = self[coordinates[0],coordinates[1]]
+    target.revealed = true
+    if target.fringe_num == 0
+      target.neighbors.each do |tile|
+        reveal_tile(tile.coordinates) unless tile.revealed == true
+      end
+    end
+  end
+
   def []=(coordinates, tile)
     @tiles[coordinates[1]][coordinates[0]] = tile
   end
@@ -48,7 +58,7 @@ class Tile
   attr_accessor :revealed, :flagged, :bomb, :coordinates, :neighbors
 
   def initialize(bomb, coordinates)
-    @revealed = true
+    @revealed = false
     @flagged = false
     @bomb = bomb
     @neighbors = []
@@ -66,6 +76,8 @@ class Tile
       return "F"
     elsif @bomb
       return "B"
+    elsif fringe_num == 0
+      return "_"
     else
       return "#{fringe_num}"
     end
