@@ -1,4 +1,5 @@
 require 'yaml'
+require 'byebug'
 
 class Game
   attr_reader :board
@@ -65,9 +66,9 @@ class Game
 
   def process_input(input)
     case input[1].downcase
-    when "f" then board.flag_tile(input[0])
-    when "r" then board.reveal_tile(input[0])
-    when "u" then board.unflag_tile(input[0])
+    when 'r' then board[input[0][0],input[0][1]].reveal
+    when 'f' then board[input[0][0],input[0][1]].flag
+    when 'u' then board[input[0][0],input[0][1]].unflag
     end
   end
 
@@ -91,10 +92,12 @@ class Board
 
   def set_random_bombs
     bomb_tiles = []
+
     until bomb_tiles.count == 10
       bomb_tile = [rand(9), rand(9)]
       bomb_tiles << bomb_tile unless bomb_tiles.include?(bomb_tile)
     end
+
     bomb_tiles.each do |coordinates|
       self[coordinates] = Tile.new(true, coordinates)
     end
@@ -106,11 +109,13 @@ class Board
   end
 
   def fill_board
+
     @tiles.each_with_index do |rows, y|
       rows.each_with_index do |tile, x|
         self[[x,y]] = Tile.new(false, [x,y]) if tile.nil?
       end
     end
+
     @tiles.each do |row|
       row.each do |tile|
         tile.get_neighbors(self)
@@ -119,45 +124,25 @@ class Board
   end
 
   def won?
-    count_bomb_tiles.all? { |tile| tile.flagged }
+    count_bomb_tiles.all? { |tile| tile.flagged } &&
+    count_flagged_tiles.count == count_bomb_tiles.count
+  end
+
+  def count_flagged_tiles
+    flagged_tiles = []
+    tiles.each{|row| row.each{|tile| flagged_tiles << tile if tile.flagged}}
+    flagged_tiles
   end
 
   def count_bomb_tiles
     bomb_tiles = []
-    tiles.each do |row|
-      row.each do |tile|
-        bomb_tiles << tile if tile.bomb
-      end
-    end
+    tiles.each{|row| row.each{|tile| bomb_tiles << tile if tile.bomb}}
     bomb_tiles
   end
 
   def game_over?
-    count_bomb_tiles.all? { |tile| tile.flagged } ||
-    count_bomb_tiles.any? { |tile| tile.revealed }
+    won? || count_bomb_tiles.any? { |tile| tile.revealed }
   end
-
-  def reveal_tile(coordinates)
-    target = self[coordinates[0],coordinates[1]]
-    target.revealed = true
-    target.flagged = false
-    if target.fringe_num == 0
-      target.neighbors.each do |tile|
-        reveal_tile(tile.coordinates) unless tile.revealed || tile.flagged
-      end
-    end
-  end
-
-  def flag_tile(coordinates)
-    target = self[coordinates[0],coordinates[1]]
-    target.flagged = true
-  end
-
-  def unflag_tile(coordinates)
-    target = self[coordinates[0],coordinates[1]]
-    target.flagged = false
-  end
-
 
   def []=(coordinates, tile)
     @tiles[coordinates[1]][coordinates[0]] = tile
@@ -178,6 +163,25 @@ class Tile
     @neighbors = []
     @coordinates = coordinates
   end
+
+  def reveal
+    @revealed = true
+    unflag
+    if self.fringe_num == 0
+      target.neighbors.each do |tile|
+        tile.reveal unless tile.revealed || tile.flagged
+      end
+    end
+  end
+
+  def flag
+    @flagged = true
+  end
+
+  def unflag
+    @flagged = false
+  end
+
 
   def fringe_num
     @neighbors.select{|neighbor| neighbor.bomb}.count
