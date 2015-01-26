@@ -1,4 +1,5 @@
-require 'byebug'
+require 'yaml'
+
 class Game
   attr_reader :board
 
@@ -9,6 +10,7 @@ class Game
   def play
     board.populate_board
     start = Time.now
+    load_game
     until board.game_over?
       display_board
       process_input(get_input)
@@ -21,11 +23,41 @@ class Game
       puts "BOOM!"
     end
     puts "It took you #{game_time} seconds."
+    puts "Do you want to save Minesweeper to a file? (y/n)"
+    input = gets.chomp.downcase
+    save_game if input == "y"
+  end
+
+  def load_game
+    print "Would you like to load a game from file? (y/n): "
+    load_input = gets.chomp.downcase
+    if load_input == "y"
+      print "Please enter saved file name: "
+      file_name = gets.chomp
+      @board = YAML.load(File.open("#{file_name}.yaml").read)
+    end
+  end
+
+  def save_game(file_name)
+    saved_game = board.to_yaml
+    new_file = File.open("#{file_name}.yaml", "w") do |f|
+      f.puts saved_game
+    end
   end
 
   def get_input
+    print "Enter 's' to save your game, or hit return to continue: "
+    save_input = gets.chomp.downcase
+    if save_input.include?('s')
+      print "Save file as: "
+      file_name = gets.chomp
+      save_game(file_name)
+      puts "Game saved!"
+    end
+
     print "Enter coordinates (x,y): "
     user_coordinates = gets.chomp.split(",").map(&:to_i)
+
     print "Reveal, flag or unflag? ('r', 'f', or 'u'): "
     user_action = gets.chomp
     return [user_coordinates, user_action]
