@@ -1,5 +1,5 @@
 class Piece
-
+  attr_accessor :board, :color, :pos
   def initialize(board, color, pos)
     @board = board
     @color = color
@@ -10,7 +10,7 @@ class Piece
   def
 
   def perform_slide
-    
+
 
   end
 
@@ -32,15 +32,15 @@ class Piece
   def symbol
     if color == :black
       if @king == true
-        return "B"
+        return "_B_"
       else
-        return "b"
+        return "_b_"
       end
     else
       if @king == true
-        return "R"
+        return "_R_"
       else
-        return "r"
+        return "_r_"
       end
     end
   end
