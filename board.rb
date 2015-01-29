@@ -21,7 +21,7 @@ class Board
     nil
   end
 
-  def display_board
+  def display
     puts "\n  0  1  2  3  4  5  6  7 "
     @rows.each_with_index do |array, row|
       print "#{row}"

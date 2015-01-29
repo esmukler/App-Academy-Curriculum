@@ -8,8 +8,8 @@ class Piece
   end
 
   def perform_moves(*move_sequence)
-    if valid_move_seq(move_sequence)
-      perform_moves!(move_sequence)
+    if valid_move_seq(*move_sequence)
+      perform_moves!(*move_sequence)
     else
       raise InvalidMoveError
     end
@@ -19,7 +19,7 @@ class Piece
   def valid_move_seq(*move_sequence)
     duped_board = board.dup
 
-    return true if duped_board[[@pos]].perform_moves!(move_sequence)
+    return true if duped_board[pos].perform_moves!(*move_sequence)
     return false
   end
 
@@ -28,6 +28,7 @@ class Piece
   end
 
   def perform_moves!(*move_sequence)
+    p move_sequence
     if perform_slide(move_sequence.first)
       return true
     elsif perform_jump(move_sequence.shift)
