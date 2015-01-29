@@ -8,6 +8,12 @@ class Board
     set_pieces
   end
 
+  def game_over?
+    pieces
+  end
+
+
+
   def set_pieces
     @rows.each_with_index do |array, row|
       array.each_with_index do |space, col|
@@ -40,8 +46,16 @@ class Board
     nil
   end
 
-  def pieces
-    @rows.flatten.compact
+  def pieces(side = :both)
+    pieces = @rows.flatten.compact
+    if side == :red
+      return pieces.select! { |piece| piece.color == :red }
+    elsif side == :black
+      return pieces.select! { |piece| piece.color == :black }
+    else
+      return pieces
+    end
+    nil
   end
 
   def dup

@@ -15,7 +15,6 @@ class Piece
     end
   end
 
-
   def valid_move_seq(*move_sequence)
     duped_board = board.dup
 
@@ -28,7 +27,6 @@ class Piece
   end
 
   def perform_moves!(*move_sequence)
-    p move_sequence
     if perform_slide(move_sequence.first)
       return true
     elsif perform_jump(move_sequence.shift)
