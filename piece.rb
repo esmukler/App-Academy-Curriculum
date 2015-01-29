@@ -41,7 +41,15 @@ class Piece
   end
 
   def pos_jumps
-
+    pos_jumps = []
+    move_diffs.map do |diff|
+      [(diff[0] * 2) + pos[0], (diff[1] * 2) + pos[1]]
+    end.select do |end_pos|
+      end_pos[0].between?(0,7) && end_pos[1].between?(0,7)
+    end.each do |end_pos|
+      pos_jumps << end_pos
+    end
+    pos_jumps
   end
 
   def move_diffs
