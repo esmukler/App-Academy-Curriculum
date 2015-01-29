@@ -40,6 +40,19 @@ class Board
     nil
   end
 
+  def pieces
+    @rows.flatten.compact
+  end
+
+  def dup
+    dupe = Board.new
+
+    pieces.each { |piece| dupe[piece.pos] = piece.dup(dupe)}
+
+    dupe
+  end
+
+
   def [](pos)
     x,y = pos[0], pos[1]
     @rows[x][y]

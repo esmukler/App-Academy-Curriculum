@@ -7,6 +7,25 @@ class Piece
     @pos = pos
   end
 
+  def perform_moves(*move_sequence)
+    if valid_move_seq(move_sequence)
+      perform_moves!(move_sequence)
+    else
+      raise InvalidMoveError
+    end
+  end
+
+
+  def valid_move_seq(*move_sequence)
+    duped_board = board.dup
+
+    return true if duped_board[[@pos]].perform_moves!(move_sequence)
+    return false
+  end
+
+  def dup(new_board)
+    dup_piece = self.class.new(new_board, color, pos)
+  end
 
   def perform_moves!(*move_sequence)
     if perform_slide(move_sequence.first)
