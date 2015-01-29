@@ -8,23 +8,46 @@ class Piece
   end
 
 
+  def perform_moves!(*move_sequence)
+    if perform_slide(move_sequence.first)
+      return true
+    elsif perform_jump(move_sequence.shift)
+      until move_sequence.empty?
+        perform_jump(move_sequence.shift)
+      end
+      return true
+    else
+      raise InvalidMoveError
+    end
+  end
+
   def perform_slide(end_pos)
     return false unless board[end_pos].nil?
     return false unless pos_slides.include?(end_pos)
+
     board[pos], board[end_pos] = nil, self
     self.pos = end_pos
+
+    promote_piece if can_promote?
+
     return true
   end
 
   def perform_jump(end_pos)
     return false unless board[end_pos].nil?
     return false unless pos_jumps.include?(end_pos)
+
     jump_space = [((@pos[0] + end_pos[0]) / 2), ((@pos[1] + end_pos[1]) / 2)]
     return false unless board[jump_space].color != color
+
     board[pos], board[end_pos] = nil, self
     self.pos = end_pos
+
     # delete jumped opponent
     board[jump_space] = nil
+
+    promote_piece if can_promote?
+
     return true
   end
 
@@ -81,9 +104,15 @@ class Piece
   end
 
   def can_promote?
+    if color == :black
+      return pos[0] == 7
+    else
+      return pos[1] == 0
+    end
   end
 
   def promote_piece
+    @king = true
   end
 
 end
