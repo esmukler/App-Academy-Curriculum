@@ -5,14 +5,40 @@ class Board
 
   def initialize
     @rows = Array.new(8) { Array.new(8) }
-    set_pieces
   end
 
   def game_over?
-    pieces
+    return true if pieces(:red).empty? || pieces(:black).empty?
+    return false
+    # for ties
+    # red_moves = 0
+    # black_moves = 0
+    # pieces(:red).each do |piece|
+    #   red_moves += piece.total_real_moves
+    # end
+    # pieces(:black).each do |piece|
+    #   black_moves += piece.total_real_moves
+    # end
+    # return true if red_moves == 0 || black_moves == 0
+    # return false
   end
 
+  def winner
+    case pieces(:red).count <=> pieces(:black).count
+    when -1
+      return :black
+    when 0
+      return "Nobody"
+    when 1
+      return :red
+    end
+  end
 
+  def make_move(start, sequence, turn_color)
+    raise ArgumentError.new("No piece at start position") if self[start].nil?
+    raise ArgumentError.new("Not your piece") if self[start].color != turn_color
+    self[start].perform_moves(sequence)
+  end
 
   def set_pieces
     @rows.each_with_index do |array, row|

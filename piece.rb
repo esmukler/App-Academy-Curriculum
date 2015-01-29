@@ -1,5 +1,5 @@
 class Piece
-  attr_accessor :board, :color, :pos
+  attr_accessor :board, :color, :pos, :king
   def initialize(board, color, pos)
     @board = board
     @color = color
@@ -7,36 +7,52 @@ class Piece
     @pos = pos
   end
 
-  def perform_moves(*move_sequence)
-    if valid_move_seq(*move_sequence)
-      perform_moves!(*move_sequence)
+  def perform_moves(sequence)
+    if valid_move_seq(sequence)
+      perform_moves!(sequence)
     else
       raise InvalidMoveError
     end
   end
 
-  def valid_move_seq(*move_sequence)
+  def valid_move_seq(sequence)
     duped_board = board.dup
 
-    return true if duped_board[pos].perform_moves!(*move_sequence)
-    return false
+    if duped_board[pos].perform_moves!(sequence)
+      return true
+    else
+      return false
+    end
   end
 
   def dup(new_board)
     dup_piece = self.class.new(new_board, color, pos)
   end
 
-  def perform_moves!(*move_sequence)
-    if perform_slide(move_sequence.first)
-      return true
-    elsif perform_jump(move_sequence.shift)
-      until move_sequence.empty?
-        perform_jump(move_sequence.shift)
-      end
-      return true
-    else
-      raise InvalidMoveError
+  def perform_moves!(sequence)
+    if sequence.count == 1
+      return true if perform_slide(sequence.first)
     end
+    multi_jump(sequence)
+  end
+
+  def multi_jump(sequence)
+    sequence.each do |jump|
+      return false unless perform_jump(jump)
+    end
+    return true
+  end
+
+  def total_real_moves
+    count = 0
+    total_pos_moves.each do |move|
+      count += 1 if valid_move_seq(move)
+    end
+    count
+  end
+
+  def total_pos_moves
+    pos_slides.concat(pos_jumps)
   end
 
   def perform_slide(end_pos)
@@ -54,9 +70,9 @@ class Piece
   def perform_jump(end_pos)
     return false unless board[end_pos].nil?
     return false unless pos_jumps.include?(end_pos)
-
     jump_space = [((@pos[0] + end_pos[0]) / 2), ((@pos[1] + end_pos[1]) / 2)]
-    return false unless board[jump_space].color != color
+    return false if board[jump_space].nil?
+    return false if board[jump_space].color == color
 
     board[pos], board[end_pos] = nil, self
     self.pos = end_pos
@@ -68,6 +84,7 @@ class Piece
 
     return true
   end
+
 
   def pos_slides
     pos_slides = []
@@ -95,10 +112,11 @@ class Piece
 
   def move_diffs
     move_diffs = []
-    if color == :black || @king == true
+    if color == :black || king == true
       move_diffs << [1, 1]
       move_diffs << [1, -1]
-    elsif color == :red || @king == true
+    end
+    if color == :red || king == true
       move_diffs << [-1, 1]
       move_diffs << [-1, -1]
     end
@@ -125,7 +143,7 @@ class Piece
     if color == :black
       return pos[0] == 7
     else
-      return pos[1] == 0
+      return pos[0] == 0
     end
   end
 
@@ -133,4 +151,7 @@ class Piece
     @king = true
   end
 
+end
+
+class InvalidMoveError < ArgumentError
 end
