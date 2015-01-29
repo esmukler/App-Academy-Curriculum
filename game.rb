@@ -6,8 +6,8 @@ class Game
   def initialize
     @board = Board.new()
     board.set_pieces
-    @player1 = HumanPlayer.new(:red)
-    @player2 = HumanPlayer.new(:black)
+    @player1 = HumanPlayer.new(board, :red)
+    @player2 = HumanPlayer.new(board, :black)
     @turn = @player1
   end
 
@@ -43,7 +43,8 @@ end
 
 class HumanPlayer
   attr_reader :color
-  def initialize(color)
+  def initialize(board, color)
+    @board = board
     @color = color
   end
 
@@ -65,6 +66,19 @@ class HumanPlayer
 end
 
 class ComputerPlayer
+  attr_reader :color
+
+  def initialize(board, color)
+    @board = board
+    @color = color
+  end
+
+  def get_move
+    possible_moves = []
+    board.pieces(color).each do |piece|
+      piece.total_p
+
+  end
 
 
 end
