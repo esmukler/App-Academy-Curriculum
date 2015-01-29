@@ -7,14 +7,41 @@ class Piece
     @pos = pos
   end
 
-  def
 
-  def perform_slide
-
-
+  def perform_slide(end_pos)
+    return false unless board[end_pos].nil?
+    return false unless pos_slides.include?(end_pos)
+    board[pos], board[end_pos] = nil, self
+    self.pos = end_pos
+    return true
   end
 
-  def perform_jump
+  def perform_jump(end_pos)
+    return false unless board[end_pos].nil?
+    return false unless pos_jumps.include?(end_pos)
+    jump_space = [((@pos[0] + end_pos[0]) / 2), ((@pos[1] + end_pos[1]) / 2)]
+    return false unless board[jump_space].color != color
+    board[pos], board[end_pos] = nil, self
+    self.pos = end_pos
+    # delete jumped opponent
+    board[jump_space] = nil
+    return true
+  end
+
+  def pos_slides
+    pos_slides = []
+    move_diffs.map do |diff|
+      [diff[0] + pos[0], diff[1] + pos[1]]
+    end.select do |end_pos|
+      end_pos[0].between?(0,7) && end_pos[1].between?(0,7)
+    end.each do |end_pos|
+      pos_slides << end_pos
+    end
+    pos_slides
+  end
+
+  def pos_jumps
+
   end
 
   def move_diffs

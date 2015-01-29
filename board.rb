@@ -22,8 +22,9 @@ class Board
   end
 
   def display_board
-    puts " 0  1  2  3  4  5  6  7 "
+    puts "\n  0  1  2  3  4  5  6  7 "
     @rows.each_with_index do |array, row|
+      print "#{row}"
       array.each_index do |col|
         if (row + col) % 2 != 0
           print "___".colorize(:background => :light_red)
@@ -33,8 +34,9 @@ class Board
           print self[[row, col]].symbol
         end
       end
-      puts "#{row}"
+      puts
     end
+
     nil
   end
 
