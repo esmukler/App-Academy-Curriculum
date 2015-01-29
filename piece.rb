@@ -43,12 +43,14 @@ class Piece
     return true
   end
 
-  def total_real_moves
-    count = 0
+  def all_real_moves
+    all_real_moves = []
     total_pos_moves.each do |move|
-      count += 1 if valid_move_seq(move)
+      if valid_move_seq(move)
+        all_real_moves << move
+      end
     end
-    count
+    all_real_moves
   end
 
   def total_pos_moves

@@ -14,10 +14,10 @@ class Board
     # red_moves = 0
     # black_moves = 0
     # pieces(:red).each do |piece|
-    #   red_moves += piece.total_real_moves
+    #   red_moves += piece.XX
     # end
     # pieces(:black).each do |piece|
-    #   black_moves += piece.total_real_moves
+    #   black_moves += piece.XX
     # end
     # return true if red_moves == 0 || black_moves == 0
     # return false

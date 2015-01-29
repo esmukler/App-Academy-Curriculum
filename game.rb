@@ -6,8 +6,8 @@ class Game
   def initialize
     @board = Board.new()
     board.set_pieces
-    @player1 = HumanPlayer.new(board, :red)
-    @player2 = HumanPlayer.new(board, :black)
+    @player1 = ComputerPlayer.new(board, :red)
+    @player2 = ComputerPlayer.new(board, :black)
     @turn = @player1
   end
 
@@ -42,7 +42,7 @@ class Game
 end
 
 class HumanPlayer
-  attr_reader :color
+  attr_accessor :board, :color
   def initialize(board, color)
     @board = board
     @color = color
@@ -66,7 +66,7 @@ class HumanPlayer
 end
 
 class ComputerPlayer
-  attr_reader :color
+  attr_accessor :board, :color
 
   def initialize(board, color)
     @board = board
@@ -74,10 +74,16 @@ class ComputerPlayer
   end
 
   def get_move
-    possible_moves = []
-    board.pieces(color).each do |piece|
-      piece.total_p
-
+    possible_inputs = Hash.new { |h,k| h[k] = [] }
+    @board.pieces(color).each do |piece|
+      next if piece.all_real_moves.empty?
+      piece.all_real_moves.each do |move|
+        possible_inputs[piece.pos] << move
+      end
+    end
+    random_piece = possible_inputs.keys.sample
+    random_move = possible_inputs[random_piece].sample
+    [random_piece, [random_move]]
   end
 
 
