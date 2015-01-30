@@ -1,7 +1,7 @@
 require 'array'
 require 'rspec'
 
-describe "Array" do
+describe Array do
 
   describe "#two_sum" do
     it "returns index pairs that sum to zero" do
