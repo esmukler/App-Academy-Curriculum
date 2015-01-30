@@ -43,9 +43,14 @@ class Hand
   def straight?
     card_values = @cards.map(&:poker_value).sort
     if card_values.include?(14)
-      #aces
+      (2..5).to_a.all?   { |value| card_values.include?(value) } ||
+      (10..13).to_a.all? { |value| card_values.include?(value) }
     else
-
+      min = card_values.min
+      4.times do |i|
+        return false unless card_values.include?(min + i + 1)
+      end
+      true
     end
 
 

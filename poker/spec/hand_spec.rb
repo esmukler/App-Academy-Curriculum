@@ -44,9 +44,7 @@ describe Hand do
       expect(deck).to receive(:receive_cards)
       hand.discard([0,1,2,3])
     end
-
   end
-
 
   describe "#flush?" do
     it "returns true when a hand is a flush" do
@@ -66,17 +64,52 @@ describe Hand do
   describe "#straight?" do
     it "returns true when a hand is a straight" do
       hand = Hand.new(deck, [Card.new(:spades, :ten), Card.new(:spades, :jack),
-                    Card.new(:heart, :ace), Card.new(:spades, :queen),
+                    Card.new(:hearts, :ace), Card.new(:spades, :queen),
                     Card.new(:spades, :king)])
       expect(hand.straight?).to be(true)
     end
 
     it "returns false when a hand is not a straight" do
       hand = Hand.new(deck, [Card.new(:spades, :ace), Card.new(:spades, :three),
-                    Card.new(:hearts, :four), Card.new(:spades, :king),
-                    Card.new(:spades, :six)])
+                    Card.new(:hearts, :four), Card.new(:spades, :deuce),
+                    Card.new(:hearts, :deuce)])
       expect(hand.straight?).to be(false)
     end
+  end
+
+  describe "#straight_flush?" do
+    it "returns true when a hand is a straight flush" do
+      hand = Hand.new(deck, [Card.new(:spades, :deuce), Card.new(:spades, :three),
+                    Card.new(:spades, :four), Card.new(:spades, :five),
+                    Card.new(:spades, :six)])
+      expect(hand.straight_flush?).to be(true)
+    end
+
+    it "returns false when a hand is just a flush" do
+      hand = Hand.new(deck, [Card.new(:spades, :deuce), Card.new(:spades, :three),
+                    Card.new(:spades, :four), Card.new(:spades, :eight),
+                    Card.new(:spades, :six)])
+      expect(hand.straight_flush?).to be(false)
+    end
+
+    it "returns false when a hand is just a straight" do
+      hand = Hand.new(deck, [Card.new(:spades, :ten), Card.new(:spades, :jack),
+                    Card.new(:hearts, :ace), Card.new(:spades, :queen),
+                    Card.new(:spades, :king)])
+      expect(hand.straight_flush?).to be(false)
+    end
+  end
+
+
+  describe "#num_of_a_kind" do
+    # it "returns the correct number of a kind" do
+    #   hand = Hand.new(deck, [Card.new(:spades, :deuce), Card.new(:spades, :three),
+    #                 Card.new(:spades, :four), Card.new(:spades, :five),
+    #                 Card.new(:spades, :six)])
+    #   expect(hand.straight_flush?).to be(true)
+    # end
+
+
   end
 
 end
