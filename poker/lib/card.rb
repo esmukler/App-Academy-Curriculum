@@ -51,6 +51,10 @@ class Card
     VALUE_STRINGS.keys
   end
 
+  def self.rand
+    Card.new(Card.suits.sample, Card.values.sample)
+  end
+
   attr_reader :suit, :value
 
   def initialize(suit, value)

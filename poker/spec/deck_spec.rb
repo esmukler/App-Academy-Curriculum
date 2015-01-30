@@ -34,23 +34,23 @@ describe Deck do
     end
   end
 
-  describe "#draw(n)" do
-    let(:cards) {[Card.new(:spades, :deuce), Card.new(:spades, :three)]}
+  describe "#deal(n)" do
+    let(:cards) {[Card.rand, Card.rand]}
     let(:deck) {Deck.new(cards.dup)}
 
     it "returns an array of n cards from the top of the deck" do
-      expect(deck.draw(1)).to eq([cards.first])
+      expect(deck.deal(1)).to eq([cards.first])
     end
 
     it "removes n cards from the top of the deck" do
-      deck.draw(1)
+      deck.deal(1)
       expect(deck.cards.count).to eq(1)
     end
 
   end
 
   describe "#receive_cards" do
-    let(:cards) { [Card.new(:spades, :deuce), Card.new(:spades, :three)] }
+    let(:cards) { [Card.rand, Card.rand] }
     let(:deck)  { Deck.new }
 
     before(:each) do
@@ -64,8 +64,6 @@ describe Deck do
     it "adds to the total number of cards in the deck" do
       expect(deck.cards.count).to be(54)
     end
-
-    #expect(deck.cards.count).to be(53)
   end
 
 end

@@ -21,7 +21,7 @@ class Deck
     @cards.shuffle!
   end
 
-  def draw(n)
+  def deal(n)
     @cards.shift(n)
   end
 
