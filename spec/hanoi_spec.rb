@@ -29,7 +29,7 @@ describe Hanoi do
 
     it "raises an error if you try to move from an empty tower" do
       game = Hanoi.new([[3],[],[2,1]])
-      expect(game.move(1,2)).to raise(IllegalMoveError)
+      expect { game.move(1,2) }.to raise_error(IllegalMoveError)
     end
 
 

@@ -6,6 +6,7 @@ class Hanoi
   end
 
   def move(start, finish)
+    raise IllegalMoveError.new if @towers[start].empty?
     disc = @towers[start].pop
     @towers[finish].push(disc)
   end
