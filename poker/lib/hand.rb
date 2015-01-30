@@ -67,7 +67,7 @@ class Hand
   end
 
   def num_of_a_kind
-
+    
   end
 
 end
