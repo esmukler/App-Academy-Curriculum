@@ -112,30 +112,4 @@ include Save
       parent_reply = ?
     SQL
   end
-
-  # def save
-  #   if @id.nil?
-  #     QuestionsDatabase.instance.execute(<<-SQL, @question, @body, @parent_reply, @replier_id)
-  #     INSERT INTO
-  #       replies (question, body, parent_reply, replier_id)
-  #     VALUES
-  #       (?, ?, ?, ?)
-  #     SQL
-  #
-  #     @id = QuestionsDatabase.instance.last_insert_row_id
-  #   else
-  #     QuestionsDatabase.instance.execute(<<-SQL, @question, @body, @parent_reply, @replier_id, @id)
-  #     UPDATE
-  #       replies
-  #     SET
-  #       question = ?,
-  #       body = ?,
-  #       parent_reply = ?,
-  #       replier_id = ?
-  #     WHERE
-  #       id = ?
-  #     SQL
-  #   end
-  # end
-
 end
