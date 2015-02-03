@@ -5,7 +5,7 @@ class QuestionsDatabase < SQLite3::Database
   include Singleton
 
   def initialize
-    super(questions.db)
+    super('questions.db')
     self.results_as_hash = true
     self.type_translation = true
   end
@@ -14,7 +14,7 @@ end
 class User
 
   def self.find_by_id(find_id)
-    new_user = execute (<<-SQL, find_id)
+    new_user = QuestionsDatabase.instance.execute(<<-SQL, find_id)
 
     SELECT
       *
@@ -24,11 +24,11 @@ class User
       id = ?
 
       SQL
-      User.new(new_user)
+      User.new(new_user[0])
   end
 
   def self.find_by_name(find_fname, find_lname)
-    new_user = execute(<<-SQL, find_fname, find_lname)
+    new_user = QuestionsDatabase.instance.execute(<<-SQL, find_fname, find_lname)
 
     SELECT
       *
@@ -38,14 +38,14 @@ class User
       fname = ? AND lname = ?
 
     SQL
-    User.new(new_user)
+    User.new(new_user[0])
   end
 
   attr_accessor :id, :fname, :lname
   def initialize( user_options = {})
     @id = user_options['id']
-    @fname = user_option['fname']
-    @lname = user_option['lname']
+    @fname = user_options['fname']
+    @lname = user_options['lname']
   end
 
   def authored_questions
@@ -59,6 +59,30 @@ class User
   def followed_questions
     QuestionFollower.followed_questions_for_user_id(@id)
   end
+
+  def liked_questions
+    QuestionLike.liked_questions_for_user_id(@id)
+  end
+
+  def average_karma
+    #CAST(sum(l.liker_id) AS FLOAT)/CAST(count(q.id) AS FLOAT)
+    karma = QuestionsDatabase.instance.execute(<<-SQL, @id)
+
+
+    SELECT
+    CAST(count(l.liker_id) AS FLOAT) / count(distinct(q.id))
+    FROM
+      questions q
+    LEFT OUTER JOIN
+      question_likes l ON q.id = l.question_id
+    WHERE
+      q.author_id = ?
+
+
+      SQL
+
+      karma[0].values[0]
+    end
 end
 
 
@@ -66,7 +90,7 @@ end
 class Question
 
   def self.find_by_id(find_id)
-    new_question = execute (<<-SQL, find_id)
+    new_question = QuestionsDatabase.instance.execute(<<-SQL, find_id)
 
     SELECT
       *
@@ -76,11 +100,12 @@ class Question
       id = ?
 
       SQL
-      Question.new(new_question)
+      p new_question
+      Question.new(new_question[0])
   end
 
   def self.find_by_author_id(find_author)
-    new_questions = execute(<<-SQL, find_author)
+    new_questions = QuestionsDatabase.instance.execute(<<-SQL, find_author)
 
     SELECT
       *
@@ -96,6 +121,14 @@ class Question
     output
   end
 
+  def self.most_followed(n)
+    QuestionFollower.most_followed_questions(n)
+  end
+
+  def self.most_liked(n)
+    QuestionLike.most_liked_questions(n)
+  end
+
   attr_accessor :id, :title, :body, :author_id
   def initialize( question_options = {})
     @id = question_options['id']
@@ -105,7 +138,7 @@ class Question
   end
 
   def author
-    author_name = execute(<<-SQL, @author_id)
+    author_name = QuestionsDatabase.instance.execute(<<-SQL, @author_id)
 
     SELECT
       fname, lname
@@ -125,6 +158,14 @@ class Question
     QuestionFollower.followers_for_question_id(@id)
   end
 
+  def likers
+    QuestionLike.likers_for_question_id(@id)
+  end
+
+  def num_likes
+    QuestionLike.num_likes_for_question_id(@id)
+  end
+
 end
 
 
@@ -132,7 +173,7 @@ end
 
 class Reply
   def self.find_by_id(find_id)
-    new_reply = execute (<<-SQL, find_id)
+    new_reply = QuestionsDatabase.instance.execute(<<-SQL, find_id)
 
     SELECT
       *
@@ -142,11 +183,11 @@ class Reply
       id = ?
 
       SQL
-      Reply.new(new_reply)
+      Reply.new(new_reply[0])
   end
 
   def self.find_by_question_id(question_id)
-    new_replies = execute(<<-SQL, question_id)
+    new_replies = QuestionsDatabase.instance.execute(<<-SQL, question_id)
 
     SELECT
       *
@@ -163,7 +204,7 @@ class Reply
   end
 
   def self.find_by_user_id(user_id)
-    new_replies = execute(<<-SQL, user_id)
+    new_replies = QuestionsDatabase.instance.execute(<<-SQL, user_id)
 
     SELECT
       *
@@ -192,7 +233,7 @@ class Reply
 
 
   def author
-    author_name = execute(<<-SQL, @replier_id)
+    author_name = QuestionsDatabase.instance.execute(<<-SQL, @replier_id)
 
     SELECT
       fname, lname
@@ -205,7 +246,7 @@ class Reply
   end
 
   def question
-    question = execute(<<-SQL, @question)
+    question = QuestionsDatabase.instance.execute(<<-SQL, @question)
 
     SELECT
       title, body
@@ -218,7 +259,7 @@ class Reply
   end
 
   def parent_reply
-    parent = execute(<<-SQL, @parent_reply)
+    parent = QuestionsDatabase.instance.execute(<<-SQL, @parent_reply)
 
     SELECT
       body
@@ -230,7 +271,7 @@ class Reply
   end
 
   def child_replies
-    children = execute(<<-SQL, @id)
+    children = QuestionsDatabase.instance.execute(<<-SQL, @id)
 
     SELECT
       body
@@ -248,7 +289,7 @@ end
 class QuestionFollower
 
   def self.followers_for_question_id(question_id)
-      users = execute(<<-SQL, question_id)
+      users = QuestionsDatabase.instance.execute(<<-SQL, question_id)
 
       SELECT
         users.id, users.fname, users.lname
@@ -267,7 +308,7 @@ class QuestionFollower
   end
 
   def self.followed_questions_for_user_id(user_id)
-      questions = execute(<<-SQL, user_id)
+      questions = QuestionsDatabase.instance.execute(<<-SQL, user_id)
 
       SELECT
         questions.id, questions.title, questions.body, questions.author_id
@@ -285,6 +326,30 @@ class QuestionFollower
       output
   end
 
+  def self.most_followed_questions(n)
+    questions = QuestionsDatabase.instance.execute(<<-SQL, n)
+
+    SELECT
+      questions.id, questions.title, questions.body, questions.author_id
+    FROM
+      question_followers
+    JOIN
+      questions ON questions.id = question_followers.question_id
+    GROUP BY
+      question_followers.question_id
+    ORDER BY
+      count(question_followers.follower_id) DESC
+    LIMIT
+      ?
+
+    SQL
+    output = []
+    questions.each do |question|
+      output << Question.new(question)
+    end
+    output
+  end
+
 
   attr_accessor :question_id, :follower_id
   def initialize(follower_options = {})
@@ -293,3 +358,95 @@ class QuestionFollower
   end
 
 end
+
+
+class QuestionLike
+
+  def self.likers_for_question_id(question_id)
+    new_users = QuestionsDatabase.instance.execute(<<-SQL, question_id)
+
+    SELECT DISTINCT
+      users.id, users.fname, users.lname
+    FROM
+      question_likes
+    JOIN
+      users ON users.id = question_likes.liker_id
+    WHERE
+      question_likes.question_id = ?
+    SQL
+    output = []
+    new_users.each do |user|
+      output << User.new(user)
+    end
+    output
+  end
+
+  def self.num_likes_for_question_id(find_question_id)
+    count = QuestionsDatabase.instance.execute(<<-SQL, find_question_id)
+
+    SELECT
+      COUNT(liker_id)
+    FROM
+      question_likes
+    WHERE
+      question_id = ?
+    GROUP BY
+      question_id
+    SQL
+    return count[0]['COUNT(liker_id)'] unless count[0].nil?
+    0
+  end
+
+  def self.liked_questions_for_user_id(find_user_id)
+    new_questions = QuestionsDatabase.instance.execute(<<-SQL, find_user_id)
+
+    SELECT DISTINCT
+      questions.id, questions.title, questions.body, questions.author_id
+    FROM
+      question_likes
+    JOIN
+      questions ON questions.id = question_likes.question_id
+    WHERE
+      question_likes.liker_id = ?
+    SQL
+    output = []
+    new_questions.each do |question|
+      output << Question.new(question)
+    end
+    output
+  end
+
+  def self.most_liked_questions(n)
+    questions = QuestionsDatabase.instance.execute(<<-SQL, n)
+
+    SELECT
+      questions.id, questions.title, questions.body, questions.author_id
+    FROM
+      question_likes
+    JOIN
+      questions ON questions.id = question_likes.question_id
+    GROUP BY
+      question_likes.question_id
+    ORDER BY
+      count(question_likes.liker_id) DESC
+    LIMIT
+      ?
+
+    SQL
+    output = []
+    questions.each do |question|
+      output << Question.new(question)
+    end
+    output
+
+  end
+
+  attr_accessor :question_id, :liker_id
+  def initialize(like_options = {})
+    @question_id = like_options['question_id']
+    @liker_id = like_options['liker_id']
+  end
+end
+
+c = QuestionLike.num_likes_for_question_id(1)
+print c
