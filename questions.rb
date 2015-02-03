@@ -55,6 +55,10 @@ class User
   def authored_replies
     Reply.find_by_user_id(@id)
   end
+
+  def followed_questions
+    QuestionFollower.followed_questions_for_user_id(@id)
+  end
 end
 
 
@@ -115,6 +119,10 @@ class Question
 
   def replies
     Reply.find_by_question_id(@id)
+  end
+
+  def followers
+    QuestionFollower.followers_for_question_id(@id)
   end
 
 end
@@ -239,6 +247,49 @@ end
 
 class QuestionFollower
 
-  def initialize
+  def self.followers_for_question_id(question_id)
+      users = execute(<<-SQL, question_id)
+
+      SELECT
+        users.id, users.fname, users.lname
+      FROM
+        question_followers
+      JOIN
+        users ON users.id = question_followers.follower_id
+      WHERE
+        question_followers.question_id = ?
+      SQL
+      output = []
+      users.each do |user|
+        output << User.new(user)
+      end
+      output
+  end
+
+  def self.followed_questions_for_user_id(user_id)
+      questions = execute(<<-SQL, user_id)
+
+      SELECT
+        questions.id, questions.title, questions.body, questions.author_id
+      FROM
+        question_followers
+      JOIN
+        questions ON questions.id = question_followers.question_id
+      WHERE
+        question_followers.follower_id = ?
+      SQL
+      output = []
+      questions.each do |question|
+        output << Question.new(question)
+      end
+      output
+  end
+
+
+  attr_accessor :question_id, :follower_id
+  def initialize(follower_options = {})
+    @question_id = follower_options['question_id']
+    @follower_id = follower_options['follower_id']
+  end
 
 end
