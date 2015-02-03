@@ -1,4 +1,8 @@
+require_relative 'save'
+
 class Reply
+include Save
+
   def self.find_by_id(find_id)
     new_reply = QuestionsDatabase.instance.execute(<<-SQL, find_id)
 
@@ -50,9 +54,9 @@ class Reply
   attr_accessor :question, :body, :id, :parent_reply, :replier_id
   def initialize(reply_options = {})
 
+    @id = reply_options['id']
     @question = reply_options['question']
     @body = reply_options['body']
-    @id = reply_options['id']
     @parent_reply = reply_options['parent_reply']
     @replier_id = reply_options['replier_id']
 
@@ -109,29 +113,29 @@ class Reply
     SQL
   end
 
-  def save
-    if @id.nil?
-      QuestionsDatabase.instance.execute(<<-SQL, @question, @body, @parent_reply, @replier_id)
-      INSERT INTO
-        replies (question, body, parent_reply, replier_id)
-      VALUES
-        (?, ?, ?, ?)
-      SQL
-
-      @id = QuestionsDatabase.instance.last_insert_row_id
-    else
-      QuestionsDatabase.instance.execute(<<-SQL, @question, @body, @parent_reply, @replier_id, @id)
-      UPDATE
-        replies
-      SET
-        question = ?,
-        body = ?,
-        parent_reply = ?,
-        replier_id = ?
-      WHERE
-        id = ?
-      SQL
-    end
-  end
+  # def save
+  #   if @id.nil?
+  #     QuestionsDatabase.instance.execute(<<-SQL, @question, @body, @parent_reply, @replier_id)
+  #     INSERT INTO
+  #       replies (question, body, parent_reply, replier_id)
+  #     VALUES
+  #       (?, ?, ?, ?)
+  #     SQL
+  #
+  #     @id = QuestionsDatabase.instance.last_insert_row_id
+  #   else
+  #     QuestionsDatabase.instance.execute(<<-SQL, @question, @body, @parent_reply, @replier_id, @id)
+  #     UPDATE
+  #       replies
+  #     SET
+  #       question = ?,
+  #       body = ?,
+  #       parent_reply = ?,
+  #       replier_id = ?
+  #     WHERE
+  #       id = ?
+  #     SQL
+  #   end
+  # end
 
 end

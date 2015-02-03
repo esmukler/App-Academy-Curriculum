@@ -1,4 +1,7 @@
+require_relative 'save'
+
 class Question
+include Save
 
   def self.find_by_id(find_id)
     new_question = QuestionsDatabase.instance.execute(<<-SQL, find_id)
@@ -76,28 +79,28 @@ class Question
   def num_likes
     QuestionLike.num_likes_for_question_id(@id)
   end
-  def save
-    if @id.nil?
-      QuestionsDatabase.instance.execute(<<-SQL, @title, @body, @author_id)
-      INSERT INTO
-        questions (title, body, author_id)
-      VALUES
-        (?, ?, ?)
-      SQL
-
-      @id = QuestionsDatabase.instance.last_insert_row_id
-    else
-      QuestionsDatabase.instance.execute(<<-SQL, @title, @body, @author_id, @id)
-      UPDATE
-        questions
-      SET
-        title = ?,
-        body = ?,
-        author_id = ?
-      WHERE
-        id = ?
-      SQL
-    end
-  end
+  # def save
+  #   if @id.nil?
+  #     QuestionsDatabase.instance.execute(<<-SQL, @title, @body, @author_id)
+  #     INSERT INTO
+  #       questions (title, body, author_id)
+  #     VALUES
+  #       (?, ?, ?)
+  #     SQL
+  #
+  #     @id = QuestionsDatabase.instance.last_insert_row_id
+  #   else
+  #     QuestionsDatabase.instance.execute(<<-SQL, @title, @body, @author_id, @id)
+  #     UPDATE
+  #       questions
+  #     SET
+  #       title = ?,
+  #       body = ?,
+  #       author_id = ?
+  #     WHERE
+  #       id = ?
+  #     SQL
+  #   end
+  # end
 
 end

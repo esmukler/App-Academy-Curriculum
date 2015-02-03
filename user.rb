@@ -1,4 +1,7 @@
+require_relative 'save'
+
 class User
+  include Save
 
   def self.find_by_id(find_id)
     new_user = QuestionsDatabase.instance.execute(<<-SQL, find_id)
@@ -10,8 +13,8 @@ class User
     WHERE
       id = ?
 
-      SQL
-      User.new(new_user[0])
+    SQL
+    User.new(new_user[0])
   end
 
   def self.find_by_name(find_fname, find_lname)
@@ -56,40 +59,40 @@ class User
     karma = QuestionsDatabase.instance.execute(<<-SQL, @id)
 
 
-    SELECT
-    CAST(count(l.liker_id) AS FLOAT) / count(distinct(q.id))
-    FROM
-      questions q
-    LEFT OUTER JOIN
-      question_likes l ON q.id = l.question_id
-    WHERE
-      q.author_id = ?
+  SELECT
+  CAST(count(l.liker_id) AS FLOAT) / count(distinct(q.id))
+  FROM
+    questions q
+  LEFT OUTER JOIN
+    question_likes l ON q.id = l.question_id
+  WHERE
+    q.author_id = ?
 
-      SQL
-      karma[0].values[0]
-    end
+    SQL
+    karma[0].values[0]
+  end
 
-    def save
-      if @id.nil?
-        QuestionsDatabase.instance.execute(<<-SQL, @fname, @lname)
-        INSERT INTO
-          users (fname, lname)
-        VALUES
-          (?, ?)
-        SQL
-
-        @id = QuestionsDatabase.instance.last_insert_row_id
-      else
-        QuestionsDatabase.instance.execute(<<-SQL, @fname, @lname, @id)
-        UPDATE
-          users
-        SET
-          fname = ?,
-          lname = ?
-        WHERE
-          id = ?
-        SQL
-      end
-    end
+  # def save
+  #   if @id.nil?
+  #     QuestionsDatabase.instance.execute(<<-SQL, @fname, @lname)
+  #     INSERT INTO
+  #       users (fname, lname)
+  #     VALUES
+  #       (?, ?)
+  #     SQL
+  #
+  #     @id = QuestionsDatabase.instance.last_insert_row_id
+  #   else
+  #     QuestionsDatabase.instance.execute(<<-SQL, @fname, @lname, @id)
+  #     UPDATE
+  #       users
+  #     SET
+  #       fname = ?,
+  #       lname = ?
+  #     WHERE
+  #       id = ?
+  #     SQL
+  #   end
+  # end
 
 end
