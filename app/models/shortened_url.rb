@@ -1,7 +1,7 @@
 class ShortenedUrl < ActiveRecord::Base
   validates :short_url, :presence => true, :uniqueness => true
   validates :long_url, :presence => true
-  validates :user_id, :presence => true
+  validates :submitter_id, :presence => true
 
   belongs_to(
     :submitter,
@@ -25,12 +25,9 @@ class ShortenedUrl < ActiveRecord::Base
   end
 
   def self.create_for_user_and_long_url!(user, long_url)
-    ShortenedUrl.new(user, long_url)
-  end
-
-  def initialize(user, long_url)
-    @user = user
-    @long_url = long_url
+    ShortenedUrl.new({short_url: ShortenedUrl.random_code,
+                      submitter_id: user.id,
+                      long_url: long_url})
   end
 
 end
