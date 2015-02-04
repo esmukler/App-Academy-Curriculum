@@ -10,6 +10,15 @@ class ShortenedUrl < ActiveRecord::Base
     :primary_key => :id
   )
 
+  has_many(
+    :visits,
+    class_name: "Visit",
+    foreign_key: :visited_url_id,
+    primary_key: :id
+  )
+
+  has_many :visitors, through: :visits, source: :visitor
+
   def self.random_code
     new_code = ''
 
@@ -30,14 +39,17 @@ class ShortenedUrl < ActiveRecord::Base
                       long_url: long_url})
   end
 
+  def num_clicks
+    Visit.where(visited_url_id: self.id).select(:id).count
+  end
 
-  has_many(
-    :visits,
-    class_name: "Visit",
-    foreign_key: :visited_url_id,
-    primary_key: :id
-  )
+  def num_uniques
+    Visit.where(visited_url_id: self.id).select(:visitor_id).distinct.count
+  end
 
-  has_many :visitors, through: :visits, source: :visitor
+  def num_recent_uniques
+    Visit.where(visited_url_id: self.id, updated_at: (10.minutes.ago..Time.now)).select(:visitor_id).distinct.count
+  end
+
 
 end
