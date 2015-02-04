@@ -17,7 +17,7 @@ class ShortenedUrl < ActiveRecord::Base
     primary_key: :id
   )
 
-  has_many :visitors, through: :visits, source: :visitor
+  has_many :visitors, -> { distinct }, through: :visits, source: :visitor
 
   def self.random_code
     new_code = ''
@@ -44,11 +44,11 @@ class ShortenedUrl < ActiveRecord::Base
   end
 
   def num_uniques
-    Visit.where(visited_url_id: self.id).select(:visitor_id).distinct.count
+    Visit.where(visited_url_id: self.id).select(:visitor_id).count
   end
 
   def num_recent_uniques
-    Visit.where(visited_url_id: self.id, updated_at: (10.minutes.ago..Time.now)).select(:visitor_id).distinct.count
+    Visit.where(visited_url_id: self.id, updated_at: (10.minutes.ago..Time.now)).select(:visitor_id).count
   end
 
 

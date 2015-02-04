@@ -36,6 +36,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    addressable (2.3.5)
     annotate (2.6.5)
       activerecord (>= 2.3.0)
       rake (>= 0.8.7)
@@ -75,6 +76,8 @@ GEM
       railties (>= 4.2.0.beta)
       thor (>= 0.14, < 2.0)
     json (1.8.2)
+    launchy (2.4.2)
+      addressable (~> 2.3)
     loofah (2.0.1)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
@@ -170,6 +173,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
+  launchy
   pg
   pry-rails
   rails (= 4.2.0.rc2)
