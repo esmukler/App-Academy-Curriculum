@@ -8,4 +8,13 @@ class User < ActiveRecord::Base
     :primary_key => :id
   )
 
+  has_many(
+    :visits,
+    class_name: "Visit",
+    foreign_key: :visitor_id,
+    primary_key: :id
+  )
+
+
+
 end

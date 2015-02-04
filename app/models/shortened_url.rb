@@ -30,4 +30,12 @@ class ShortenedUrl < ActiveRecord::Base
                       long_url: long_url})
   end
 
+
+  has_many(
+    :visits,
+    class_name: "Visit",
+    foreign_key: :visited_url,
+    primary_key: :id
+  )
+
 end
