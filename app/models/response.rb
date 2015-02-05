@@ -31,6 +31,14 @@ class Response < ActiveRecord::Base
     source:  :poll
   )
 
+  def improved_sibling_responses
+     a = Response.select("responses.*")
+          .joins("JOIN answer_choices AS all_acs ON responses.answer_choice_id = all_acs.id")
+          .joins("JOIN questions ON questions.id = all_acs.question_id")
+          .joins("JOIN answer_choices AS our_ac ON our_ac.question_id = questions.id")
+          .where("our_ac.id = :ac_id AND (:id IS NULL OR responses.id != :id)", ac_id: self.answer_choice_id, id: self.id)
+  end
+
   def sibling_responses
     siblings = question.responses
     self.id.nil? ? siblings : siblings.where("responses.id != ?", self.id)
@@ -46,6 +54,10 @@ class Response < ActiveRecord::Base
 
   def parent_poll
     question.poll
+  end
+
+  def does_not_respond_to_own_poll
+
   end
 
   def author_cant_respond_to_own_poll
