@@ -2,7 +2,7 @@ class Response < ActiveRecord::Base
   validates :respondent_id, presence: true
   validates :answer_choice_id, presence: true
 
-  validate  :respondent_has_not_already_answered_question
+  validate  :respondent_has_already_answered_question
   validate  :author_cant_respond_to_own_poll
 
   belongs_to(
@@ -38,7 +38,7 @@ class Response < ActiveRecord::Base
 
   private
 
-  def respondent_has_not_already_answered_question
+  def respondent_has_already_answered_question
     if sibling_responses.exists?(respondent_id: respondent_id)
       errors[:respondent_id] << "already answered this question."
     end
