@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
                                     params[:user][:password])
     if user
       log_in!(user)
-      redirect_to user_url(user)
+      redirect_to bands_url
     else
       redirect_to new_session_url
     end

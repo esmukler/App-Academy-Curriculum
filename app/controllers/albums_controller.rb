@@ -1,4 +1,5 @@
 class AlbumsController < ApplicationController
+  before_action :require_login
 
   def new
     @band = Band.find(params[:band_id])

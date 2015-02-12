@@ -7,7 +7,7 @@
 <body>
 
 <% if current_user %>
-  <p>Hello, <%= current_user.email %> </p>
+  <p>Hello, <a href="<%= user_url(current_user) %>"><%= current_user.email %></a></p>
   <form action="<%= session_url %>" method="post">
     <input type="hidden" name="_method" value="delete">
     <input type="hidden"
