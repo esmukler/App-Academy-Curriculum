@@ -28,7 +28,7 @@ class BandsController < ApplicationController
   def update
     @band = Band.find(params[:id])
 
-    if @band.update
+    if @band.update(band_params)
       redirect_to band_url(@band)
     else
       render :edit
@@ -36,6 +36,7 @@ class BandsController < ApplicationController
   end
 
   def show
+    @band = Band.find(params[:id])
     render :show
   end
 
