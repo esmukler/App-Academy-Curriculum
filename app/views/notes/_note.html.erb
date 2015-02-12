@@ -1,0 +1,4 @@
+<% @track.notes.order("created_at DESC").each do |note| %>
+  <p><%= note.body %></p>
+  <em><p>Posted by: <%= note.user.email %></p></em>
+<% end %>

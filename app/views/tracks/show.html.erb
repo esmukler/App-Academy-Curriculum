@@ -5,13 +5,19 @@
 <p>Lyrics:</p>
 <p><%= @track.lyrics %></p>
 
+<p>-----------</p>
 
+<%= render "notes/note" %>
+
+<p>-----------</p>
+
+<%= render "notes/form" %>
+
+<br><br>
 
 <form action="<%= edit_track_url(@track) %>" method="get">
   <input type="submit" value="Edit Track">
-</form>
-
-<br>
+</form><br>
 
 <form action="<%= track_url(@track) %>" method="post">
   <input type="hidden" name="_method" value="delete">

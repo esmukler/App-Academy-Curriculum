@@ -7,4 +7,6 @@ class Track < ActiveRecord::Base
 
   has_one :band, through: :album
 
+  has_many :notes
+
 end
