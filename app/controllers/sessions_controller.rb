@@ -11,7 +11,11 @@ class SessionsController < ApplicationController
     if user
       log_in!(user)
       redirect_to bands_url
+    elsif User.find_by_email(params[:user][:email])
+      flash[:errors] = ["the password you entered does not match our records"]
+      redirect_to new_session_url
     else
+      flash[:errors] = ["we don't have a user by that name in our records"]
       redirect_to new_session_url
     end
   end

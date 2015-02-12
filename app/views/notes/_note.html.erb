@@ -10,5 +10,8 @@
     </form>
   <% end %>
   </p>
+<% end %>
 
+<% if @track.notes.empty? %>
+  <p><em>No one has commented yet</em><p>
 <% end %>
