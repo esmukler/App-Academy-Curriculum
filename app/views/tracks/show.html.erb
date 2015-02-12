@@ -29,4 +29,8 @@
 
 <form action="<%= band_url(@track.band) %>" method="get">
   <input type="submit" value="Back to <%= @track.band.name %>">
+</form><br>
+
+<form action="<%= bands_url %>" method="get">
+  <input type="submit" value="Home">
 </form>
