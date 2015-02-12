@@ -1,4 +1,5 @@
 class NotesController < ApplicationController
+  before_action :cant_delete_others_notes, only: :delete
 
   def new
     render :new
@@ -21,13 +22,19 @@ class NotesController < ApplicationController
   end
 
   def destroy
-
+    @note = Note.find(params[:id])
+    @note.destroy
+    redirect_to track_url(@note.track)
   end
 
   private
 
     def note_params
       params.require(:note).permit(:body, :track_id)
+    end
+
+    def cant_delete_others_notes
+      render text: "403 FORBIDDEN" unless current_user.id == @note.user_id
     end
 
 end

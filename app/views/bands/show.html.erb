@@ -2,7 +2,7 @@
 
 <ul>
 <% @band.albums.each do |album| %>
-  <li><a href="<%= album_url(album)%>"><%= album.name %>, (<%= album.setting %>)</a></li>
+  <li><a href="<%= album_url(album)%>"><%= album.name %> (<%= album.setting %>)</a></li>
   <br>
 <% end %>
 </ul>
