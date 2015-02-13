@@ -11,6 +11,12 @@ class User < ActiveRecord::Base
   primary_key: :id,
   inverse_of: :moderator
 
+  has_many :authored_posts,
+  class_name: "Post",
+  foreign_key: :author_id,
+  primary_key: :id,
+  inverse_of: :author
+
   def self.find_by_credentials(username, password)
     user = User.find_by_username(username)
     return nil if user.nil?

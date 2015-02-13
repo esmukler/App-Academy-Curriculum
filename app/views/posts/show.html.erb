@@ -1,0 +1,4 @@
+<h2><%= @post.title %></h2><br>
+<h4>Authored by: <%= @post.author.username.html_safe %><h4><br>
+<a href="<%= @post.url %>"><%=@post.url%></a><br>
+<p><%= @post.content %></p>

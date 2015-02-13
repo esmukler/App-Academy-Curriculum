@@ -1,3 +1,4 @@
+
 class SubsController < ApplicationController
   before_action :is_moderator, only: [:edit, :update, :destroy]
 

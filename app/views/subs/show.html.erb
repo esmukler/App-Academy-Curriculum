@@ -4,4 +4,13 @@
 
 <h6>Moderated by: <%= @sub.moderator.username %></h6>
 
+<br>
+<% @sub.posts.each do |post| %>
+<a href="<%= post_url(post) %>">
+<%= post.title %>
+</a>
+<br>
+<br>
+<% end %>
+
 <a href="<%= subs_url %>">Back to Index</a>

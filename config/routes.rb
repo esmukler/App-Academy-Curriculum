@@ -4,5 +4,5 @@ RedditClone::Application.routes.draw do
     resources :posts, only: [:index]
   end
   resource :session, only: [:new, :create, :destroy]
-  resource :posts, except: [:index]
+  resources :posts, except: [:index]
 end
