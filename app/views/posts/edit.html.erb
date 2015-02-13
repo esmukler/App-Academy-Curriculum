@@ -1,6 +1,8 @@
-<h2>New post</h2>
+<h2>Edit</h2>
 
-<form action="<%= posts_url %>" method="post">
+
+<form action="<%= post_url(@post) %>" method="post">
+  <input type="hidden" name="_method" value="PATCH">
 
   <label for="post_title">Title:</label><br>
   <input type="text" name="post[title]" value="<%= @post.title %>">
