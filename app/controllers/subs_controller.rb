@@ -1,4 +1,5 @@
 class SubsController < ApplicationController
+  before_action :is_moderator, only: [:edit, :update, :destroy]
 
   def new
     @sub = Sub.new
@@ -44,6 +45,12 @@ class SubsController < ApplicationController
 
   def sub_params
     params.require(:sub).permit(:title, :description)
+  end
+
+  def is_moderator
+    unless current_user.id == Sub.find(params[:id]).moderator_id
+      redirect_to subs_url
+    end
   end
 
 end
