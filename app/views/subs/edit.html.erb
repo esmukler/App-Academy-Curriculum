@@ -1,0 +1,14 @@
+<h2>Edit your sub!</h2>
+
+<form action="<%= sub_url(@sub) %>" method="post">
+  <input type="hidden" name="_method" value="PATCH">
+  <label for="sub_title">Title:</label><br>
+  <input id="sub_title" type="text" name="sub[title]" value="<%= @sub.title %>">
+  <br>
+  <label for="sub_description">Description:</label><br>
+  <textarea name="sub[description]"><%= @sub.description %></textarea>
+  <br>
+  <button>Make Changes!</button>
+</form>
+
+<a href="<%=sub_url(@sub)%>">Back</a>
