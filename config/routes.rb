@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   end
   resource :session
   resources :goals, except: [ :new ]
+  resources :comments
+
 end

@@ -1,9 +1,48 @@
-Welcome <%= @user.username %>
-<br>
+<%= @user.username %>'s page
+
+<form action="<%= new_comment_url %>" method="get">
+
+  <input type="hidden" name="comment[commentable_id]" value="<%= @user.id %>">
+  <input type="hidden" name="comment[commentable_type]" value="<%= @user.class %>">
+
+
+  <button name="Comment on this user">Comment on this user</button>
+</form><br><br>
+
+<% unless @user.comments.nil? %>
+  <ul>
+  <% @user.comments.each do |com| %>
+    <li><em><%= com.author.username %></em> said <%= com.body %></li><br>
+  <% end %>
+  </ul>
+<% end %>
+
+<br><br>
 <% unless public_goals(@user).nil? %>
   <% public_goals(@user).each do |goal| %>
 
-    <%= "#{goal.name}, #{goal.status}" %><br>
+    <%= "#{goal.name}, #{goal.status}" %>
+
+    <form action="<%= new_comment_url %>" method="get">
+
+      <input type="hidden" name="comment[commentable_id]" value="<%= goal.id %>">
+      <input type="hidden" name="comment[commentable_type]" value="<%= goal.class %>">
+
+      <button name="Comment on this goal">Comment on this goal</button>
+    </form><br><br>
+
+    <% unless goal.comments.nil? %>
+      <ul>
+      <% goal.comments.each do |com| %>
+        <li><em><%= com.author.username %></em> said <%= com.body %></li><br>
+      <% end %>
+      </ul>
+    <% end %>
+
+
+
+
+
 
     <% if current_user == @user %>
       <a href="<%= edit_goal_url(goal.id) %>">Edit Goal</a>
@@ -14,7 +53,7 @@ Welcome <%= @user.username %>
         <button name="Delete">Delete</button>
       </form>
     <% end %>
-
+    <br><br>
   <% end %>
 <% end %>
 
@@ -34,28 +73,30 @@ Welcome <%= @user.username %>
   <% end %>
 <% end %>
 
-<form action="<%= goals_url %>" method="post">
-  <input type="hidden" name="authenticity_token"
-          value="<%= form_authenticity_token %>">
+<br>
+<% if current_user == @user %>
+  <form action="<%= goals_url %>" method="post">
+    <input type="hidden" name="authenticity_token"
+            value="<%= form_authenticity_token %>">
 
-  <input type="hidden" name="goal[user_id]" value="<%= @user.id %>">
+    <input type="hidden" name="goal[user_id]" value="<%= @user.id %>">
 
-  <label for="Name">Name
-    <input type="text" name="goal[name]" value="<%=  %>">
-  </label><br>
-  <br>
-  <% Goal::AVAILABILITY.each do |avail| %>
-    <input type="radio" name="goal[availability]" id="goal_avail_<%= avail %>"
-            value="<%= avail %>"><br>
-    <label for="goal_avail_<%= avail %>"><%= avail %></label><br>
-  <% end %>
+    <label for="Name">Name
+      <input type="text" name="goal[name]" value="<%=  %>">
+    </label><br>
+    <br>
+    <% Goal::AVAILABILITY.each do |avail| %>
+      <input type="radio" name="goal[availability]" id="goal_avail_<%= avail %>"
+              value="<%= avail %>"><br>
+      <label for="goal_avail_<%= avail %>"><%= avail %></label><br>
+    <% end %>
 
-  <% Goal::STATUS.each do |status| %>
-    <input type="radio" name="goal[status]" id="goal_status_<%= status %>"
-            value="<%= status %>"><br>
-    <label for="goal_status_<%= status %>"><%= status %></label><br>
-  <% end %>
+    <% Goal::STATUS.each do |status| %>
+      <input type="radio" name="goal[status]" id="goal_status_<%= status %>"
+              value="<%= status %>"><br>
+      <label for="goal_status_<%= status %>"><%= status %></label><br>
+    <% end %>
 
-  <button name="Create a Goal">Create a Goal</button>
-
-</form>
+    <button name="Create a Goal">Create a Goal</button>
+  </form>
+<% end %>

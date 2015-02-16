@@ -10,6 +10,16 @@ class User < ActiveRecord::Base
       primary_key: :id
     )
 
+    has_many(
+      :authored_comments,
+      class_name: "Comment",
+      foreign_key: :author_id,
+      primary_key: :id,
+      inverse_of: :author
+    )
+
+    include Commentable
+
     attr_reader :password
 
     def self.find_by_credentials(username, password)

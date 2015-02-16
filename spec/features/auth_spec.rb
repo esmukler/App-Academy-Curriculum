@@ -11,7 +11,7 @@ feature "the signup process" do
   feature "signing up a user" do
 
     it "shows username on the homepage after signup" do
-      expect(page).to have_content('Welcome JohnnyBoy')
+      expect(page).to have_content('JohnnyBoy')
     end
 
 
@@ -27,7 +27,7 @@ feature "logging in" do
     fill_in('Username', :with => 'JohnnyBoy')
     fill_in('Password', :with => 'abcdef')
     click_button('Sign In')
-    expect(page).to have_content('Welcome JohnnyBoy')
+    expect(page).to have_content('JohnnyBoy')
   end
 
 end
