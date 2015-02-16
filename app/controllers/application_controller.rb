@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  helper_method :current_user, :is_logged_in
+  helper_method :current_user, :is_logged_in, :public_goals, :private_goals
 
   def current_user
     return nil if session[:session_token].nil?
@@ -26,6 +26,14 @@ class ApplicationController < ActionController::Base
 
   def require_logged_in
     redirect_to new_session_url unless is_logged_in
+  end
+
+  def public_goals(user)
+    user.goals.where(:availability => "PUBLIC")
+  end
+
+  def private_goals(user)
+    user.goals.where(:availability => "PRIVATE")
   end
 
 end

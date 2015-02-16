@@ -98,10 +98,14 @@ def log_in(username = 'JohnnyBoy')
   click_button('Sign In')
 end
 
-def create_a_goal(name, availability = 'Public')
+def create_a_goal(name, availability = 'PUBLIC')
   click_button('Create a Goal')
   fill_in('Name', :with => name)
-  choose('Incomplete')
+  choose('INCOMPLETE')
   choose(availability)
-  click_button('Create Goal')
+  click_button('Create a Goal')
+end
+
+def sign_out
+  click_button('Log Out')
 end
