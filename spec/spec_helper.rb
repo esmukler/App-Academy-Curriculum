@@ -83,3 +83,25 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
+
+def sign_up(username = 'JohnnyBoy')
+  visit ('/users/new')
+  fill_in('Username', :with => username)
+  fill_in('Password', :with => 'abcdef')
+  click_button('Sign Up')
+end
+
+def log_in(username = 'JohnnyBoy')
+  visit ('/session/new')
+  fill_in('Username', :with => username)
+  fill_in('Password', :with => 'abcdef')
+  click_button('Sign In')
+end
+
+def create_a_goal(name, availability = 'Public')
+  click_button('Create a Goal')
+  fill_in('Name', :with => name)
+  choose('Incomplete')
+  choose(availability)
+  click_button('Create Goal')
+end

@@ -8,6 +8,16 @@
 </head>
 <body>
 
+<% if is_logged_in %>
+  <form action="<%= session_url %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+    <button name="Log Out">Log Out</button>
+  </form>
+
+<% end %>
+
 <%= yield %>
 
 </body>
