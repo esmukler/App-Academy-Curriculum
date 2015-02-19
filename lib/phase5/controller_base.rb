@@ -6,7 +6,10 @@ module Phase5
     attr_reader :params
 
     # setup the controller
-    def initialize(req, res, route_params = {})
+    def initialize(req, res, route_params = nil)
+      @req = req
+      @res = res
+      @params = Params.new(req, route_params)
     end
   end
 end

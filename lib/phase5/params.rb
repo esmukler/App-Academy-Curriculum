@@ -10,10 +10,17 @@ module Phase5
     # You haven't done routing yet; but assume route params will be
     # passed in as a hash to `Params.new` as below:
     def initialize(req, route_params = {})
-      @params = route_params
+      @params = {}
+
+      @params = @params.merge(route_params) unless route_params.nil?
       unless req.query_string.nil?
-        parse_www_encoded_form(req.query_string)
+        req_qs = parse_www_encoded_form(req.query_string)
       end
+      @params = @params.merge(req_qs) unless req_qs.nil?
+      unless req.body.nil?
+        req_body = parse_www_encoded_form(req.body)
+      end
+      @params = @params.merge(req_body) unless req_body.nil?
     end
 
     def [](key)
@@ -33,20 +40,25 @@ module Phase5
     # should return
     # { "user" => { "address" => { "street" => "main", "zip" => "89436" } } }
     def parse_www_encoded_form(www_encoded_form)
-      final_hash = Hash.new { h[k] = {} }
+      final_hash = {}
+
       output = URI::decode_www_form(www_encoded_form)
-      output.each do |tuple|
-        key_array = parse_key(tuple[0])
-        val = tuple[1]
-        hashy = val
-        key_array.count.times do |x|
-          hashy = { key_array[-(x+1)] => hashy }
+
+      output.each do |pair|
+        key_array = parse_key(pair[0])
+        val = pair[1]
+        current_level = final_hash
+
+        key_array.each_with_index do |key, idx|
+          if idx == key_array.count - 1
+            current_level[key] = val
+          elsif current_level[key]
+            current_level = current_level[key]
+          else
+            current_level[key] = {}
+            current_level = current_level[key]
+          end
         end
-
-        # => {"user"=>{"address"=>{"street"=>"main"}}}
-
-        # => {"user"=>{"address"=>{"zip"=>"89436"}}}
-
       end
       final_hash
     end
