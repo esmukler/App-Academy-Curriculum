@@ -1,21 +1,21 @@
-var uniq = function (array) {
+Array.prototype.uniq = function () {
 
   var uniq_arr = [];
 
-  for (var i = 0; i < array.length; i++) {
+  for (var i = 0; i < this.length; i++) {
 
     var included = false;
 
     for (var j = 0; j < uniq_arr.length; j++) {
 
-      if (uniq_arr[j] === array[i]) {
+      if (uniq_arr[j] === this[i]) {
         included = true;
         break;
       };
     };
 
     if (included === false) {
-      uniq_arr.push(array[i]);
+      uniq_arr.push(this[i]);
     };
   };
 
@@ -23,14 +23,14 @@ var uniq = function (array) {
 };
 
 
-var twoSum = function (array) {
+Array.prototype.twoSum = function () {
 
   var sum_arr = [];
 
-  for (var i = 0; i < array.length; i++) {
+  for (var i = 0; i < this.length; i++) {
 
-    for (var j = i+1; j < array.length; j++) {
-      if ((array[i] + array[j]) === 0) {
+    for (var j = i+1; j < this.length; j++) {
+      if ((this[i] + this[j]) === 0) {
         sum_arr.push([i,j]);
       };
     };
