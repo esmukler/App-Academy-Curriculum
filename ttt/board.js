@@ -37,11 +37,15 @@ Board.prototype.won = function() {
 };
 
 Board.prototype.draw = function () {
-  var movesLeft = false
+  var _draw = true
 
-  for (var i = 0; i < 9; i++) {
-
+  for (var i = 1; i <= 9; i++) {
+    if (this.empty(i.toString())) {
+      _draw = false;
+    }
   }
+
+  return _draw;
 };
 
 Board.prototype.placeMark = function (square, mark) {
