@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>App Academy Friends</title>
 
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/00-reset.css" type="text/css">
   <link rel="stylesheet" href="css/01-header.css" type="text/css">
   <link rel="stylesheet" href="css/02-notifications.css" type="text/css">
@@ -19,8 +20,30 @@
   <link rel="stylesheet" href="css/12-modal.css" type="text/css">
 </head>
 <body>
+  <header class="header">
+    <nav class="header-nav group">
+      <h1 class="header-logo">App Academy Friends</h1>
+      <ul class="header-list group">
+        <li class="notifications"><a href="#">
+            Notifications
+            <span class="badge">3</span>
+            </a>
+            <ul class="notifications-list">
+              <li>Constance likes your photo.</li>
+              <li>Tommy left you a comment.</li>
+              <li>Jonathan is now following you.</li>
+            </ul>
+        </li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="content group">
+    <section class="content-sidebar"></section>
+    <section class="content-main"></section>
+  </main>
 
-  <!-- YOUR HTML HERE -->
 
   <script src="../shared/js/jquery.js"></script>
   <script>
