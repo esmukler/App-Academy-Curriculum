@@ -2,20 +2,35 @@
 .content {
   width: 900px;
   margin: auto;
-  border: 1px solid #aaa;
-  border-top: 0;
+  border: 1px solid #ccc;
+  background: #fff;
+  position: relative;
+
 }
 
 .content-sidebar {
-  width: 240px;
+  width: 200px;
   float: left;
-  background: green;
   min-height: 200px;
+  padding: 20px;
+  position: relative;
+
 }
 
 .content-main {
-  width: 660px;
+  width: 640px;
   float: right;
-  background: yellow;
   min-height: 200px;
+  padding: 20px;
+
+}
+
+.content-main:before {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 1px;
+  top: 200px;
+  bottom: 0;
+  background: #ccc;
 }
