@@ -16,8 +16,8 @@ ul {
 
 .grid {
   margin: 100px auto;
-  border: 5px solid black;
-  width: 300px;
+  border-bottom: 5px solid silver;
+  width: 420px;
 }
 
 .group:after {
@@ -27,26 +27,43 @@ ul {
 }
 
 li {
+  margin: 5px 40px;
   font-size: 62px;
   line-height: 90px;
   vertical-align: middle;
-  width: 90px;
-  height: 90px;
+  width: 60px;
+  height: 30px;
   float: left;
-  border: 5px solid black;
-  background: grey;
+  background: lightgrey;
 }
 
-li:hover {
+.grid > li:hover {
   background: yellow;
 }
 
-.selectedX {
+li.small {
+  border: 5px solid black;
   background: blue;
+  margin: 0 50px;
+  width: 30px;
 }
 
-.selectedO {
+li.medium {
+  border: 5px solid black;
   background: red;
+  margin: 0 35px;
+  width: 60px;
+}
+
+li.large {
+  border: 5px solid black;
+  background: green;
+  margin: 0 20px;
+  width: 90px;
+}
+
+li.selected {
+  background: orange;
 }
 
 button {
