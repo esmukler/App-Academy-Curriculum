@@ -31,8 +31,14 @@
 
       if (view.selected === 0) {
         view.startTower = index;
-        view.selected = 1
-        view.getStartPiece().toggleClass("selected");
+        var $startPiece = view.getStartPiece()
+
+        if($startPiece){
+          console.log("test")
+          $startPiece.toggleClass("selected");
+          view.selected = 1
+        }
+
       } else if (view.selected === 1 &&
                  view.game.isValidMove(view.startTower, index)){
 
@@ -53,6 +59,7 @@
           view.$el.off();
         }
       } else {
+
         view.getStartPiece().toggleClass("selected");
         view.selected = 0;
         view.$el.find("p").text("Illegal move");
@@ -66,6 +73,7 @@
         return $("li").eq(i);
       }
     }
+    return null;
   };
 
   View.prototype.getEndPiece = function(index) {

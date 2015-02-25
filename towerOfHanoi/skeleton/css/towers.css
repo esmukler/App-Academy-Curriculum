@@ -35,6 +35,7 @@ li {
   height: 30px;
   float: left;
   background: lightgrey;
+  border-radius: 10px;
 }
 
 .grid > li:hover {
