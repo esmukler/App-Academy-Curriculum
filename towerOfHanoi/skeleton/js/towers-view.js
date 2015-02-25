@@ -16,14 +16,15 @@
     var html = "<ul class='grid group'>" +
                 "<li class='small'></li><li class='empty'></li><li class='empty'></li>" +
                 "<li class='medium'></li><li class='empty'></li><li class='empty'></li>" +
-                "<li class='large'></li><li class='empty'></li><li class='empty'></li></ul>"
+                "<li class='large'></li><li class='empty'></li><li class='empty'></li></ul>"+
+                "<p class='message'></p>"
     this.$el.html(html);
   };
 
   View.prototype.bindEvents = function () {
     var view = this;
     this.$el.on("click", "li", function(event) {
-      console.log(view.selected)
+      view.$el.find("p").text("");
 
       var $square = $(event.currentTarget);
       var index = $square.index() % 3;
@@ -46,11 +47,16 @@
         $startPiece.toggleClass("empty " + size);
         $endPiece.toggleClass("empty " + size);
 
+        if (view.game.isWon()) {
+          console.log("game over")
+          view.$el.find("p").text("Congratulations!")
+          view.$el.off();
+        }
       } else {
         view.getStartPiece().toggleClass("selected");
         view.selected = 0;
+        view.$el.find("p").text("Illegal move");
       }
-
     });
   };
 
