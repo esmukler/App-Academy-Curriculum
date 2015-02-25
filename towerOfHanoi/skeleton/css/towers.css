@@ -1,0 +1,54 @@
+html, ul, li, p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  text-align: inherit;
+}
+
+body {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.grid {
+  margin: 100px auto;
+  border: 5px solid black;
+  width: 300px;
+}
+
+.group:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+li {
+  font-size: 62px;
+  line-height: 90px;
+  vertical-align: middle;
+  width: 90px;
+  height: 90px;
+  float: left;
+  border: 5px solid black;
+  background: grey;
+}
+
+li:hover {
+  background: yellow;
+}
+
+.selectedX {
+  background: blue;
+}
+
+.selectedO {
+  background: red;
+}
+
+button {
+
+}
