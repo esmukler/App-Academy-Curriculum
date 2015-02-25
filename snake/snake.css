@@ -1,0 +1,40 @@
+html, ul, li, p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  text-align: inherit;
+}
+
+body {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.grid {
+  margin: 100px auto;
+  border: 2px solid black;
+  width: 400px;
+}
+
+.group:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+li {
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  float: left;
+  border: 1px solid black;
+  background: silver;
+}
+
+li.snake {
+  background: purple;
+}

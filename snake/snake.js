@@ -14,6 +14,10 @@
    this.segments.unshift(newSeg);
  };
 
+ Snake.prototype.turn = function (dir) {
+   this.dir = dir;
+ };
+
  Snake.DIR = ["N","E","S","W"];
 
  var Coord = SnakeGame.Coord = function (pos) {
@@ -52,8 +56,8 @@
    this.apples = [];
  }
 
- Board.DIM_X = 10;
- Board.DIM_Y = 10;
+ Board.DIM_X = 20;
+ Board.DIM_Y = 30;
 
 Board.prototype.setUpBoard = function () {
   var grid = [];
