@@ -1,7 +1,7 @@
 figure.carousel {
   width: 200px;
   height: 300px;
-  /*overflow: hidden;*/
+  overflow: hidden;
   border: 5px solid #000;
   margin: 100px auto;
   position: relative;
@@ -14,22 +14,23 @@ ul.items {
 }
 
 ul.items > li {
+  position: absolute;
   float: left;
   display: none;
+  transition: left 0.5s linear;
 }
 
 ul.items > li.active {
   display: block;
-}
-
-ul.items > li.left {
-  position: absolute;
-  left: calc(-100%/4);
+  left: 0%;
 }
 
 ul.items > li.right {
-  position: absolute;
   left: calc(100%/4);
+}
+
+ul.items > li.left {
+  left: calc(-100%/4);
 }
 
 

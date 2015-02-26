@@ -33,22 +33,32 @@ $.Carousel.prototype.slide = function (dir) {
     this.$el.find("li.active.left").removeClass("active left")
     var $rightImg = this.$el.find("ul > li").eq(rightIdx);
     $rightImg.addClass("active right");
+
     var $newImg = this.$el.find("ul > li").eq(this.activeIdx);
-    $newImg.removeClass("right");
+
     var $leftImg = this.$el.find("ul > li").eq(leftIdx);
+
     $leftImg.addClass("left");
+    $newImg.removeClass("right");
+
+
   } else {
     this.$el.find("li.active.right").removeClass("active right")
     var $leftImg = this.$el.find("ul > li").eq(leftIdx);
     $leftImg.addClass("active left");
+
     var $newImg = this.$el.find("ul > li").eq(this.activeIdx);
-    $newImg.removeClass("left");
+
     var $rightImg = this.$el.find("ul > li").eq(rightIdx);
     $rightImg.addClass("right");
+
+
+    $newImg.removeClass("left");;
   }
 
-  console.log(this.$el.find("li"))
+  console.log($("li"))
 }
+
 
 
 $.fn.cats = function () {
