@@ -13,13 +13,38 @@ img {
   height: auto;
 }
 
-.thumbnails > .gutter-images {
-  position: relative;
-  left: 40px;
+.gutter {
+  width: 500px;
 }
 
-.thumbnails > .gutter-images > li {
+.left {
+  font-size: 40px;
+  float: left;
+  display: block;
+  width: 40px;
+}
+
+.right {
+  font-size: 40px;
+  float: right;
+  display: block;
+  width: 40px;
+}
+
+
+.thumbnails .gutter-images {
+  position: relative;
+  width: 75%;
+  left: 20px;
+  float: left;
+}
+
+.thumbnails .gutter-images > li {
   width: 20%;
   float: left;
+  display: none;
+}
+
+.thumbnails .gutter-images > li.current {
   display: block;
 }
