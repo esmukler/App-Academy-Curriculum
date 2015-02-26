@@ -12,19 +12,17 @@ $.Tabs.prototype.clickTab = function () {
 
     tab.$contentTabs.find(".active").toggleClass();
     $(event.currentTarget).toggleClass("active");
-
     tab.$activeTab.toggleClass("transitioning");
+
+    var id = event.currentTarget.hash;
     tab.$activeTab.one("transitionend", function (event) {
       $(this).toggleClass("transitioning active");
+      tab.$activeTab = $(tab.$el.find(id));
+      tab.$activeTab.toggleClass("active transitioning");
+      setTimeout(function () {
+        tab.$activeTab.toggleClass("transitioning");
+      }, 0);
     })
-    var id = event.currentTarget.hash;
-    tab.$activeTab = $(tab.$el.find(id));
-    tab.$activeTab.toggleClass("active");
-
-    // tab.$activeTab.one("transitionend", function (event) {
-    //   this.toggleClass("transitioning active");
-    // })
-
   })
 }
 

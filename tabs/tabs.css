@@ -9,6 +9,7 @@ pre.tab-pane {
 pre.tab-pane.active {
   display: block;
   opacity: 1;
+  transition: opacity 0.5s linear;
 }
 
 pre.tab-pane.transitioning {
