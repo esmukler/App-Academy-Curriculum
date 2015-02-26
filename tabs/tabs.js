@@ -1,29 +1,30 @@
 $.Tabs = function (el) {
   this.$el = $(el);
-  this.$contentTabs = this.$el.find(".data-content-tabs");
-  this.$activeTab = this.$el.find(".tab-pane.active");
-  this.clickTab();
+  this.$contentTabs = $(this.$el.attr("data-content-tabs"));
+  this.$activeTab = this.$contentTabs.find(".tab-pane.active");
+  this.$el.on("click", "a", this.clickTab.bind(this));
 };
 
-$.Tabs.prototype.clickTab = function () {
-  var tab = this;
-  this.$contentTabs.on("click", "a", function (event) {
-    event.preventDefault();
+$.Tabs.prototype.clickTab = function (event) {
+  event.preventDefault();
 
-    tab.$contentTabs.find(".active").toggleClass();
-    $(event.currentTarget).toggleClass("active");
-    tab.$activeTab.toggleClass("transitioning");
+  this.$el.find(".active").toggleClass();
+  $(event.currentTarget).toggleClass("active");
+  this.$activeTab.toggleClass("transitioning");
 
-    var id = event.currentTarget.hash;
-    tab.$activeTab.one("transitionend", function (event) {
-      $(this).toggleClass("transitioning active");
-      tab.$activeTab = $(tab.$el.find(id));
-      tab.$activeTab.toggleClass("active transitioning");
-      setTimeout(function () {
-        tab.$activeTab.toggleClass("transitioning");
-      }, 0);
-    })
-  })
+  var id = event.currentTarget.hash;
+
+  this.$activeTab.one("transitionend", function (event) {
+    $(event.currentTarget).toggleClass("transitioning active");
+    this.$activeTab = $(this.$contentTabs.find(id));
+    this.$activeTab.toggleClass("active transitioning");
+
+
+    setTimeout(function () {
+      this.$activeTab.toggleClass("transitioning");
+    }.bind(this), 0);
+    
+  }.bind(this))
 }
 
 $.fn.tabs = function () {
