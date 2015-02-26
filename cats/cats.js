@@ -8,14 +8,21 @@ $.Carousel = function (el) {
 
   this.$right.on("click", this.slide.bind(this, 1));
   this.$left.on("click", this.slide.bind(this, -1));
+  this.transitioning = false;
 };
 
 $.Carousel.prototype.slide = function (dir) {
+  if (this.transitioning) {
+    return;
+  } else {
+    this.transitioning = true;
+  }
+
   this.activeIdx += dir;
   var rightIdx = this.activeIdx + 1;
   var leftIdx = this.activeIdx - 1;
 
-  // wrapping
+
   if (this.activeIdx > this.numImgs) {
     this.activeIdx = 0;
     rightIdx = 1;
@@ -41,7 +48,6 @@ $.Carousel.prototype.slide = function (dir) {
     $leftImg.addClass("left");
     $newImg.removeClass("right");
 
-
   } else {
     this.$el.find("li.active.right").removeClass("active right")
     var $leftImg = this.$el.find("ul > li").eq(leftIdx);
@@ -56,7 +62,9 @@ $.Carousel.prototype.slide = function (dir) {
     $newImg.removeClass("left");;
   }
 
-  console.log($("li"))
+  $newImg.one("transitionend", function () {
+    this.transitioning = false;
+  }.bind(this))
 }
 
 
