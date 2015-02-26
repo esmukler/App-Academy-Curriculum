@@ -1,32 +1,28 @@
 $.Carousel = function (el) {
-  this.activeIdx = 1;
+  this.activeIdx = 0;
   this.$el = $(el);
-  this.numImgs = this.$el.find("ul").children().length;
+  this.numImgs = this.$el.find("ul").children().length - 1;
 
   this.$right = $('.slide-right');
   this.$left = $('.slide-left');
 
-  this.$right.on("click", this.slide.bind(this));
-  this.$left.on("click", this.slide.bind(this));
+  this.$right.on("click", this.slide.bind(this, 1));
+  this.$left.on("click", this.slide.bind(this, -1));
 };
 
-$.Carousel.prototype.slide = function (event) {
-  if (($(event.currentTarget).context.className) === "slide-right") {
-    this.activeIdx += 1;
-  } else {
-    this.activeIdx -= 1;
-  }
+$.Carousel.prototype.slide = function (dir) {
+  this.activeIdx += dir;
   if (this.activeIdx > this.numImgs) {
-    this.activeIdx = 1;
+    this.activeIdx = 0;
   } else if (this.activeIdx < 0) {
     this.activeIdx = this.numImgs;
   }
 
 
-  this.$el.find("li.active").toggleClass("active");
+  this.$el.find("li.active").removeClass("active");
 
-  var $newImg = this.$el.find("ul > li:nth-child(" + this.activeIdx + ")");
-  $newImg.toggleClass("active");
+  var $newImg = this.$el.find("ul > li").eq(this.activeIdx);
+  $newImg.addClass("active");
 }
 
 
