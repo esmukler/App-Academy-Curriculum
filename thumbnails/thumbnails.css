@@ -1,0 +1,25 @@
+.thumbnails {
+  width: 400px;
+  margin: 100px auto;
+}
+
+.thumbnails > .active{
+  width: 400px;
+  height: 400px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.thumbnails > .gutter-images {
+  position: relative;
+  left: 40px;
+}
+
+.thumbnails > .gutter-images > li {
+  width: 20%;
+  float: left;
+  display: block;
+}
