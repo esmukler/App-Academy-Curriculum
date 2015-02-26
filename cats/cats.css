@@ -4,11 +4,13 @@ figure.carousel {
   /*overflow: hidden;*/
   border: 5px solid #000;
   margin: 100px auto;
+  position: relative;
 }
 
 ul.items {
   width: 800px;
   height: 300px;
+  position: relative;
 }
 
 ul.items > li {
@@ -18,6 +20,16 @@ ul.items > li {
 
 ul.items > li.active {
   display: block;
+}
+
+ul.items > li.left {
+  position: absolute;
+  left: calc(-100%/4);
+}
+
+ul.items > li.right {
+  position: absolute;
+  left: calc(100%/4);
 }
 
 
