@@ -1,0 +1,11 @@
+a.active {
+  font-weight: bold;
+}
+
+pre.tab-pane {
+  display: none;
+}
+
+pre.tab-pane.active {
+  display: block;
+}
