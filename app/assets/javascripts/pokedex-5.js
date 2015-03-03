@@ -18,26 +18,23 @@ Pokedex.Views.PokemonIndex = Backbone.View.extend({
     this.collection.fetch( {
       success: function () {
         this.render();
-        if (callback) {
-          callback();
-        }
+        callback && callback();
+
       }.bind(this)
     });
   },
 
   render: function () {
     this.$el.empty();
-    this.collection.each(function(pokemon) {
-      this.addPokemonToList(pokemon);
-    }.bind(this));
+    this.collection.each(this.addPokemonToList.bind(this));
   },
+
 
   selectPokemonFromList: function (event) {
     var pokemonId = $(event.currentTarget).data('id');
 
-
-
-    Backbone.history.navigate("pokemon/" + pokemonId, { trigger: true });
+    Backbone.history.navigate("pokemon/" + pokemonId,
+      { trigger: true });
   }
 });
 
@@ -50,9 +47,8 @@ Pokedex.Views.PokemonDetail = Backbone.View.extend({
     this.model.fetch( {
       success: function () {
         this.render();
-        if (callback) {
-          callback();
-        }
+        callback && callback();
+
       }.bind(this)
     });
   },
@@ -74,18 +70,40 @@ Pokedex.Views.PokemonDetail = Backbone.View.extend({
     var toy = this.model.toys().get(toyId);
     var pokemonId = toy.get("pokemon_id");
 
-    Backbone.history.navigate("pokemon/" + pokemonId + "/toys/" + toyId, { trigger: true });
+    Backbone.history.navigate("pokemon/" + pokemonId + "/toys/" + toyId,
+      { trigger: true });
 
   }
 });
 
 Pokedex.Views.ToyDetail = Backbone.View.extend({
+
+  events: {
+    "change select" : "moveToy"
+  },
+
   render: function () {
-    var pokes = new Pokedex.Collections.Pokemon();
-    var content = JST["toyDetail"]({toy: this.model, pokes: pokes});
+    var content = JST["toyDetail"]({toy: this.model, pokes: this.collection});
     this.$el.html(content);
 
     return this;
+  },
+
+  moveToy: function(event) {
+    var oldPokemonId = $(event.currentTarget).data("pokemon-id");
+    var toyId = $(event.currentTarget).data("toy-id");
+    var newPokemonId = $(event.currentTarget).val();
+    var oldPokemon = this.collection.get(oldPokemonId);
+
+    this.model.save({pokemon_id: newPokemonId}, {
+      success: function() {
+        oldPokemon.toys().remove(this.model);
+        // Backbone.history.navigate("pokemon/" + newPokemonId, { trigger: true});
+        Backbone.history.navigate("pokemon/" + newPokemonId + "/toys/" + toyId,
+          { trigger: true });
+
+      }
+    });
   }
 });
 
