@@ -5,6 +5,8 @@ Pokedex.Views.PokemonForm = Backbone.View.extend({
   },
 
   render: function () {
+    var content = JST["pokemonForm"]();
+    this.$el.html(content);
   },
 
   savePokemon: function (event) {
