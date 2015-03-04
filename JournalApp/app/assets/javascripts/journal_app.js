@@ -4,13 +4,13 @@ window.JournalApp = {
   Views: {},
   Routers: {},
   initialize: function() {
-    
+
     var collection = new JournalApp.Collections.Posts();
-    var $postsSection = $("section.posts");
+    var $postsIndexSidebar = $("section.sidebar");
     collection.fetch({
       success: function(){
         router = new JournalApp.Routers.Posts({
-        $el: $postsSection,
+        $el: $postsIndexSidebar,
         collection: collection
         })
       }

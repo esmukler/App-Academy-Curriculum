@@ -5,6 +5,11 @@ class Api::PostsController < ApplicationController
     render json: @posts
   end
 
+  def new
+    @post = Post.new
+    render json: @post
+  end
+
   def create
     @post = Post.new(post_params)
 
@@ -32,7 +37,7 @@ class Api::PostsController < ApplicationController
       render json: @post
     else
       render json: @post.errors.full_messages, status: :unprocessable_entity
-    end    
+    end
   end
 
 

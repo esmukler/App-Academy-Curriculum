@@ -19,11 +19,14 @@ JournalApp.Views.PostForm = Backbone.View.extend({
   updatePost: function(event) {
     event.preventDefault();
     var formData = this.$el.serializeJSON();
-    console.log(formData.post);
+    var isNew = ( typeof this.model.id === "undefined" ) ? true : false;
     this.model.save(formData.post, {
       success: function(){
+        if (isNew){
+          this.collection.add(this.model, {merge: true});
+        }
         Backbone.history.navigate( "", {trigger: true});
-      },
+      }.bind(this),
       error: function(){
         Backbone.history.navigate(
           "#posts/" + this.model.id + "/edit", {trigger: true});
