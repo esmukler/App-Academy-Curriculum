@@ -5,8 +5,8 @@ window.JournalApp = {
   Routers: {},
   initialize: function() {
     alert('Hello Scott and Eli, from Backbone!');
-    var collection = new JournalApp.Collections.Posts();
-    var postsIndexView = new JournalApp.Views.PostsIndex({collection: collection});
+    JournalApp.collection = new JournalApp.Collections.Posts();
+    var postsIndexView = new JournalApp.Views.PostsIndex({collection: JournalApp.collection});
     var $section = $("section.posts");
     $section.append(postsIndexView.render().$el);
   }

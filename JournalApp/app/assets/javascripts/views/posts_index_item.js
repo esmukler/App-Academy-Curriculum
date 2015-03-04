@@ -12,13 +12,8 @@ JournalApp.Views.PostsIndexItem = Backbone.View.extend({
 
   render: function(){
     this.$el.empty();
-    this.model.fetch({
-      success: function() {
-        this.$el.append(this.template({
-          title: this.model.escape("title")
-        }));
-      }.bind(this)
-    });
+
+    this.$el.append(this.template({ title: this.model.escape("title")}));
     return this;
   },
 
