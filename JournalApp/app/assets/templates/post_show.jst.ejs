@@ -1,4 +1,10 @@
-<%= "Title: " + post.escape("title") %><br><br>
-<%= "Body: " + post.escape("body") %><br><br>
+<p class="post-title"><%= "Title: " + post.escape("title") %></p><br>
+
+<input class="hidden edit-title" type="text" name="post[title]" value="<%= post.escape("title") %>"><br>
+
+<p class="post-body"><%= "Body: " + post.escape("body") %></p><br>
+
+<textarea class="hidden edit-body" name="post[body]"><%= post.escape("body") %></textarea><br>
+
 <a href="#posts/<%= post.id %>/edit">Edit Post</a><br><br>
 <button class="delete">Delete Post</button>
