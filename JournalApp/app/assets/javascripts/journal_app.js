@@ -6,13 +6,14 @@ window.JournalApp = {
   initialize: function() {
 
     var collection = new JournalApp.Collections.Posts();
-    var $postsIndexSidebar = $("section.sidebar");
+    var $posts = $("section.posts");
     collection.fetch({
       success: function(){
         router = new JournalApp.Routers.Posts({
-        $el: $postsIndexSidebar,
+        $el: $posts,
         collection: collection
         })
+        
       }
     });
 

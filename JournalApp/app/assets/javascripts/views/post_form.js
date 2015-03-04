@@ -25,7 +25,7 @@ JournalApp.Views.PostForm = Backbone.View.extend({
         if (isNew){
           this.collection.add(this.model, {merge: true});
         }
-        Backbone.history.navigate( "", {trigger: true});
+        Backbone.history.navigate( "#/posts/" + this.model.id, {trigger: true});
       }.bind(this),
       error: function(){
         Backbone.history.navigate(
