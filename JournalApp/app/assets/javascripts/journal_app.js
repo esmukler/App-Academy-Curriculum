@@ -4,7 +4,7 @@ window.JournalApp = {
   Views: {},
   Routers: {},
   initialize: function() {
-    alert('Hello Scott and Eli, from Backbone!');
+    
     var collection = new JournalApp.Collections.Posts();
     var $postsSection = $("section.posts");
     collection.fetch({

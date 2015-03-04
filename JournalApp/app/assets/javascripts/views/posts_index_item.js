@@ -7,7 +7,7 @@ JournalApp.Views.PostsIndexItem = Backbone.View.extend({
 
   events: {
     "click button.delete": "deletePost",
-    "click a.index-link": "goToIndex"
+
   },
 
 
@@ -18,13 +18,6 @@ JournalApp.Views.PostsIndexItem = Backbone.View.extend({
     return this;
   },
 
-  goToIndex: function(){
-    // event.preventDefault();
-    Backbone.history.navigate(
-      "",
-      {trigger: true}
-    );
-  },
 
   deletePost: function(){
     this.model.destroy();
