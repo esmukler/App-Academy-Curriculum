@@ -6,7 +6,6 @@ JournalApp.Views.PostsIndex = Backbone.View.extend({
   tagName: "ul",
 
   initialize: function(){
-    this.collection.fetch();
     this.listenTo(this.collection, "sync remove", this.render);
   },
 
