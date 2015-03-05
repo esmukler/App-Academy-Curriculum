@@ -1,0 +1,8 @@
+<h2>Feeds</h2>
+
+
+<ul class="feed-list">
+<% feeds.models.forEach( function(feed) { %>
+  <li><a class="feed-link" href="#feeds/<%= feed.id %>"><%= feed.escape("title") %></a></li>
+<% }) %>
+</ul>
