@@ -19,6 +19,8 @@ NewsReader.Views.FeedShow = Backbone.View.extend({
     var $ul = this.$el.find('ul.entries-list');
 
     var entries = this.model.entries();
+    entries.comparator = "published_at";
+    entries.sort();
     if (entries.models.length > 0 ) {
       console.log("Entries", entries)
       entries.each(function(entry) {
