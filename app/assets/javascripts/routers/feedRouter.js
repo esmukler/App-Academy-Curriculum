@@ -27,4 +27,6 @@ NewsReader.Routers.FeedRouter = Backbone.Router.extend({
     this._currentView = view;
     this.$el.html(view.render().$el);
   }
+
+
 })

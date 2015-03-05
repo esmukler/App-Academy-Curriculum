@@ -3,6 +3,7 @@
 
 <ul class="feed-list">
 <% feeds.models.forEach( function(feed) { %>
-  <li><a class="feed-link" href="#feeds/<%= feed.id %>"><%= feed.escape("title") %></a></li>
+  <li><a class="feed-link" href="#feeds/<%= feed.id %>"><%= feed.escape("title") %></a><br>
+  <button class="destroy-feed" data-id="<%= feed.id %>">Delete this feed</button><br><br></li>
 <% }) %>
 </ul>

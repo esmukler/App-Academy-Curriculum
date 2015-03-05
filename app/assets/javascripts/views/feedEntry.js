@@ -1,7 +1,6 @@
 NewsReader.Views.FeedEntry = Backbone.View.extend({
   initialize: function(options) {
     this.model = options.model;
-    console.log("entry init");
 
     this.listenTo(this.model, "sync", this.render);
   },
@@ -13,6 +12,7 @@ NewsReader.Views.FeedEntry = Backbone.View.extend({
   tagName: "li",
 
   render: function() {
+    console.log("entry render")
     this.$el.html(this.template({entry: this.model}));
     return this;
   }

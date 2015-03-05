@@ -16,6 +16,16 @@ class Api::FeedsController < ApplicationController
     end
   end
 
+  def new
+    render :json => Feed.new
+  end
+
+  def destroy
+    @feed = Feed.find(params[:id])
+    @feed.destroy
+    render :json => @feed
+  end
+
   private
 
   def feed_params

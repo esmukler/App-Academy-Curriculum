@@ -3,6 +3,8 @@ NewsReader.Views.FeedShow = Backbone.View.extend({
     this.model = options.model;
 
     this.listenTo(this.model, "sync", this.render);
+
+    this.subViews = [];
   },
 
   template: JST['feed_show'],
@@ -26,7 +28,8 @@ NewsReader.Views.FeedShow = Backbone.View.extend({
       entries.each(function(entry) {
         var entryView = new NewsReader.Views.FeedEntry({ model: entry });
         $ul.prepend(entryView.render().$el);
-      });
+        this.subViews.push(entryView);
+      }.bind(this));
     }
 
     return this;
@@ -34,5 +37,13 @@ NewsReader.Views.FeedShow = Backbone.View.extend({
 
   reRender: function () {
     this.model.fetch()
+  },
+
+  remove: function () {
+    Backbone.View.prototype.remove.call(this);
+    _.each(this.subViews, function (subView) {
+      subView.remove();
+    })
+    this.subViews = [];
   }
 })
