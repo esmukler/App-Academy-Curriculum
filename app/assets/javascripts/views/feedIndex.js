@@ -12,7 +12,6 @@ NewsReader.Views.FeedIndex = Backbone.View.extend({
   className: 'feed-index',
 
   render: function() {
-    console.log("Inside view render", this.collection)
     this.$el.html(this.template({feeds: this.collection}));
     return this;
   }

@@ -1913,3 +1913,944 @@ Started GET "/api/feeds/" for 127.0.0.1 at 2015-03-05 11:00:43 -0500
 Processing by Api::FeedsController#index as JSON
   [1m[36mFeed Load (0.5ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
 Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-05 11:05:44 -0500
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 62ms (Views: 61.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:44 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:44 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-05 11:05:44 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:44 -0500
+
+
+Started GET "/assets/feed_index.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:44 -0500
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:44 -0500
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:44 -0500
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:44 -0500
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:44 -0500
+
+
+Started GET "/assets/views/feedIndex.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:44 -0500
+
+
+Started GET "/assets/routers/feedRouter.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:44 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:44 -0500
+
+
+Started GET "/api/feeds/" for 127.0.0.1 at 2015-03-05 11:05:44 -0500
+Processing by Api::FeedsController#index as JSON
+  [1m[35mFeed Load (5.7ms)[0m  SELECT "feeds".* FROM "feeds"
+Completed 200 OK in 13ms (Views: 6.4ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/api/feeds/" for 127.0.0.1 at 2015-03-05 11:05:44 -0500
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (0.8ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-05 11:05:47 -0500
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:48 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-05 11:05:48 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:48 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:48 -0500
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:48 -0500
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:48 -0500
+
+
+Started GET "/assets/views/feedIndex.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:48 -0500
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:48 -0500
+
+
+Started GET "/assets/feed_index.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:48 -0500
+
+
+Started GET "/assets/routers/feedRouter.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:48 -0500
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:48 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:48 -0500
+
+
+Started GET "/api/feeds/" for 127.0.0.1 at 2015-03-05 11:05:48 -0500
+Processing by Api::FeedsController#index as JSON
+  [1m[35mFeed Load (3.2ms)[0m  SELECT "feeds".* FROM "feeds"
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/api/feeds/" for 127.0.0.1 at 2015-03-05 11:05:48 -0500
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (1.7ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-05 11:05:58 -0500
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 50ms (Views: 49.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-05 11:05:58 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:59 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:59 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:59 -0500
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:59 -0500
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:59 -0500
+
+
+Started GET "/assets/feed_index.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:59 -0500
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:59 -0500
+
+
+Started GET "/assets/routers/feedRouter.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:59 -0500
+
+
+Started GET "/assets/views/feedIndex.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:59 -0500
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:59 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-05 11:05:59 -0500
+
+
+Started GET "/api/feeds/" for 127.0.0.1 at 2015-03-05 11:05:59 -0500
+Processing by Api::FeedsController#index as JSON
+  [1m[35mFeed Load (0.8ms)[0m  SELECT "feeds".* FROM "feeds"
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/feeds/" for 127.0.0.1 at 2015-03-05 11:05:59 -0500
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (0.7ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/feeds/1/entries" for 127.0.0.1 at 2015-03-05 11:22:58 -0500
+Processing by Api::EntriesController#index as HTML
+  Parameters: {"feed_id"=>"1"}
+  [1m[35mFeed Load (1.5ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mEntry Load (25.6ms)[0m  [1mSELECT "entries".* FROM "entries" WHERE "entries"."feed_id" = $1[0m  [["feed_id", 1]]
+Completed 200 OK in 145ms (Views: 20.8ms | ActiveRecord: 30.8ms)
+
+
+Started GET "/api/feeds/1" for 127.0.0.1 at 2015-03-05 11:23:04 -0500
+Processing by Api::FeedsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFeed Load (0.5ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mSQL (41.4ms)[0m  [1mUPDATE "feeds" SET "updated_at" = '2015-03-05 16:23:04.699799' WHERE "feeds"."id" = 1[0m
+  [1m[35m (0.6ms)[0m  SELECT "entries"."guid" FROM "entries"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 05 Mar 2015 16:23:05 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1425572580"], ["json", "{\"title\":\"Lorem ipsum 2015-03-05T16:23:00+00:00\",\"link\":\"http://example.com/test/1425572580\",\"description\":\"Deserunt veniam cupidatat culpa veniam excepteur sunt irure excepteur excepteur commodo.\",\"pubDate\":\"2015-03-05T11:23:00-05:00\",\"guid\":\"http://example.com/test/1425572580\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1425572580"], ["published_at", Thu, 05 Mar 2015 16:23:00 UTC +00:00], ["title", "Lorem ipsum 2015-03-05T16:23:00+00:00"], ["updated_at", Thu, 05 Mar 2015 16:23:05 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 05 Mar 2015 16:23:05 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1425572570"], ["json", "{\"title\":\"Lorem ipsum 2015-03-05T16:22:50+00:00\",\"link\":\"http://example.com/test/1425572570\",\"description\":\"Id id consectetur ipsum mollit aute dolor sit.\",\"pubDate\":\"2015-03-05T11:22:50-05:00\",\"guid\":\"http://example.com/test/1425572570\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1425572570"], ["published_at", Thu, 05 Mar 2015 16:22:50 UTC +00:00], ["title", "Lorem ipsum 2015-03-05T16:22:50+00:00"], ["updated_at", Thu, 05 Mar 2015 16:23:05 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 05 Mar 2015 16:23:05 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1425572560"], ["json", "{\"title\":\"Lorem ipsum 2015-03-05T16:22:40+00:00\",\"link\":\"http://example.com/test/1425572560\",\"description\":\"Incididunt reprehenderit occaecat nostrud adipisicing.\",\"pubDate\":\"2015-03-05T11:22:40-05:00\",\"guid\":\"http://example.com/test/1425572560\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1425572560"], ["published_at", Thu, 05 Mar 2015 16:22:40 UTC +00:00], ["title", "Lorem ipsum 2015-03-05T16:22:40+00:00"], ["updated_at", Thu, 05 Mar 2015 16:23:05 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 05 Mar 2015 16:23:05 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1425572550"], ["json", "{\"title\":\"Lorem ipsum 2015-03-05T16:22:30+00:00\",\"link\":\"http://example.com/test/1425572550\",\"description\":\"Anim mollit aliquip aute minim culpa magna quis laboris sint.\",\"pubDate\":\"2015-03-05T11:22:30-05:00\",\"guid\":\"http://example.com/test/1425572550\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1425572550"], ["published_at", Thu, 05 Mar 2015 16:22:30 UTC +00:00], ["title", "Lorem ipsum 2015-03-05T16:22:30+00:00"], ["updated_at", Thu, 05 Mar 2015 16:23:05 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 05 Mar 2015 16:23:05 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1425572540"], ["json", "{\"title\":\"Lorem ipsum 2015-03-05T16:22:20+00:00\",\"link\":\"http://example.com/test/1425572540\",\"description\":\"Eiusmod eiusmod nostrud ad deserunt sunt esse ut dolor.\",\"pubDate\":\"2015-03-05T11:22:20-05:00\",\"guid\":\"http://example.com/test/1425572540\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1425572540"], ["published_at", Thu, 05 Mar 2015 16:22:20 UTC +00:00], ["title", "Lorem ipsum 2015-03-05T16:22:20+00:00"], ["updated_at", Thu, 05 Mar 2015 16:23:05 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 05 Mar 2015 16:23:05 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1425572530"], ["json", "{\"title\":\"Lorem ipsum 2015-03-05T16:22:10+00:00\",\"link\":\"http://example.com/test/1425572530\",\"description\":\"Eu proident qui ex amet dolor.\",\"pubDate\":\"2015-03-05T11:22:10-05:00\",\"guid\":\"http://example.com/test/1425572530\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1425572530"], ["published_at", Thu, 05 Mar 2015 16:22:10 UTC +00:00], ["title", "Lorem ipsum 2015-03-05T16:22:10+00:00"], ["updated_at", Thu, 05 Mar 2015 16:23:05 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 05 Mar 2015 16:23:05 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1425572520"], ["json", "{\"title\":\"Lorem ipsum 2015-03-05T16:22:00+00:00\",\"link\":\"http://example.com/test/1425572520\",\"description\":\"Duis et sunt ea exercitation excepteur culpa et elit.\",\"pubDate\":\"2015-03-05T11:22:00-05:00\",\"guid\":\"http://example.com/test/1425572520\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1425572520"], ["published_at", Thu, 05 Mar 2015 16:22:00 UTC +00:00], ["title", "Lorem ipsum 2015-03-05T16:22:00+00:00"], ["updated_at", Thu, 05 Mar 2015 16:23:05 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 05 Mar 2015 16:23:05 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1425572510"], ["json", "{\"title\":\"Lorem ipsum 2015-03-05T16:21:50+00:00\",\"link\":\"http://example.com/test/1425572510\",\"description\":\"Et consectetur officia tempor nisi cupidatat sunt duis deserunt cillum sint nulla enim sint id.\",\"pubDate\":\"2015-03-05T11:21:50-05:00\",\"guid\":\"http://example.com/test/1425572510\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1425572510"], ["published_at", Thu, 05 Mar 2015 16:21:50 UTC +00:00], ["title", "Lorem ipsum 2015-03-05T16:21:50+00:00"], ["updated_at", Thu, 05 Mar 2015 16:23:05 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 05 Mar 2015 16:23:05 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1425572500"], ["json", "{\"title\":\"Lorem ipsum 2015-03-05T16:21:40+00:00\",\"link\":\"http://example.com/test/1425572500\",\"description\":\"Nostrud culpa aliquip pariatur dolore aute aliquip enim.\",\"pubDate\":\"2015-03-05T11:21:40-05:00\",\"guid\":\"http://example.com/test/1425572500\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1425572500"], ["published_at", Thu, 05 Mar 2015 16:21:40 UTC +00:00], ["title", "Lorem ipsum 2015-03-05T16:21:40+00:00"], ["updated_at", Thu, 05 Mar 2015 16:23:05 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 05 Mar 2015 16:23:05 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1425572490"], ["json", "{\"title\":\"Lorem ipsum 2015-03-05T16:21:30+00:00\",\"link\":\"http://example.com/test/1425572490\",\"description\":\"Commodo exercitation et ipsum ut velit.\",\"pubDate\":\"2015-03-05T11:21:30-05:00\",\"guid\":\"http://example.com/test/1425572490\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1425572490"], ["published_at", Thu, 05 Mar 2015 16:21:30 UTC +00:00], ["title", "Lorem ipsum 2015-03-05T16:21:30+00:00"], ["updated_at", Thu, 05 Mar 2015 16:23:05 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mEntry Load (1.0ms)[0m  [1mSELECT "entries".* FROM "entries" WHERE "entries"."feed_id" = $1[0m  [["feed_id", 1]]
+Completed 200 OK in 496ms (Views: 438.6ms | ActiveRecord: 56.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-05 11:30:58 -0500
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 152ms (Views: 151.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-05 11:30:58 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-05 11:30:58 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-05 11:30:58 -0500
+
+
+Started GET "/assets/models/entry.js?body=1" for 127.0.0.1 at 2015-03-05 11:30:58 -0500
+
+
+Started GET "/assets/collections/entries.js?body=1" for 127.0.0.1 at 2015-03-05 11:30:58 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2015-03-05 11:30:58 -0500
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2015-03-05 11:30:58 -0500
+
+
+Started GET "/assets/feed_index.js?body=1" for 127.0.0.1 at 2015-03-05 11:30:58 -0500
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2015-03-05 11:30:58 -0500
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2015-03-05 11:30:58 -0500
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2015-03-05 11:30:58 -0500
+
+
+Started GET "/assets/views/feedIndex.js?body=1" for 127.0.0.1 at 2015-03-05 11:30:58 -0500
+
+
+Started GET "/assets/routers/feedRouter.js?body=1" for 127.0.0.1 at 2015-03-05 11:30:58 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-05 11:30:58 -0500
+
+
+Started GET "/api/feeds/" for 127.0.0.1 at 2015-03-05 11:30:58 -0500
+Processing by Api::FeedsController#index as JSON
+  [1m[35mFeed Load (2.0ms)[0m  SELECT "feeds".* FROM "feeds"
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/feeds/" for 127.0.0.1 at 2015-03-05 11:30:58 -0500
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (3.3ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-05 11:35:37 -0500
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 71ms (Views: 70.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2015-03-05 11:35:37 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-05 11:35:37 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-05 11:35:37 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-05 11:35:37 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2015-03-05 11:35:37 -0500
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2015-03-05 11:35:37 -0500
+
+
+Started GET "/assets/feed_index.js?body=1" for 127.0.0.1 at 2015-03-05 11:35:37 -0500
+
+
+Started GET "/assets/models/entry.js?body=1" for 127.0.0.1 at 2015-03-05 11:35:37 -0500
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2015-03-05 11:35:37 -0500
+
+
+Started GET "/assets/collections/entries.js?body=1" for 127.0.0.1 at 2015-03-05 11:35:37 -0500
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2015-03-05 11:35:37 -0500
+
+
+Started GET "/assets/views/feedIndex.js?body=1" for 127.0.0.1 at 2015-03-05 11:35:37 -0500
+
+
+Started GET "/assets/routers/feedRouter.js?body=1" for 127.0.0.1 at 2015-03-05 11:35:37 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-05 11:35:37 -0500
+
+
+Started GET "/api/feeds/" for 127.0.0.1 at 2015-03-05 11:35:37 -0500
+Processing by Api::FeedsController#index as JSON
+  [1m[35mFeed Load (4.1ms)[0m  SELECT "feeds".* FROM "feeds"
+Completed 200 OK in 9ms (Views: 4.3ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/api/feeds/" for 127.0.0.1 at 2015-03-05 11:35:37 -0500
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (11.3ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Completed 200 OK in 16ms (Views: 4.0ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-05 11:36:52 -0500
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 74ms (Views: 73.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-05 11:36:52 -0500
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2015-03-05 11:36:52 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2015-03-05 11:36:52 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-05 11:36:52 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-05 11:36:52 -0500
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2015-03-05 11:36:52 -0500
+
+
+Started GET "/assets/feed_index.js?body=1" for 127.0.0.1 at 2015-03-05 11:36:52 -0500
+
+
+Started GET "/assets/models/entry.js?body=1" for 127.0.0.1 at 2015-03-05 11:36:52 -0500
+
+
+Started GET "/assets/collections/entries.js?body=1" for 127.0.0.1 at 2015-03-05 11:36:52 -0500
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2015-03-05 11:36:52 -0500
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2015-03-05 11:36:52 -0500
+
+
+Started GET "/assets/views/feedIndex.js?body=1" for 127.0.0.1 at 2015-03-05 11:36:52 -0500
+
+
+Started GET "/assets/routers/feedRouter.js?body=1" for 127.0.0.1 at 2015-03-05 11:36:52 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-05 11:36:52 -0500
+
+
+Started GET "/api/feeds/" for 127.0.0.1 at 2015-03-05 11:36:52 -0500
+Processing by Api::FeedsController#index as JSON
+  [1m[35mFeed Load (0.9ms)[0m  SELECT "feeds".* FROM "feeds"
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/feeds/" for 127.0.0.1 at 2015-03-05 11:36:52 -0500
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (2.2ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-05 11:38:01 -0500
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-05 11:38:01 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-05 11:38:01 -0500
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2015-03-05 11:38:01 -0500
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2015-03-05 11:38:01 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2015-03-05 11:38:01 -0500
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2015-03-05 11:38:01 -0500
+
+
+Started GET "/assets/feed_index.js?body=1" for 127.0.0.1 at 2015-03-05 11:38:01 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-05 11:38:01 -0500
+
+
+Started GET "/assets/models/entry.js?body=1" for 127.0.0.1 at 2015-03-05 11:38:02 -0500
+
+
+Started GET "/assets/collections/entries.js?body=1" for 127.0.0.1 at 2015-03-05 11:38:02 -0500
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2015-03-05 11:38:02 -0500
+
+
+Started GET "/assets/views/feedIndex.js?body=1" for 127.0.0.1 at 2015-03-05 11:38:02 -0500
+
+
+Started GET "/assets/routers/feedRouter.js?body=1" for 127.0.0.1 at 2015-03-05 11:38:02 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-05 11:38:02 -0500
+
+
+Started GET "/api/feeds/" for 127.0.0.1 at 2015-03-05 11:38:02 -0500
+Processing by Api::FeedsController#index as JSON
+  [1m[35mFeed Load (3.5ms)[0m  SELECT "feeds".* FROM "feeds"
+Completed 200 OK in 8ms (Views: 4.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/api/feeds/" for 127.0.0.1 at 2015-03-05 11:38:02 -0500
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (1.6ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-05 11:40:14 -0500
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 66ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-05 11:40:14 -0500
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2015-03-05 11:40:14 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2015-03-05 11:40:14 -0500
+
+
+Started GET "/assets/feed_index.js?body=1" for 127.0.0.1 at 2015-03-05 11:40:14 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-05 11:40:14 -0500
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2015-03-05 11:40:14 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-05 11:40:14 -0500
+
+
+Started GET "/assets/models/entry.js?body=1" for 127.0.0.1 at 2015-03-05 11:40:14 -0500
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2015-03-05 11:40:14 -0500
+
+
+Started GET "/assets/collections/entries.js?body=1" for 127.0.0.1 at 2015-03-05 11:40:14 -0500
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2015-03-05 11:40:14 -0500
+
+
+Started GET "/assets/views/feedIndex.js?body=1" for 127.0.0.1 at 2015-03-05 11:40:14 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-05 11:40:14 -0500
+
+
+Started GET "/assets/routers/feedRouter.js?body=1" for 127.0.0.1 at 2015-03-05 11:40:14 -0500
+
+
+Started GET "/api/feeds/" for 127.0.0.1 at 2015-03-05 11:40:14 -0500
+Processing by Api::FeedsController#index as JSON
+  [1m[35mFeed Load (2.3ms)[0m  SELECT "feeds".* FROM "feeds"
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/feeds/" for 127.0.0.1 at 2015-03-05 11:40:14 -0500
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (2.0ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/feeds/" for 127.0.0.1 at 2015-03-05 11:41:47 -0500
+Processing by Api::FeedsController#index as JSON
+  [1m[35mFeed Load (0.5ms)[0m  SELECT "feeds".* FROM "feeds"
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/feeds/2" for 127.0.0.1 at 2015-03-05 11:42:43 -0500
+Processing by Api::FeedsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mFeed Load (0.5ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mSQL (1.3ms)[0m  UPDATE "feeds" SET "updated_at" = '2015-03-05 16:42:43.341251' WHERE "feeds"."id" = 2
+  [1m[36m (0.9ms)[0m  [1mSELECT "entries"."guid" FROM "entries"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 05 Mar 2015 16:42:43 UTC +00:00], ["feed_id", 2], ["guid", "http://www.wired.com/?p=1747764"], ["json", "{\"title\":\"We Put 4 Home Weather Stations to the Test\",\"link\":\"http://feeds.wired.com/c/35185/f/661370/s/4413cc31/sc/36/l/0L0Swired0N0C20A150C0A30Cput0E40Ehome0Eweather0Estations0Etest0C/story01.htm\",\"description\":\"\\u0026lt;div class=\\\"rss_thumbnail\\\"\\u0026gt;\\u0026lt;img src=\\\"http://www.wired.com/wp-content/uploads/2015/03/AP41554550229-660x440.jpg\\\" alt=\\\"We Put 4 Home Weather Stations to the Test\\\" /\\u0026gt;\\u0026lt;/div\\u0026gt;\\u0026lt;p\\u0026gt;The home weather station isn't a new idea, but recent models have become considerably more feature-stuffed compared to what you might have seen even just a few years ago.\\u0026lt;/p\\u0026gt; \\u0026lt;p\\u0026gt;The post \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com/2015/03/put-4-home-weather-stations-test/\\\"\\u0026gt;We Put 4 Home Weather Stations to the Test\\u0026lt;/a\\u0026gt; appeared first on \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com\\\"\\u0026gt;WIRED\\u0026lt;/a\\u0026gt;.\\u0026lt;/p\\u0026gt;\\u0026lt;img width='1' height='1' src='http://feeds.wired.com/c/35185/f/661370/s/4413cc31/sc/36/mf.gif' border='0'/\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/222166878849/u/0/f/661370/c/35185/s/4413cc31/sc/36/rc/1/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/222166878849/u/0/f/661370/c/35185/s/4413cc31/sc/36/rc/1/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/222166878849/u/0/f/661370/c/35185/s/4413cc31/sc/36/rc/2/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/222166878849/u/0/f/661370/c/35185/s/4413cc31/sc/36/rc/2/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/222166878849/u/0/f/661370/c/35185/s/4413cc31/sc/36/rc/3/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/222166878849/u/0/f/661370/c/35185/s/4413cc31/sc/36/rc/3/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/222166878849/u/0/f/661370/c/35185/s/4413cc31/sc/36/a2.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/222166878849/u/0/f/661370/c/35185/s/4413cc31/sc/36/a2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi.feedsportal.com/r/222166878849/u/0/f/661370/c/35185/s/4413cc31/sc/36/a2t.img\\\" border=\\\"0\\\"/\\u0026gt;\",\"comments\":\"http://www.wired.com/2015/03/put-4-home-weather-stations-test/#comments\",\"pubDate\":\"2015-03-05T11:00:48-05:00\",\"category\":\"weather stations\",\"guid\":\"http://www.wired.com/?p=1747764\",\"dc_creator\":\"Christopher Null\"}"], ["link", "http://feeds.wired.com/c/35185/f/661370/s/4413cc31/sc/36/l/0L0Swired0N0C20A150C0A30Cput0E40Ehome0Eweather0Estations0Etest0C/story01.htm"], ["published_at", Thu, 05 Mar 2015 16:00:48 UTC +00:00], ["title", "We Put 4 Home Weather Stations to the Test"], ["updated_at", Thu, 05 Mar 2015 16:42:43 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 05 Mar 2015 16:42:43 UTC +00:00], ["feed_id", 2], ["guid", "http://www.wired.com/?p=1738483"], ["json", "{\"title\":\"A Rainbow-Colored Horse That Takes Aim at Homeland Security\",\"link\":\"http://feeds.wired.com/c/35185/f/661370/s/44131edf/sc/4/l/0L0Swired0N0C20A150C0A30Crainbow0Ecolored0Ehorse0Etakes0Eaim0Ehomeland0Esecurity0C/story01.htm\",\"description\":\"\\u0026lt;div class=\\\"rss_thumbnail\\\"\\u0026gt;\\u0026lt;img src=\\\"http://www.wired.com/wp-content/uploads/2015/02/PRISM_0029_Layer-6-660x495.jpg\\\" alt=\\\"A Rainbow-Colored Horse That Takes Aim at Homeland Security\\\" /\\u0026gt;\\u0026lt;/div\\u0026gt;\\u0026lt;p\\u0026gt;PRISM calls attention to the various anonymous, and largely unaccountable powers, that shape our lives.\\u0026lt;/p\\u0026gt; \\u0026lt;p\\u0026gt;The post \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com/2015/03/rainbow-colored-horse-takes-aim-homeland-security/\\\"\\u0026gt;A Rainbow-Colored Horse That Takes Aim at Homeland Security\\u0026lt;/a\\u0026gt; appeared first on \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com\\\"\\u0026gt;WIRED\\u0026lt;/a\\u0026gt;.\\u0026lt;/p\\u0026gt;\\u0026lt;img width='1' height='1' src='http://feeds.wired.com/c/35185/f/661370/s/44131edf/sc/4/mf.gif' border='0'/\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\",\"comments\":\"http://www.wired.com/2015/03/rainbow-colored-horse-takes-aim-homeland-security/#comments\",\"pubDate\":\"2015-03-05T07:00:50-05:00\",\"category\":\"gallery\",\"guid\":\"http://www.wired.com/?p=1738483\",\"dc_creator\":\"Joseph Flaherty\"}"], ["link", "http://feeds.wired.com/c/35185/f/661370/s/44131edf/sc/4/l/0L0Swired0N0C20A150C0A30Crainbow0Ecolored0Ehorse0Etakes0Eaim0Ehomeland0Esecurity0C/story01.htm"], ["published_at", Thu, 05 Mar 2015 12:00:50 UTC +00:00], ["title", "A Rainbow-Colored Horse That Takes Aim at Homeland Security"], ["updated_at", Thu, 05 Mar 2015 16:42:43 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 05 Mar 2015 16:42:43 UTC +00:00], ["feed_id", 2], ["guid", "http://www.wired.com/?p=1747324"], ["json", "{\"title\":\"Cape Watch: The Spider-Man Reboot Eyes a New Director\",\"link\":\"http://feeds.wired.com/c/35185/f/661370/s/44131eeb/sc/38/l/0L0Swired0N0C20A150C0A30Ccapewatch0Espider0Eman0Ereboot0C/story01.htm\",\"description\":\"\\u0026lt;div class=\\\"rss_thumbnail\\\"\\u0026gt;\\u0026lt;img src=\\\"http://www.wired.com/wp-content/uploads/2015/03/WIREDCape27-660x440.jpg\\\" alt=\\\"Cape Watch: The Spider-Man Reboot Eyes a New Director\\\" /\\u0026gt;\\u0026lt;/div\\u0026gt;\\u0026lt;p\\u0026gt;From Drew Goddard taking on the webslinger to yet another rumored reboot of \\u0026lt;em\\u0026gt;The Crow\\u0026lt;/em\\u0026gt;, we've rounded up the week's best superhero casting news.\\u0026lt;/p\\u0026gt; \\u0026lt;p\\u0026gt;The post \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com/2015/03/capewatch-spider-man-reboot/\\\"\\u0026gt;Cape Watch: The Spider-Man Reboot Eyes a New Director\\u0026lt;/a\\u0026gt; appeared first on \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com\\\"\\u0026gt;WIRED\\u0026lt;/a\\u0026gt;.\\u0026lt;/p\\u0026gt;\\u0026lt;img width='1' height='1' src='http://feeds.wired.com/c/35185/f/661370/s/44131eeb/sc/38/mf.gif' border='0'/\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\",\"comments\":\"http://www.wired.com/2015/03/capewatch-spider-man-reboot/#comments\",\"pubDate\":\"2015-03-05T07:00:48-05:00\",\"category\":\"Green Lantern\",\"guid\":\"http://www.wired.com/?p=1747324\",\"dc_creator\":\"Graeme McMillan\"}"], ["link", "http://feeds.wired.com/c/35185/f/661370/s/44131eeb/sc/38/l/0L0Swired0N0C20A150C0A30Ccapewatch0Espider0Eman0Ereboot0C/story01.htm"], ["published_at", Thu, 05 Mar 2015 12:00:48 UTC +00:00], ["title", "Cape Watch: The Spider-Man Reboot Eyes a New Director"], ["updated_at", Thu, 05 Mar 2015 16:42:43 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mEntry Load (1.9ms)[0m  [1mSELECT "entries".* FROM "entries" WHERE "entries"."feed_id" = $1[0m  [["feed_id", 2]]
+Completed 200 OK in 588ms (Views: 578.5ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/api/feeds/3" for 127.0.0.1 at 2015-03-05 11:42:43 -0500
+Processing by Api::FeedsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mFeed Load (2.6ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "feeds" SET "updated_at" = '2015-03-05 16:42:43.938708' WHERE "feeds"."id" = 3[0m
+  [1m[35m (0.6ms)[0m  SELECT "entries"."guid" FROM "entries"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 05 Mar 2015 16:42:44 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/blogs/thesalt/2015/03/05/390726886/were-not-taking-enough-lunch-breaks-why-thats-bad-for-business"], ["json", "{\"title\":\"We're Not Taking Enough Lunch Breaks. Why That's Bad For Business\",\"link\":\"http://www.npr.org/blogs/thesalt/2015/03/05/390726886/were-not-taking-enough-lunch-breaks-why-thats-bad-for-business?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"Research shows that only 1 in 5 five people take a break and leave their desks to eat. Most workers are simply eating at their desks. But creativity can take a big hit without a change of scenery.\",\"content_encoded\":\"\\u003Cp\\u003EResearch shows that only 1 in 5 five people take a break and leave their desks to eat. Most workers are simply eating at their desks. But creativity can take a big hit without a change of scenery.\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=390726886\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2015-03-05T10:47:00-05:00\",\"guid\":\"http://www.npr.org/blogs/thesalt/2015/03/05/390726886/were-not-taking-enough-lunch-breaks-why-thats-bad-for-business\",\"dc_creator\":\"Here \\u0026amp; Now\"}"], ["link", "http://www.npr.org/blogs/thesalt/2015/03/05/390726886/were-not-taking-enough-lunch-breaks-why-thats-bad-for-business?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Thu, 05 Mar 2015 15:47:00 UTC +00:00], ["title", "We're Not Taking Enough Lunch Breaks. Why That's Bad For Business"], ["updated_at", Thu, 05 Mar 2015 16:42:44 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 05 Mar 2015 16:42:44 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/blogs/thetwo-way/2015/03/05/390938778/second-day-proceedings-under-way-in-boston-marathon-trial"], ["json", "{\"title\":\"Second-Day Proceedings Under Way In Boston Marathon Trial\",\"link\":\"http://www.npr.org/blogs/thetwo-way/2015/03/05/390938778/second-day-proceedings-under-way-in-boston-marathon-trial?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"Jurors will hear more testimony in the trial of Dzhokar Tsarnaev, the accused bomber, a day after a dramatic admission of guilt and often-heartbreaking accounts from victims of the deadly 2013 attack.\",\"content_encoded\":\"\\u003Cp\\u003EJurors will hear more testimony in the trial of Dzhokar Tsarnaev, the accused bomber, a day after a dramatic admission of guilt and often-heartbreaking accounts from victims of the deadly 2013 attack.\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=390938778\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2015-03-05T10:32:00-05:00\",\"guid\":\"http://www.npr.org/blogs/thetwo-way/2015/03/05/390938778/second-day-proceedings-under-way-in-boston-marathon-trial\",\"dc_creator\":\"Krishnadev Calamur\"}"], ["link", "http://www.npr.org/blogs/thetwo-way/2015/03/05/390938778/second-day-proceedings-under-way-in-boston-marathon-trial?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Thu, 05 Mar 2015 15:32:00 UTC +00:00], ["title", "Second-Day Proceedings Under Way In Boston Marathon Trial"], ["updated_at", Thu, 05 Mar 2015 16:42:44 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 05 Mar 2015 16:42:44 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/blogs/thetwo-way/2015/03/05/390930498/winters-final-punch-forecasters-say-maybe"], ["json", "{\"title\":\"Winter's Final Punch? Forecasters Say Maybe\",\"link\":\"http://www.npr.org/blogs/thetwo-way/2015/03/05/390930498/winters-final-punch-forecasters-say-maybe?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"Up to 10 inches of snowfall is possible in some areas of the mid-Atlantic. A slippery \\\"wintry mix\\\" caused the closing of federal government offices.\",\"content_encoded\":\"\\u003Cp\\u003EUp to 10 inches of snowfall is possible in some areas of the mid-Atlantic. A slippery \\\"wintry mix\\\" caused the closing of federal government offices.\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=390930498\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2015-03-05T09:34:00-05:00\",\"guid\":\"http://www.npr.org/blogs/thetwo-way/2015/03/05/390930498/winters-final-punch-forecasters-say-maybe\",\"dc_creator\":\"Scott Neuman\"}"], ["link", "http://www.npr.org/blogs/thetwo-way/2015/03/05/390930498/winters-final-punch-forecasters-say-maybe?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Thu, 05 Mar 2015 14:34:00 UTC +00:00], ["title", "Winter's Final Punch? Forecasters Say Maybe"], ["updated_at", Thu, 05 Mar 2015 16:42:44 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mEntry Load (0.6ms)[0m  SELECT "entries".* FROM "entries" WHERE "entries"."feed_id" = $1  [["feed_id", 3]]
+Completed 200 OK in 228ms (Views: 218.6ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/api/feeds/5" for 127.0.0.1 at 2015-03-05 11:42:44 -0500
+Processing by Api::FeedsController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mFeed Load (0.6ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  [1m[35mSQL (0.8ms)[0m  UPDATE "feeds" SET "updated_at" = '2015-03-05 16:42:44.170109' WHERE "feeds"."id" = 5
+  [1m[36m (0.6ms)[0m  [1mSELECT "entries"."guid" FROM "entries"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (8.1ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 05 Mar 2015 16:42:44 UTC +00:00], ["feed_id", 5], ["guid", "http://www.nytimes.com/2015/03/05/nytnow/latest-news-clinton-emails-south-korea-attack-bloody-sunday.html"], ["json", "{\"title\":\"Latest News: Clinton Emails, South Korea Attack, ‘Bloody Sunday’\",\"link\":\"\\u003Ctitle\\u003ELatest News: Clinton Emails, South Korea Attack, ‘Bloody Sunday’\\u003C/title\\u003E\\u003Clink\\u003Ehttp://rss.nytimes.com/c/34625/f/640350/s/44108993/sc/7/l/0L0Snytimes0N0C20A150C0A30C0A50Cnytnow0Clatest0Enews0Eclinton0Eemails0Esouth0Ekorea0Eattack0Ebloody0Esunday0Bhtml0Dpartner0Frss0Gemc0Frss/story01.htm\",\"description\":\"Here’s what you need to know to start your day.\\u0026lt;img width='1' height='1' src='http://rss.nytimes.com/c/34625/f/640350/s/44108993/sc/7/mf.gif' border='0'/\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/222166846837/u/0/f/640350/c/34625/s/44108993/sc/7/rc/1/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/222166846837/u/0/f/640350/c/34625/s/44108993/sc/7/rc/1/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/222166846837/u/0/f/640350/c/34625/s/44108993/sc/7/rc/2/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/222166846837/u/0/f/640350/c/34625/s/44108993/sc/7/rc/2/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/222166846837/u/0/f/640350/c/34625/s/44108993/sc/7/rc/3/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/222166846837/u/0/f/640350/c/34625/s/44108993/sc/7/rc/3/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/222166846837/u/0/f/640350/c/34625/s/44108993/sc/7/a2.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/222166846837/u/0/f/640350/c/34625/s/44108993/sc/7/a2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi.feedsportal.com/r/222166846837/u/0/f/640350/c/34625/s/44108993/sc/7/a2t.img\\\" border=\\\"0\\\"/\\u0026gt;\",\"pubDate\":\"2015-03-05T09:50:49-05:00\",\"guid\":\"http://www.nytimes.com/2015/03/05/nytnow/latest-news-clinton-emails-south-korea-attack-bloody-sunday.html\",\"dc_creator\":\"By ADEEL HASSAN\",\"media_content_url\":\"http://graphics8.nytimes.com/images/2015/03/05/business/05nytnow-selma2/05nytnow-selma2-moth-v2.jpg\",\"media_content_height\":\"151\",\"media_content_width\":\"151\",\"media_credit\":\"Associated Press\"}"], ["link", "<title>Latest News: Clinton Emails, South Korea Attack, ‘Bloody Sunday’</title><link>http://rss.nytimes.com/c/34625/f/640350/s/44108993/sc/7/l/0L0Snytimes0N0C20A150C0A30C0A50Cnytnow0Clatest0Enews0Eclinton0Eemails0Esouth0Ekorea0Eattack0Ebloody0Esunday0Bhtml0Dpartner0Frss0Gemc0Frss/story01.htm"], ["published_at", Thu, 05 Mar 2015 14:50:49 UTC +00:00], ["title", "Latest News: Clinton Emails, South Korea Attack, ‘Bloody Sunday’"], ["updated_at", Thu, 05 Mar 2015 16:42:44 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 329ms
+
+PG::StringDataRightTruncation - ERROR:  value too long for type character varying(255)
+:
+  activerecord (4.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:786:in `exec_cache'
+  activerecord (4.0.2) lib/active_record/connection_adapters/postgresql/database_statements.rb:139:in `block in exec_query'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:435:in `block in log'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:430:in `log'
+  activerecord (4.0.2) lib/active_record/connection_adapters/postgresql/database_statements.rb:137:in `exec_query'
+  activerecord (4.0.2) lib/active_record/connection_adapters/postgresql/database_statements.rb:184:in `exec_insert'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:96:in `insert'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/query_cache.rb:14:in `insert'
+  activerecord (4.0.2) lib/active_record/relation.rb:76:in `insert'
+  activerecord (4.0.2) lib/active_record/persistence.rb:509:in `create_record'
+  activerecord (4.0.2) lib/active_record/attribute_methods/dirty.rb:78:in `create_record'
+  activerecord (4.0.2) lib/active_record/callbacks.rb:306:in `block in create_record'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__1456628783766756474__create__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  activerecord (4.0.2) lib/active_record/callbacks.rb:306:in `create_record'
+  activerecord (4.0.2) lib/active_record/timestamp.rb:57:in `create_record'
+  activerecord (4.0.2) lib/active_record/persistence.rb:477:in `create_or_update'
+  activerecord (4.0.2) lib/active_record/callbacks.rb:302:in `block in create_or_update'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:383:in `_run__1456628783766756474__save__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  activerecord (4.0.2) lib/active_record/callbacks.rb:302:in `create_or_update'
+  activerecord (4.0.2) lib/active_record/persistence.rb:128:in `save!'
+  activerecord (4.0.2) lib/active_record/validations.rb:57:in `save!'
+  activerecord (4.0.2) lib/active_record/attribute_methods/dirty.rb:41:in `save!'
+  activerecord (4.0.2) lib/active_record/transactions.rb:275:in `block in save!'
+  activerecord (4.0.2) lib/active_record/transactions.rb:326:in `block in with_transaction_returning_status'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:202:in `block in transaction'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:210:in `within_new_transaction'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:202:in `transaction'
+  activerecord (4.0.2) lib/active_record/transactions.rb:209:in `transaction'
+  activerecord (4.0.2) lib/active_record/transactions.rb:323:in `with_transaction_returning_status'
+  activerecord (4.0.2) lib/active_record/transactions.rb:275:in `save!'
+  activerecord (4.0.2) lib/active_record/validations.rb:41:in `create!'
+  app/models/entry.rb:7:in `create_from_json!'
+  app/models/feed.rb:38:in `block in reload'
+  app/models/feed.rb:36:in `reload'
+  app/models/feed.rb:25:in `latest_entries'
+  activemodel (4.0.2) lib/active_model/serialization.rb:157:in `block in serializable_add_includes'
+  activemodel (4.0.2) lib/active_model/serialization.rb:156:in `serializable_add_includes'
+  activemodel (4.0.2) lib/active_model/serialization.rb:112:in `serializable_hash'
+  activerecord (4.0.2) lib/active_record/serialization.rb:17:in `serializable_hash'
+  activemodel (4.0.2) lib/active_model/serializers/json.rb:99:in `as_json'
+  activesupport (4.0.2) lib/active_support/json/encoding.rb:50:in `block in encode'
+  activesupport (4.0.2) lib/active_support/json/encoding.rb:81:in `check_for_circular_references'
+  activesupport (4.0.2) lib/active_support/json/encoding.rb:49:in `encode'
+  activesupport (4.0.2) lib/active_support/json/encoding.rb:34:in `encode'
+  activesupport (4.0.2) lib/active_support/core_ext/object/to_json.rb:16:in `to_json'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:90:in `block in <module:Renderers>'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:33:in `block in _handle_render_options'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/set.rb:263:in `each'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:30:in `_handle_render_options'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  app/controllers/api/feeds_controller.rb:7:in `show'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:383:in `_run__1586474546172825412__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__570486809239627131__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/api/feeds/4" for 127.0.0.1 at 2015-03-05 11:42:44 -0500
+Processing by Api::FeedsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mFeed Load (0.6ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mSQL (0.8ms)[0m  UPDATE "feeds" SET "updated_at" = '2015-03-05 16:42:44.554004' WHERE "feeds"."id" = 4
+  [1m[36m (0.7ms)[0m  [1mSELECT "entries"."guid" FROM "entries"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 05 Mar 2015 16:42:45 UTC +00:00], ["feed_id", 4], ["guid", "http://qz.com/?p=356635"], ["json", "{\"title\":\"American workers are less productive and better compensated than we thought\",\"link\":\"http://qz.com/356635/american-workers-are-less-productive-and-better-compensated-than-we-thought/\",\"description\":\"The US Bureau of Labor Statistics revised its fourth-quarter figures for productivity—economic output divided by hours worked—indicating Americans weren\\u0026#8217;t as productive as they looked at first blush. In fact, the numbers were a letdown versus the initial estimates for the entire second half of 2014. But the news from the BLS today is better than it sounds. [\\u0026#8230;]\\u003Cimg alt=\\\"\\\" border=\\\"0\\\" src=\\\"http://pixel.wp.com/b.gif?host=qz.com\\u0026#038;blog=39587363\\u0026#038;post=356635\\u0026#038;subd=qzprod\\u0026#038;ref=\\u0026#038;feed=1\\\" width=\\\"1\\\" height=\\\"1\\\" /\\u003E\",\"content\":\"\",\"content_encoded\":\"\\u003Cimg width=\\\"640\\\" height=\\\"427\\\" src=\\\"https://qzprod.files.wordpress.com/2014/11/ap110727085778.jpg?w=640\\\" class=\\\"attachment-medium_10 wp-post-image\\\" alt=\\\"Not as productive as he looked.\\\" /\\u003E\\u003Cp\\u003EThe US Bureau of Labor Statistics revised its \\u003Ca href=\\\"http://www.bls.gov/news.release/prod2.nr0.htm\\\" target=\\\"_blank\\\"\\u003Efourth-quarter figures\\u003C/a\\u003E for productivity—economic output divided by hours worked—indicating Americans weren\\u0026#8217;t as productive as they looked at first blush. In fact, the numbers were a letdown versus the initial estimates for the entire second half of 2014.\\u003C/p\\u003E\\n\\u003Cfigure id=\\\"image-356659\\\" class=\\\"inline-image  aligncenter zoomable size-medium\\\"\\u003E\\u003Cdiv class=\\\"inline-image-tools\\\"\\u003E\\u003Ca href=\\\"#\\\" class=\\\"share-button\\\" data-image-id=\\\"356659\\\"\\u003EShare\\u003C/a\\u003E\\n\\t\\t\\t\\u003Cdiv class=\\\"share-icons desaturated\\\"\\u003E\\u003Ca href=\\\"https://twitter.com/intent/tweet?url=http%3A%2F%2Fqz.com%2F356635%2Famerican-workers-are-less-productive-and-better-compensated-than-we-thought%2Fi%2F356659%2F\\u0026text=American+workers+are+less+productive+and+better+compensated+than+we+thought\\u0026via=qz\\\" target=\\\"_blank\\\" class=\\\"icon-twitter\\\"\\u003E\\u003C/a\\u003E\\u003Ca href=\\\"https://www.facebook.com/sharer.php?u=http%3A%2F%2Fqz.com%2F356635%2Famerican-workers-are-less-productive-and-better-compensated-than-we-thought%2Fi%2F356659%2F\\\" target=\\\"_blank\\\" class=\\\"icon-facebook\\\"\\u003E\\u003C/a\\u003E\\u003C/div\\u003E\\u003Cspan class=\\\"help-text\\\"\\u003E\\u003Ci class=\\\"icon-zoom\\\"\\u003E\\u003C/i\\u003ETap image to zoom\\u003C/span\\u003E\\u003C/div\\u003E\\u003Cimg src=\\\"https://qzprod.files.wordpress.com/2015/03/us-quarterly-productivity-growth-annual-rate-2014-non-farm-business-previous-non-farm-business-revised-_chartbuilder.png?w=640\\\" data-retina=\\\"https://qzprod.files.wordpress.com/2015/03/us-quarterly-productivity-growth-annual-rate-2014-non-farm-business-previous-non-farm-business-revised-_chartbuilder.png?w=1024\\\" alt=\\\"\\\" title=\\\"\\\"/\\u003E\\u003C/figure\\u003E\\n\\u003Cp\\u003EBut the news from the BLS today is better than it sounds. Although output got revised down, compensation is rising faster than previously thought.\\u003C/p\\u003E\\n\\u003Cfigure id=\\\"image-356666\\\" class=\\\"inline-image  aligncenter zoomable size-medium\\\"\\u003E\\u003Cdiv class=\\\"inline-image-tools\\\"\\u003E\\u003Ca href=\\\"#\\\" class=\\\"share-button\\\" data-image-id=\\\"356666\\\"\\u003EShare\\u003C/a\\u003E\\n\\t\\t\\t\\u003Cdiv class=\\\"share-icons desaturated\\\"\\u003E\\u003Ca href=\\\"https://twitter.com/intent/tweet?url=http%3A%2F%2Fqz.com%2F356635%2Famerican-workers-are-less-productive-and-better-compensated-than-we-thought%2Fi%2F356666%2F\\u0026text=American+workers+are+less+productive+and+better+compensated+than+we+thought\\u0026via=qz\\\" target=\\\"_blank\\\" class=\\\"icon-twitter\\\"\\u003E\\u003C/a\\u003E\\u003Ca href=\\\"https://www.facebook.com/sharer.php?u=http%3A%2F%2Fqz.com%2F356635%2Famerican-workers-are-less-productive-and-better-compensated-than-we-thought%2Fi%2F356666%2F\\\" target=\\\"_blank\\\" class=\\\"icon-facebook\\\"\\u003E\\u003C/a\\u003E\\u003C/div\\u003E\\u003Cspan class=\\\"help-text\\\"\\u003E\\u003Ci class=\\\"icon-zoom\\\"\\u003E\\u003C/i\\u003ETap image to zoom\\u003C/span\\u003E\\u003C/div\\u003E\\u003Cimg src=\\\"https://qzprod.files.wordpress.com/2015/03/us-real-hourly-compensation-growth-annual-rate-2014-non-farm-business-previous-non-farm-business-revised-_chartbuilder.png?w=640\\\" data-retina=\\\"https://qzprod.files.wordpress.com/2015/03/us-real-hourly-compensation-growth-annual-rate-2014-non-farm-business-previous-non-farm-business-revised-_chartbuilder.png?w=1024\\\" alt=\\\"\\\" title=\\\"\\\"/\\u003E\\u003C/figure\\u003E\\n\\u003Cp\\u003EAnd since \\u003Ca href=\\\"http://money.cnn.com/2015/02/24/news/economy/janet-yellen-congress-rate-hike/\\\" target=\\\"_blank\\\"\\u003Esluggish wages have been such a sticking point\\u003C/a\\u003E for Federal Reserve chair Janet Yellen, this arguably is another sign that the recovery is finally getting felt in more distant corners of the economy.\\u003C/p\\u003E\\u003Cimg alt=\\\"\\\" border=\\\"0\\\" src=\\\"http://pixel.wp.com/b.gif?host=qz.com\\u0026#038;blog=39587363\\u0026#038;post=356635\\u0026#038;subd=qzprod\\u0026#038;ref=\\u0026#038;feed=1\\\" width=\\\"1\\\" height=\\\"1\\\" /\\u003E\",\"comments\":\"http://qz.com/356635/american-workers-are-less-productive-and-better-compensated-than-we-thought/#comments\",\"pubDate\":\"2015-03-05T11:31:39-05:00\",\"category\":\"Uncategorized\",\"guid\":\"http://qz.com/?p=356635\",\"dc_creator\":\"Melvin Backman\",\"media_content_url\":\"https://qzprod.files.wordpress.com/2014/11/ap110727085778.jpg?w=640\",\"media_content_type\":\"html\",\"media_title\":\"Economy\",\"media_thumbnail_url\":\"https://qzprod.files.wordpress.com/2014/11/ap110727085778.jpg?w=640\"}"], ["link", "http://qz.com/356635/american-workers-are-less-productive-and-better-compensated-than-we-thought/"], ["published_at", Thu, 05 Mar 2015 16:31:39 UTC +00:00], ["title", "American workers are less productive and better compensated than we thought"], ["updated_at", Thu, 05 Mar 2015 16:42:45 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 05 Mar 2015 16:42:45 UTC +00:00], ["feed_id", 4], ["guid", "http://qz.com/?p=356623"], ["json", "{\"title\":\"Circus elephants will no longer sadden audiences at Ringling Bros. shows\",\"link\":\"http://qz.com/356623/circus-elephants-will-no-longer-sadden-audiences-at-ringling-bros-shows/\",\"description\":\"The \\u0026#8220;Greatest Show on Earth\\u0026#8221; will no longer include elephants. The iconic American institution Ringling Bros. and Barnum \\u0026#38; Bailey Circus has said it will eliminate its famous elephant act by 2018. The decision comes amid public concern about animal mistreatment, the Associated Press reported, but Ringling will continue to use other animals. Elephants have been part of [\\u0026#8230;]\\u003Cimg alt=\\\"\\\" border=\\\"0\\\" src=\\\"http://pixel.wp.com/b.gif?host=qz.com\\u0026#038;blog=39587363\\u0026#038;post=356623\\u0026#038;subd=qzprod\\u0026#038;ref=\\u0026#038;feed=1\\\" width=\\\"1\\\" height=\\\"1\\\" /\\u003E\",\"content\":\"\",\"content_encoded\":\"\\u003Cimg width=\\\"640\\\" height=\\\"439\\\" src=\\\"https://qzprod.files.wordpress.com/2015/03/ap876981281401.jpg?w=640\\\" class=\\\"attachment-medium_10 wp-post-image\\\" alt=\\\"A relic of the past.\\\" /\\u003E\\u003Cp\\u003EThe \\u0026#8220;Greatest Show on Earth\\u0026#8221; will no longer include elephants. The iconic American institution Ringling Bros. and Barnum \\u0026amp; Bailey Circus has said it will eliminate its famous elephant act by 2018. The decision comes amid public concern about animal mistreatment, the \\u003Ca href=\\\"http://www.chicagotribune.com/news/nationworld/chi-ringling-bros-circus-elephants-20150305-story.html\\\" target=\\\"_blank\\\"\\u003EAssociated Press reported\\u003C/a\\u003E, but Ringling will continue to \\u003Ca href=\\\"https://www.ringling.com/SectionLandingPage.aspx?id=45696\\\" target=\\\"_blank\\\"\\u003Euse other animals\\u003C/a\\u003E.\\u003C/p\\u003E\\n\\u003Cp\\u003EElephants have been part of Ringling circus acts for more than a century, but as audiences grew uncomfortable with performances of captive animals and local authorities across the country have passed regulations restricting them, Ringling\\u0026#8217;s parent company Feld Entertainment decided to phase out the 13 elephants it uses in the circus ring.\\u003C/p\\u003E\\n\\u003Cp\\u003E“As the circus evolves, we can maintain our focus on elephant conservation while allowing our business to continue to meet shifting consumer preferences,” the company \\u003Ca href=\\\"http://www.feldentertainment.com/PressRoom/DisplayPressRelease/75870/\\\" target=\\\"_blank\\\"\\u003Esaid in a press release\\u003C/a\\u003E.\\u003C/p\\u003E\\n\\u003Cp\\u003EThe elephants will now live at the company\\u0026#8217;s Center for Elephant Conservation in Florida, and will join the 29 animals already there. Feld has the largest herd of Asian elephants on the continent, and it has said it is committed to preserving the species.\\u003C/p\\u003E\\n\\u003Cp\\u003EThe circus has been in hot water over its treatment of the animals many times over the years. Mother Jones conducted a \\u003Ca href=\\\"http://www.motherjones.com/environment/2011/10/ringling-bros-elephant-abuse\\\" target=\\\"_blank\\\"\\u003Eheart-breaking year-long investigation\\u003C/a\\u003E detailing abuses at the circus in 2011. It showed that:\\u003C/p\\u003E\\n\\u003Cblockquote\\u003E\\u003Cp\\u003E\\u0026#8220;Ringling elephants spend most of their long lives either in chains or on trains, under constant threat of the bullhook, or ankus—the menacing tool used to control elephants. They are lame from balancing their 8,000-pound frames on tiny tubs and from being confined in cramped spaces, sometimes for days at a time. They are afflicted with tuberculosis and herpes, potentially deadly diseases rare in the wild and linked to captivity.\\u0026#8221;\\u003C/p\\u003E\\u003C/blockquote\\u003E\\n\\u003Cp\\u003EIn 2014, however, \\u003Ca href=\\\"http://blogs.wsj.com/law/2014/05/15/animal-rights-groups-pay-circus-producer-millions-to-settle-suit/\\\" target=\\\"_blank\\\"\\u003Ethe company won a combined $25 million\\u003C/a\\u003E in settlements from several animal-rights groups after 14 years of fighting over allegations of mistreatment in the courtroom. It turned out the activists had paid a former circus employee $200,000 to make the allegations of elephant abuse.\\u003C/p\\u003E\\n\\u003Cp\\u003EElephant acts are a mainstay of the traditional circus, mythologized in movies such as the 1941 Disney film \\u003Cem\\u003EDumbo\\u003C/em\\u003E, or the 2011 move, based on a bestselling novel, \\u003Cem\\u003EWater for Elephants\\u003C/em\\u003E. But a number of countries have banned animal performances, \\u003Ca href=\\\"http://www.aljazeera.com/indepth/features/2014/12/new-age-circuses-after-mexico-bans-animals-2014121220181127326.html\\\" target=\\\"_blank\\\"\\u003Eincluding Mexico\\u003C/a\\u003E, and \\u003Ca href=\\\"http://www.nytimes.com/2012/12/26/us/circus-elephant-ban-considered-in-los-angeles.html?_r=0\\\" target=\\\"_blank\\\"\\u003Esome American cities\\u003C/a\\u003E have outlawed elephant acts specifically. This week, Britain\\u0026#8217;s Prince William got himself into trouble when he visited an elephant sanctuary in China: The \\u003Ca href=\\\"http://news.sky.com/story/1438224/embarrassment-for-prince-at-elephant-sanctuary\\\" target=\\\"_blank\\\"\\u003EBritish media was quick to point out\\u003C/a\\u003E that the facility forces elephants to perform for tourists.\\u003C/p\\u003E\\n\\u003Cp\\u003ECircuses have successfully performed without animal acts, most notably the Canadian troupe \\u003Ca href=\\\"https://www.youtube.com/watch?v=Aebpod2MPug\\\" target=\\\"_blank\\\"\\u003ECirque de Soleil\\u003C/a\\u003E (video). Perhaps human performances are the way forward for the American circus.\\u003C/p\\u003E\\u003Cimg alt=\\\"\\\" border=\\\"0\\\" src=\\\"http://pixel.wp.com/b.gif?host=qz.com\\u0026#038;blog=39587363\\u0026#038;post=356623\\u0026#038;subd=qzprod\\u0026#038;ref=\\u0026#038;feed=1\\\" width=\\\"1\\\" height=\\\"1\\\" /\\u003E\",\"comments\":\"http://qz.com/356623/circus-elephants-will-no-longer-sadden-audiences-at-ringling-bros-shows/#comments\",\"pubDate\":\"2015-03-05T11:27:14-05:00\",\"category\":\"Uncategorized\",\"guid\":\"http://qz.com/?p=356623\",\"dc_creator\":\"Hanna Kozlowska\",\"media_content_url\":\"https://qzprod.files.wordpress.com/2015/03/ap876981281401.jpg?w=640\",\"media_content_type\":\"html\",\"media_title\":\"AP876981281401\",\"media_thumbnail_url\":\"https://qzprod.files.wordpress.com/2015/03/ap876981281401.jpg?w=640\"}"], ["link", "http://qz.com/356623/circus-elephants-will-no-longer-sadden-audiences-at-ringling-bros-shows/"], ["published_at", Thu, 05 Mar 2015 16:27:14 UTC +00:00], ["title", "Circus elephants will no longer sadden audiences at Ringling Bros. shows"], ["updated_at", Thu, 05 Mar 2015 16:42:45 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 05 Mar 2015 16:42:45 UTC +00:00], ["feed_id", 4], ["guid", "http://qz.com/?p=354402"], ["json", "{\"title\":\"Attractive stairwells designed to inspire Americans to actually use them\",\"link\":\"http://qz.com/354402/enticing-stairways-will-make-americans-less-fat/\",\"description\":\"In a country where more than a third of adults are obese, how do you get Americans to move more? The answer may lie in designing more appealing staircases, according to the Center for Active Design. The New York-based non-profit is working with the Michelle Obama-backed coalition Partnership for a Healthier America (PHA) to provide design strategies for real estate developers [\\u0026#8230;]\\u003Cimg alt=\\\"\\\" border=\\\"0\\\" src=\\\"http://pixel.wp.com/b.gif?host=qz.com\\u0026#038;blog=39587363\\u0026#038;post=354402\\u0026#038;subd=qzprod\\u0026#038;ref=\\u0026#038;feed=1\\\" width=\\\"1\\\" height=\\\"1\\\" /\\u003E\",\"content\":\"\",\"content_encoded\":\"\\u003Cimg width=\\\"640\\\" height=\\\"360\\\" src=\\\"https://qzprod.files.wordpress.com/2015/03/lead_buckingham-county-schools_credit-tom-daly.jpg?w=640\\\" class=\\\"attachment-medium_10 wp-post-image\\\" alt=\\\"This is what we want to see more of.\\\" /\\u003E\\u003Cp\\u003EIn a country where \\u003Ca href=\\\"http://www.cdc.gov/obesity/data/adult.html\\\" target=\\\"_blank\\\"\\u003Emore than a third\\u003C/a\\u003E of adults are obese, how do you get Americans to move more? The answer may lie in designing more appealing staircases, according to the \\u003Ca href=\\\"http://centerforactivedesign.org/\\\"\\u003ECenter for Active Design\\u003C/a\\u003E.\\u003C/p\\u003E\\n\\u003Cp\\u003EThe New York-based non-profit is working with the Michelle Obama-backed coalition \\u003Ca href=\\\"http://ahealthieramerica.org/\\\"\\u003EPartnership for a Healthier America\\u003C/a\\u003E (PHA) to provide design strategies for real estate developers so that that affordable housing is built to encourage an active, healthy lifestyle for residents.\\u003C/p\\u003E\\n\\u003Cp\\u003EOn average, American adults gain about a pound a year, but \\u003Ca href=\\\"http://www.ajpmonline.org/article/S0749-3797%2804%2900305-8/pdf\\\" target=\\\"_blank\\\"\\u003Esome research\\u003C/a\\u003E (PDF) has suggested that just two additional minutes of stair-climbing a day could prevent that gain. The US Centers for Disease Control, which \\u003Ca href=\\\"http://www.cdc.gov/physicalactivity/everyone/guidelines/adults.html\\\"\\u003Erecommends\\u003C/a\\u003E a minimum of 2.5 hours of moderate physical activity for adults every week, also pushes for stairway use in its workplace health initiative \\u0026#8220;\\u003Ca href=\\\"http://www.cdc.gov/nccdphp/dnpao/hwi/toolkits/stairwell/\\\"\\u003EStairWELL to Better Health\\u003C/a\\u003E.\\u0026#8221;\\u003C/p\\u003E\\n\\u003Cp\\u003EDesign can play an important role in encouraging this, especially in subsidized housing developments where many avoid stairwells that are dirty, dark, and sometimes unsafe. Five out of the 10 \\u003Ca href=\\\"///Users/annequito/Downloads/Building%20Design%20Checklist.pdf\\\" target=\\\"_blank\\\"\\u003Ebuilding design strategies\\u003C/a\\u003E the Center for Active Design recommends deal with creating \\u0026#8220;enticing stairways\\u0026#8221; that motivate residents to take the stairs, instead of elevators. Active design guidelines also recommend making elevators less appealing by slowing travel speed, making them less conspicuous, and limiting their number, size, and capacity.\\u003C/p\\u003E\\n\\u003Cfigure id=\\\"image-355470\\\" class=\\\"inline-image  alignleft zoomable size-small\\\"\\u003E\\u003Cdiv class=\\\"inline-image-tools\\\"\\u003E\\u003Ca href=\\\"#\\\" class=\\\"share-button\\\" data-image-id=\\\"355470\\\"\\u003EShare\\u003C/a\\u003E\\n\\t\\t\\t\\u003Cdiv class=\\\"share-icons desaturated\\\"\\u003E\\u003Ca href=\\\"https://twitter.com/intent/tweet?url=http%3A%2F%2Fqz.com%2F354402%2Fenticing-stairways-will-make-americans-less-fat%2Fi%2F355470%2F\\u0026text=Attractive+stairwells+designed+to+inspire+Americans+to+actually+use+them\\u0026via=qz\\\" target=\\\"_blank\\\" class=\\\"icon-twitter\\\"\\u003E\\u003C/a\\u003E\\u003Ca href=\\\"https://www.facebook.com/sharer.php?u=http%3A%2F%2Fqz.com%2F354402%2Fenticing-stairways-will-make-americans-less-fat%2Fi%2F355470%2F\\\" target=\\\"_blank\\\" class=\\\"icon-facebook\\\"\\u003E\\u003C/a\\u003E\\u003C/div\\u003E\\u003Cspan class=\\\"help-text\\\"\\u003E\\u003Ci class=\\\"icon-zoom\\\"\\u003E\\u003C/i\\u003ETap image to zoom\\u003C/span\\u003E\\u003C/div\\u003E\\u003Cimg src=\\\"https://qzprod.files.wordpress.com/2015/03/18991_10.jpg?w=1024\\\" data-retina=\\\"https://qzprod.files.wordpress.com/2015/03/18991_10.jpg?w=1024\\\" alt=\\\"\\\" title=\\\"Certainly more appealing than a dark stairwell.\\\"/\\u003E\\u003Cfigcaption class=\\\"inline-image-caption\\\"\\u003ECertainly more appealing than a dark stairwell.\\u003Cspan class=\\\"inline-image-credit\\\"\\u003E(Vitus Group)\\u003C/span\\u003E\\u003C/figcaption\\u003E\\u003C/figure\\u003E\\n\\u003Cp\\u003E\\u0026#8220;With active design we want to entice people to be physically active but we want to make it in a way that\\u0026#8217;s desirable,\\u0026#8221; explains the center\\u0026#8217;s executive director, Joanna Frank. \\u0026#8220;Humans are stimulated by trees, shade, dappled light, scale of the sidewalks, and perceived safety. Understanding all this adds a layer of information for designers and planners.\\u0026#8221;\\u003C/p\\u003E\\n\\u003Cp\\u003EUsing New York City as its laboratory, Frank highlighted buildings with particularly remarkable stairwells that have earned the Center\\u0026#8217;s \\u003Ca href=\\\"http://awards.centerforactivedesign.org/\\\"\\u003Eexcellence awards\\u003C/a\\u003E:\\u003C/p\\u003E\\n\\u003Ch2\\u003EThe stairwells at Arbor House, a low-income rental property in the Bronx, have artwork and piped-in music\\u003C/h2\\u003E\\n\\u003Cfigure id=\\\"image-355794\\\" class=\\\"inline-image  alignnone zoomable size-medium\\\"\\u003E\\u003Cdiv class=\\\"inline-image-tools\\\"\\u003E\\u003Ca href=\\\"#\\\" class=\\\"share-button\\\" data-image-id=\\\"355794\\\"\\u003EShare\\u003C/a\\u003E\\n\\t\\t\\t\\u003Cdiv class=\\\"share-icons desaturated\\\"\\u003E\\u003Ca href=\\\"https://twitter.com/intent/tweet?url=http%3A%2F%2Fqz.com%2F354402%2Fenticing-stairways-will-make-americans-less-fat%2Fi%2F355794%2F\\u0026text=Attractive+stairwells+designed+to+inspire+Americans+to+actually+use+them\\u0026via=qz\\\" target=\\\"_blank\\\" class=\\\"icon-twitter\\\"\\u003E\\u003C/a\\u003E\\u003Ca href=\\\"https://www.facebook.com/sharer.php?u=http%3A%2F%2Fqz.com%2F354402%2Fenticing-stairways-will-make-americans-less-fat%2Fi%2F355794%2F\\\" target=\\\"_blank\\\" class=\\\"icon-facebook\\\"\\u003E\\u003C/a\\u003E\\u003C/div\\u003E\\u003Cspan class=\\\"help-text\\\"\\u003E\\u003Ci class=\\\"icon-zoom\\\"\\u003E\\u003C/i\\u003ETap image to zoom\\u003C/span\\u003E\\u003C/div\\u003E\\u003Cimg src=\\\"https://qzprod.files.wordpress.com/2015/03/arbor-house_credit-center-for-active-design-copy.jpg?w=640\\\" data-retina=\\\"https://qzprod.files.wordpress.com/2015/03/arbor-house_credit-center-for-active-design-copy.jpg?w=1024\\\" alt=\\\"\\\" title=\\\"Musical stairs\\\"/\\u003E\\u003Cfigcaption class=\\\"inline-image-caption\\\"\\u003EMusical stairs\\u003Cspan class=\\\"inline-image-credit\\\"\\u003E(Center for Active Design)\\u003C/span\\u003E\\u003C/figcaption\\u003E\\u003C/figure\\u003E\\n\\u003Ch2\\u003EThe windows surrounding the stairwell at New Settlement Community Campus in the South Bronx offer light and views\\u003C/h2\\u003E\\n\\u003Cfigure id=\\\"image-355471\\\" class=\\\"inline-image  alignnone zoomable size-medium\\\"\\u003E\\u003Cdiv class=\\\"inline-image-tools\\\"\\u003E\\u003Ca href=\\\"#\\\" class=\\\"share-button\\\" data-image-id=\\\"355471\\\"\\u003EShare\\u003C/a\\u003E\\n\\t\\t\\t\\u003Cdiv class=\\\"share-icons desaturated\\\"\\u003E\\u003Ca href=\\\"https://twitter.com/intent/tweet?url=http%3A%2F%2Fqz.com%2F354402%2Fenticing-stairways-will-make-americans-less-fat%2Fi%2F355471%2F\\u0026text=Attractive+stairwells+designed+to+inspire+Americans+to+actually+use+them\\u0026via=qz\\\" target=\\\"_blank\\\" class=\\\"icon-twitter\\\"\\u003E\\u003C/a\\u003E\\u003Ca href=\\\"https://www.facebook.com/sharer.php?u=http%3A%2F%2Fqz.com%2F354402%2Fenticing-stairways-will-make-americans-less-fat%2Fi%2F355471%2F\\\" target=\\\"_blank\\\" class=\\\"icon-facebook\\\"\\u003E\\u003C/a\\u003E\\u003C/div\\u003E\\u003Cspan class=\\\"help-text\\\"\\u003E\\u003Ci class=\\\"icon-zoom\\\"\\u003E\\u003C/i\\u003ETap image to zoom\\u003C/span\\u003E\\u003C/div\\u003E\\u003Cimg src=\\\"https://qzprod.files.wordpress.com/2015/03/new-settlement-community-campus_credit-esto-photography.jpg?w=640\\\" data-retina=\\\"https://qzprod.files.wordpress.com/2015/03/new-settlement-community-campus_credit-esto-photography.jpg?w=1024\\\" alt=\\\"\\\" title=\\\"Natural light\\\"/\\u003E\\u003Cfigcaption class=\\\"inline-image-caption\\\"\\u003ENatural light\\u003Cspan class=\\\"inline-image-credit\\\"\\u003E(Esto Photography)\\u003C/span\\u003E\\u003C/figcaption\\u003E\\u003C/figure\\u003E\\n\\u003Ch2\\u003EHistorical images line the walls of the stairwells in the Sephardic Community Center in Brooklyn\\u003C/h2\\u003E\\n\\u003Cfigure id=\\\"image-355788\\\" class=\\\"inline-image  alignnone zoomable size-medium\\\"\\u003E\\u003Cdiv class=\\\"inline-image-tools\\\"\\u003E\\u003Ca href=\\\"#\\\" class=\\\"share-button\\\" data-image-id=\\\"355788\\\"\\u003EShare\\u003C/a\\u003E\\n\\t\\t\\t\\u003Cdiv class=\\\"share-icons desaturated\\\"\\u003E\\u003Ca href=\\\"https://twitter.com/intent/tweet?url=http%3A%2F%2Fqz.com%2F354402%2Fenticing-stairways-will-make-americans-less-fat%2Fi%2F355788%2F\\u0026text=Attractive+stairwells+designed+to+inspire+Americans+to+actually+use+them\\u0026via=qz\\\" target=\\\"_blank\\\" class=\\\"icon-twitter\\\"\\u003E\\u003C/a\\u003E\\u003Ca href=\\\"https://www.facebook.com/sharer.php?u=http%3A%2F%2Fqz.com%2F354402%2Fenticing-stairways-will-make-americans-less-fat%2Fi%2F355788%2F\\\" target=\\\"_blank\\\" class=\\\"icon-facebook\\\"\\u003E\\u003C/a\\u003E\\u003C/div\\u003E\\u003Cspan class=\\\"help-text\\\"\\u003E\\u003Ci class=\\\"icon-zoom\\\"\\u003E\\u003C/i\\u003ETap image to zoom\\u003C/span\\u003E\\u003C/div\\u003E\\u003Cimg src=\\\"https://qzprod.files.wordpress.com/2015/03/heritagehall-creditjeffreytotaro-1.jpg?w=640\\\" data-retina=\\\"https://qzprod.files.wordpress.com/2015/03/heritagehall-creditjeffreytotaro-1.jpg?w=1000\\\" alt=\\\"\\\" title=\\\"Art gallery\\\"/\\u003E\\u003Cfigcaption class=\\\"inline-image-caption\\\"\\u003EArt gallery\\u003Cspan class=\\\"inline-image-credit\\\"\\u003E(Jeffrey Totaro)\\u003C/span\\u003E\\u003C/figcaption\\u003E\\u003C/figure\\u003E\\n\\u003Cp\\u003ESo far, three national affordable housing developers are working with PHA in the battle against obesity. Blue Sea Development Company, Urban Ventures and Vitus Group, have pledged to prioritize active design strategies in at least 80% of their building projects over the next three years. That means creating gyms, bike storage, community gardens, walkways and health programs in their properties, while keeping to the budget constraints of operating low-cost housing units.\\u003C/p\\u003E\\n\\u003Cp\\u003E“The reality is that we\\u0026#8217;re renovating old properties and don’t have the luxury of building from scratch,” \\u003Ca href=\\\"http://www.vitusgroup.com/\\\"\\u003EVitus\\u003C/a\\u003E managing director Stephen Whyte tells Quartz. “Improving stairwells so they are well-lit, secure, maybe even with piped-in music so they\\u0026#8217;re enticing for residents, is definitely something we’re looking into.\\u0026#8221;\\u003C/p\\u003E\\u003Cimg alt=\\\"\\\" border=\\\"0\\\" src=\\\"http://pixel.wp.com/b.gif?host=qz.com\\u0026#038;blog=39587363\\u0026#038;post=354402\\u0026#038;subd=qzprod\\u0026#038;ref=\\u0026#038;feed=1\\\" width=\\\"1\\\" height=\\\"1\\\" /\\u003E\",\"comments\":\"http://qz.com/354402/enticing-stairways-will-make-americans-less-fat/#comments\",\"pubDate\":\"2015-03-05T10:53:53-05:00\",\"category\":\"Design\",\"guid\":\"http://qz.com/?p=354402\",\"dc_creator\":\"Anne Quito\",\"media_content_url\":\"https://qzprod.files.wordpress.com/2015/03/lead_buckingham-county-schools_credit-tom-daly.jpg?w=640\",\"media_content_type\":\"html\",\"media_title\":\"lead_Buckingham County Schools_Credit Tom Daly\",\"media_thumbnail_url\":\"https://qzprod.files.wordpress.com/2015/03/lead_buckingham-county-schools_credit-tom-daly.jpg?w=640\"}"], ["link", "http://qz.com/354402/enticing-stairways-will-make-americans-less-fat/"], ["published_at", Thu, 05 Mar 2015 15:53:53 UTC +00:00], ["title", "Attractive stairwells designed to inspire Americans to actually use them"], ["updated_at", Thu, 05 Mar 2015 16:42:45 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 05 Mar 2015 16:42:45 UTC +00:00], ["feed_id", 4], ["guid", "http://qz.com/?p=356654"], ["json", "{\"title\":\"Looks like humans are actually hundreds of thousands of years older than we originally thought\",\"link\":\"http://qz.com/356654/looks-like-humans-are-actually-hundreds-of-thousands-of-years-older-than-we-originally-thought/\",\"description\":\"A piece of fossilized jaw bone—complete with teeth—found by a student in Ethiopia, is leading scientists to believe humans may have been around for 400,000 years longer than previously thought. A paper published in the journal Science this week revealed the discovery of the partial mandible in Ethiopia\\u0026#8217;s Afar state. It establishes the presence of [\\u0026#8230;]\\u003Cimg alt=\\\"\\\" border=\\\"0\\\" src=\\\"http://pixel.wp.com/b.gif?host=qz.com\\u0026#038;blog=39587363\\u0026#038;post=356654\\u0026#038;subd=qzprod\\u0026#038;ref=\\u0026#038;feed=1\\\" width=\\\"1\\\" height=\\\"1\\\" /\\u003E\",\"content\":\"\",\"content_encoded\":\"\\u003Cimg width=\\\"640\\\" height=\\\"360\\\" src=\\\"https://qzprod.files.wordpress.com/2015/03/jawbone.jpg?w=640\\\" class=\\\"attachment-medium_10 wp-post-image\\\" alt=\\\"Fossilized jaw bone from Ethiopia\\\" /\\u003E\\u003Cp\\u003EA piece of fossilized jaw bone—complete with teeth—found by a student in Ethiopia, is leading scientists to believe humans may have been around for 400,000 years longer than previously thought.\\u003C/p\\u003E\\n\\u003Cp\\u003EA \\u003Ca href=\\\"http://www.sciencemag.org/content/early/2015/03/03/science.aaa1343\\\" target=\\\"_blank\\\"\\u003Epaper published\\u003C/a\\u003E in the journal Science this week revealed the discovery of the partial mandible in Ethiopia\\u0026#8217;s Afar state. It establishes the presence of early humans in the area almost half a million years earlier than had been proved by the scarce existing fossil record, the journal said.\\u003C/p\\u003E\\n\\u003Cp\\u003EThe 2.8-million-year-old chunk of bone was found by an Ethiopian student, Chalachew Seyoum. He \\u003Ca href=\\\"http://www.bbc.co.uk/news/science-environment-31718336?ocid=fbert\\\" target=\\\"_blank\\\"\\u003Etold the BBC\\u003C/a\\u003E he was “stunned” by a find that immediately seemed significant.\\u003C/p\\u003E\\n\\u003Cp\\u003EIt comprises the left side of an adult lower jaw, and has canine teeth, premolars and molars. These teeth are a key: they are smaller than those of other hominins living nearby.\\u003C/p\\u003E\\n\\u003Cp\\u003EMuch older hominins, or human-like primates, have been found in the same area. But the new fossil could provide a link between those primates and the very first humans.\\u003C/p\\u003E\\n\\u003Cp\\u003EThe new discovery “pushes the human line back by 400,000 years or so,” making it a likely indicator of such a transition, professor William Kimbel, director of Arizona State University\\u0026#8217;s Institute of Human Origins, \\u003Ca href=\\\"http://www.bbc.co.uk/news/science-environment-31718336?ocid=fbert\\\" target=\\\"_blank\\\"\\u003Etold the BBC\\u003C/a\\u003E.\\u003C/p\\u003E\\n\\u003Cp\\u003EOr, for anyone out there who speaks Science: “For all of these reasons, we consider the hypothesis that posits LD 350-1 as representing a population ancestral to ~2.4-2.3 Ma Homo, to the exclusion of A. garhi, to be more parsimonious than ones that include this taxon in the Homo lineage”.\\u003C/p\\u003E\\u003Cimg alt=\\\"\\\" border=\\\"0\\\" src=\\\"http://pixel.wp.com/b.gif?host=qz.com\\u0026#038;blog=39587363\\u0026#038;post=356654\\u0026#038;subd=qzprod\\u0026#038;ref=\\u0026#038;feed=1\\\" width=\\\"1\\\" height=\\\"1\\\" /\\u003E\",\"comments\":\"http://qz.com/356654/looks-like-humans-are-actually-hundreds-of-thousands-of-years-older-than-we-originally-thought/#comments\",\"pubDate\":\"2015-03-05T10:50:46-05:00\",\"category\":\"Uncategorized\",\"guid\":\"http://qz.com/?p=356654\",\"dc_creator\":\"Cassie Werber\",\"media_content_url\":\"https://qzprod.files.wordpress.com/2015/03/jawbone.jpg?w=640\",\"media_content_type\":\"html\",\"media_title\":\"jawbone-early-human-ethiopia\",\"media_thumbnail_url\":\"https://qzprod.files.wordpress.com/2015/03/jawbone.jpg?w=640\"}"], ["link", "http://qz.com/356654/looks-like-humans-are-actually-hundreds-of-thousands-of-years-older-than-we-originally-thought/"], ["published_at", Thu, 05 Mar 2015 15:50:46 UTC +00:00], ["title", "Looks like humans are actually hundreds of thousands of years older than we originally thought"], ["updated_at", Thu, 05 Mar 2015 16:42:45 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 05 Mar 2015 16:42:45 UTC +00:00], ["feed_id", 4], ["guid", "http://qz.com/?p=356577"], ["json", "{\"title\":\"The Apple Watch: What we don\\u0026#8217;t know\",\"link\":\"http://qz.com/356577/the-apple-watch-what-we-dont-know-2/\",\"description\":\"Apple will reveal more details about the forthcoming Apple Watch at a media event on March 9. The company has incrementally released Apple Watch information since first unveiling it last September. But there are still many unanswered questions ahead of the device\\u0026#8217;s April launch. Here are some we\\u0026#8217;re thinking about. How much will it cost? Apple has only disclosed the Apple Watch\\u0026#8217;s starting price: [\\u0026#8230;]\\u003Cimg alt=\\\"\\\" border=\\\"0\\\" src=\\\"http://pixel.wp.com/b.gif?host=qz.com\\u0026#038;blog=39587363\\u0026#038;post=356577\\u0026#038;subd=qzprod\\u0026#038;ref=\\u0026#038;feed=1\\\" width=\\\"1\\\" height=\\\"1\\\" /\\u003E\",\"content\":\"\",\"content_encoded\":\"\\u003Cimg width=\\\"640\\\" height=\\\"360\\\" src=\\\"https://qzprod.files.wordpress.com/2015/03/apple-watch-photographer.jpg?w=640\\\" class=\\\"attachment-medium_10 wp-post-image\\\" alt=\\\"Apple Watch\\\" /\\u003E\\u003Cp\\u003EApple will reveal more details about the forthcoming Apple Watch at a media event on March 9. The company has incrementally released Apple Watch information since \\u003Ca href=\\\"http://qz.com/262387/apple-watch-looks-a-lot-like-a-watch/\\\" target=\\\"_blank\\\"\\u003Efirst unveiling it last September\\u003C/a\\u003E. But there are still many unanswered questions ahead of the device\\u0026#8217;s April launch. Here are some we\\u0026#8217;re thinking about.\\u003C/p\\u003E\\n\\u003Ch2\\u003EHow much will it cost?\\u003C/h2\\u003E\\n\\u003Cp\\u003EApple has only disclosed the Apple Watch\\u0026#8217;s starting price: $349. That is likely the entry level price for the \\u0026#8220;Sport\\u0026#8221; model—Apple\\u0026#8217;s most basic of three watch lines, which differ in their materials. But what about the others?\\u003C/p\\u003E\\n\\u003Cp\\u003ESome of the lively pricing discussion has focused on the more luxurious \\u0026#8220;Edition\\u0026#8221; line. These are made of gold, with fancy bands, and could easily fetch $5,000 or far more—novel, high-tech jewelry that Apple fans might have smirked at if it were made by another company.\\u003C/p\\u003E\\n\\u003Cp\\u003EBut the most important price that\\u0026#8217;s still secret is for the standard series, simply called Apple Watch. Most buyers will likely be choosing between these and the Sport model. Will a standard Apple Watch cost closer to $500 or $1,000? For what it\\u0026#8217;s worth: In a \\u003Ca href=\\\"http://qz.com/319016/only-5-of-us-iphone-users-say-theyre-very-likely-to-buy-an-apple-watch/\\\" target=\\\"_blank\\\"\\u003Esurvey Quartz conducted last year\\u003C/a\\u003E, only 3% of US smartphone owners said they would spend $500 or more for an Apple Watch.\\u003C/p\\u003E\\n\\u003Cfigure id=\\\"image-356592\\\" class=\\\"inline-image  alignnone zoomable size-medium\\\"\\u003E\\u003Cdiv class=\\\"inline-image-tools\\\"\\u003E\\u003Ca href=\\\"#\\\" class=\\\"share-button\\\" data-image-id=\\\"356592\\\"\\u003EShare\\u003C/a\\u003E\\n\\t\\t\\t\\u003Cdiv class=\\\"share-icons desaturated\\\"\\u003E\\u003Ca href=\\\"https://twitter.com/intent/tweet?url=http%3A%2F%2Fqz.com%2F356577%2Fthe-apple-watch-what-we-dont-know-2%2Fi%2F356592%2F\\u0026text=The+Apple+Watch%3A+What+we+don%26%238217%3Bt+know\\u0026via=qz\\\" target=\\\"_blank\\\" class=\\\"icon-twitter\\\"\\u003E\\u003C/a\\u003E\\u003Ca href=\\\"https://www.facebook.com/sharer.php?u=http%3A%2F%2Fqz.com%2F356577%2Fthe-apple-watch-what-we-dont-know-2%2Fi%2F356592%2F\\\" target=\\\"_blank\\\" class=\\\"icon-facebook\\\"\\u003E\\u003C/a\\u003E\\u003C/div\\u003E\\u003Cspan class=\\\"help-text\\\"\\u003E\\u003Ci class=\\\"icon-zoom\\\"\\u003E\\u003C/i\\u003ETap image to zoom\\u003C/span\\u003E\\u003C/div\\u003E\\u003Cimg src=\\\"https://qzprod.files.wordpress.com/2015/03/apple-watch-colette-display-case.jpg?w=640\\\" data-retina=\\\"https://qzprod.files.wordpress.com/2015/03/apple-watch-colette-display-case.jpg?w=1024\\\" alt=\\\"Apple Watches at Colette\\\" title=\\\"Apple Watch Sport models on display.\\\"/\\u003E\\u003Cfigcaption class=\\\"inline-image-caption\\\"\\u003EApple Watch Sport models on display.\\u003Cspan class=\\\"inline-image-credit\\\"\\u003E(Quartz/Dan Frommer)\\u003C/span\\u003E\\u003C/figcaption\\u003E\\u003C/figure\\u003E\\n\\u003Ch2\\u003EWhy would someone buy one?\\u003C/h2\\u003E\\n\\u003Cp\\u003EApple has so far focused on three major use cases for the Apple Watch: Keeping time, communicating with other people, and tracking health and fitness. It has also shown preview glimpses of several apps, ranging from maps and directions to a remote control for music. Apple Pay, the company\\u0026#8217;s mobile payments product, will also be part of the watch. And of course the gadget may also become a wrist-worn status symbol.\\u003C/p\\u003E\\n\\u003Cp\\u003EBut why will someone \\u003Cem\\u003Ereally\\u003C/em\\u003E want to wear one? That part still isn\\u0026#8217;t totally clear. Perhaps Apple will unveil some more compelling features during its event. There\\u0026#8217;s also a good chance that other companies—not Apple—will be the \\u003Ca href=\\\"http://qz.com/262497/apple-watch-future-depends-on-how-it-inspires-app-developers/\\\" target=\\\"_blank\\\"\\u003Eones to create the most useful and interesting\\u003C/a\\u003E watch apps. The first version of Apple\\u0026#8217;s software developers kit is pretty basic, but the company has promised a more elaborate kit later this year.\\u003C/p\\u003E\\n\\u003Ch2\\u003EHow will you buy it?\\u003C/h2\\u003E\\n\\u003Cp\\u003EApple\\u0026#8217;s network of about 450 retail stores will play an important role here. In our survey, 75% of respondents said they wanted to see an Apple Watch in person before buying it. The \\u003Ca href=\\\"http://www.newyorker.com/magazine/2015/02/23/shape-things-come\\\" target=\\\"_blank\\\"\\u003ENew Yorker\\u0026#8217;s recent profile\\u003C/a\\u003E of Apple\\u0026#8217;s design head, Jonathan Ive, noted that he was working with Apple\\u0026#8217;s retail chief on a redesign of the stores that \\u0026#8220;will surely become a more natural setting for vitrines filled with gold.\\u0026#8221; The article mentioned \\u0026#8220;a glass-topped Apple Watch display cabinet, accessible to staff from below, via a descending, motorized flap, like the ramp at the rear of a cargo plane.\\u0026#8221; Apple will also likely sell the watch on its website.\\u003C/p\\u003E\\n\\u003Cp\\u003EBut where else? Apple sells many of its iPhones, for example, through mobile operator partners and their stores. It makes sense to sell at least some basic watch models via retail partners, even at big box stores such as Walmart. High-end department and jewelry stores—or cool boutiques like Colette in Paris, where \\u003Ca href=\\\"http://qz.com/274000/inside-apples-one-day-watch-pop-up-at-paris-fashion-week/\\\" target=\\\"_blank\\\"\\u003EApple held a watch preview event last year\\u003C/a\\u003E—also seem like logical outlets. One caveat: Many luxury watch stores are owned or licensed by the watch companies themselves, which are \\u003Ca href=\\\"http://qz.com/316064/six-things-to-know-about-the-swiss-watch-industry-before-apple-invades/\\\" target=\\\"_blank\\\"\\u003Eeven more vertically integrated than Apple\\u003C/a\\u003E—and likely want no role in helping Apple.\\u003C/p\\u003E\\n\\u003Cfigure id=\\\"image-356604\\\" class=\\\"inline-image  alignnone zoomable size-medium\\\"\\u003E\\u003Cdiv class=\\\"inline-image-tools\\\"\\u003E\\u003Ca href=\\\"#\\\" class=\\\"share-button\\\" data-image-id=\\\"356604\\\"\\u003EShare\\u003C/a\\u003E\\n\\t\\t\\t\\u003Cdiv class=\\\"share-icons desaturated\\\"\\u003E\\u003Ca href=\\\"https://twitter.com/intent/tweet?url=http%3A%2F%2Fqz.com%2F356577%2Fthe-apple-watch-what-we-dont-know-2%2Fi%2F356604%2F\\u0026text=The+Apple+Watch%3A+What+we+don%26%238217%3Bt+know\\u0026via=qz\\\" target=\\\"_blank\\\" class=\\\"icon-twitter\\\"\\u003E\\u003C/a\\u003E\\u003Ca href=\\\"https://www.facebook.com/sharer.php?u=http%3A%2F%2Fqz.com%2F356577%2Fthe-apple-watch-what-we-dont-know-2%2Fi%2F356604%2F\\\" target=\\\"_blank\\\" class=\\\"icon-facebook\\\"\\u003E\\u003C/a\\u003E\\u003C/div\\u003E\\u003Cspan class=\\\"help-text\\\"\\u003E\\u003Ci class=\\\"icon-zoom\\\"\\u003E\\u003C/i\\u003ETap image to zoom\\u003C/span\\u003E\\u003C/div\\u003E\\u003Cimg src=\\\"https://qzprod.files.wordpress.com/2015/03/apple-watch-colette-table.jpg?w=640\\\" data-retina=\\\"https://qzprod.files.wordpress.com/2015/03/apple-watch-colette-table.jpg?w=1024\\\" alt=\\\"Apple Watch at Colette\\\" title=\\\"Apple Watches on display at Colette in Paris during Paris Fashion Week in September, 2014.\\\"/\\u003E\\u003Cfigcaption class=\\\"inline-image-caption\\\"\\u003EApple Watches on display at Colette in Paris during Paris Fashion Week in September, 2014.\\u003Cspan class=\\\"inline-image-credit\\\"\\u003E(Quartz/Dan Frommer)\\u003C/span\\u003E\\u003C/figcaption\\u003E\\u003C/figure\\u003E\\n\\u003Ch2\\u003EHow quickly will it become obsolete?\\u003C/h2\\u003E\\n\\u003Cp\\u003EThe standard, two-year length of a mobile contract has gotten iPhone owners used to replacing their devices regularly. And in apparel, the rise of fast fashion has made clothing seem almost disposable. But watches—especially expensive ones—have historically been seen as priceless family heirlooms.\\u003C/p\\u003E\\n\\u003Cp\\u003EWill people happily spend hundreds or thousands of dollars on an Apple Watch, knowing there will be a better, thinner, and more capable one in a year or two? Does Apple have any tricks up its sleeve to make Apple Watches more useful over time? Could you upgrade its chip—which Apple notes is modular and “completely encapsulated in resin”—when the battery needs replacing? Or is Apple going to pioneer the idea of jewelry that has a shelf life?\\u003C/p\\u003E\\n\\u003Ch2\\u003EHow will you listen to music on it?\\u003C/h2\\u003E\\n\\u003Cp\\u003EThe Apple Watch is an obvious remote control for your iPhone\\u0026#8217;s music app. But Apple CEO Tim Cook has said that people will also be able to listen to music directly from the device. Cook \\u003Ca href=\\\"http://gizmodo.com/apple-watch-will-play-music-on-bluetooth-headphones-no-1634369364\\\" target=\\\"_blank\\\"\\u003Esaid on the Charlie Rose show last year\\u003C/a\\u003E, \\u0026#8220;if you go for a run, and you don\\u0026#8217;t want to carry your iPhone, music is also on your watch. So with a Bluetooth headset, you can run and listen to your music without your iPhone.\\u0026#8221; But how that music gets onto the watch is unclear: Will Apple only support iTunes downloads? Or would apps such as Spotify also be able to access that storage?\\u003C/p\\u003E\\n\\u003Cp\\u003EMeanwhile, will the Apple Watch be the device that makes Bluetooth headphones mainstream? Apple has already led two earphone trends over the past decade: The iPod\\u0026#8217;s iconic white earbuds and the \\u003Ca href=\\\"http://www.businessinsider.com/is-apple-about-to-shuffle-the-headphone-industry-again-2009-3?IR=T\\\" target=\\\"_blank\\\"\\u003Enow-universal microphone/remote clicker\\u003C/a\\u003E on iPhone earphones. Both involve wires, but Apple\\u0026#8217;s \\u003Ca href=\\\"https://www.apple.com/watch/films/\\\" target=\\\"_blank\\\"\\u003E\\u0026#8220;Health and Fitness\\u0026#8221; promo video\\u003C/a\\u003E for the watch includes a man who seems to be \\u003Ca href=\\\"http://www.beatsbydre.com/earphones/powerbeats2-wireless/black/900-00240.html\\\" target=\\\"_blank\\\"\\u003Ewearing these $200 Bluetooth Beats earphones\\u003C/a\\u003E.\\u003C/p\\u003E\\n\\u003Cfigure id=\\\"image-356579\\\" class=\\\"inline-image  alignnone zoomable size-medium\\\"\\u003E\\u003Cdiv class=\\\"inline-image-tools\\\"\\u003E\\u003Ca href=\\\"#\\\" class=\\\"share-button\\\" data-image-id=\\\"356579\\\"\\u003EShare\\u003C/a\\u003E\\n\\t\\t\\t\\u003Cdiv class=\\\"share-icons desaturated\\\"\\u003E\\u003Ca href=\\\"https://twitter.com/intent/tweet?url=http%3A%2F%2Fqz.com%2F356577%2Fthe-apple-watch-what-we-dont-know-2%2Fi%2F356579%2F\\u0026text=The+Apple+Watch%3A+What+we+don%26%238217%3Bt+know\\u0026via=qz\\\" target=\\\"_blank\\\" class=\\\"icon-twitter\\\"\\u003E\\u003C/a\\u003E\\u003Ca href=\\\"https://www.facebook.com/sharer.php?u=http%3A%2F%2Fqz.com%2F356577%2Fthe-apple-watch-what-we-dont-know-2%2Fi%2F356579%2F\\\" target=\\\"_blank\\\" class=\\\"icon-facebook\\\"\\u003E\\u003C/a\\u003E\\u003C/div\\u003E\\u003Cspan class=\\\"help-text\\\"\\u003E\\u003Ci class=\\\"icon-zoom\\\"\\u003E\\u003C/i\\u003ETap image to zoom\\u003C/span\\u003E\\u003C/div\\u003E\\u003Cimg src=\\\"https://qzprod.files.wordpress.com/2015/03/apple-watch-earphones-video-still.jpg?w=640\\\" data-retina=\\\"https://qzprod.files.wordpress.com/2015/03/apple-watch-earphones-video-still.jpg?w=816\\\" alt=\\\"Apple Watch Bluetooth earphones\\\" title=\\\"Are those Beats? Original and enhanced screenshots from an Apple promo video.\\\"/\\u003E\\u003Cfigcaption class=\\\"inline-image-caption\\\"\\u003EAre those Beats? Original and enhanced screenshots from an Apple promo video.\\u003Cspan class=\\\"inline-image-credit\\\"\\u003E(Screenshot/Apple)\\u003C/span\\u003E\\u003C/figcaption\\u003E\\u003C/figure\\u003E\\n\\u003Cp\\u003EBluetooth earphones have the advantage of a wireless connection—handy when you\\u0026#8217;re trying to play music from your wrist—but the downsides are price, an awkward pairing procedure, and having yet another device with a battery that needs charging. Still, is this the next Apple Watch upsell opportunity?\\u003C/p\\u003E\\n\\u003Cp\\u003EThe music question also raises the issue of storage capacity. Will different Apple Watch models offer different amounts of storage, at increasing price tiers? Considering all the other configuration options, perhaps that\\u0026#8217;s adding too much complexity. “At that point it seems way too confusing,\\u0026#8221; long-time Apple watcher John Gruber said on a \\u003Ca href=\\\"http://daringfireball.net/thetalkshow/2015/02/23/ep-111\\\" target=\\\"_blank\\\"\\u003Erecent episode of his podcast, The Talk Show\\u003C/a\\u003E.\\u003C/p\\u003E\\n\\u003Ch2\\u003EWhat other accessories will there be?\\u003C/h2\\u003E\\n\\u003Cp\\u003EApple proudly showed off that its watch bands will be cleverly interchangeable. Will other companies be able to make official Apple Watch bands? (Would another watch company like Swatch—famous for its fun straps—ever do that?) Will there be covers and cases and charging stations?\\u003C/p\\u003E\\n\\u003Ch2\\u003EWill the Apple Watch be cool?\\u003C/h2\\u003E\\n\\u003Cp\\u003EThis is, alas, a question that Apple won\\u0026#8217;t be able to answer during its event. But it will certainly play a role in the watch\\u0026#8217;s success.\\u003C/p\\u003E\\n\\u003Cp\\u003EThis is \\u003Ca href=\\\"http://qz.com/237085/apple-iwatch-clues-in-steve-jobs-era-apple-wearables/\\\" target=\\\"_blank\\\"\\u003Enot Apple\\u0026#8217;s first wearable\\u003C/a\\u003E gadget, but it is the company\\u0026#8217;s first fashion item. And Apple is treating this launch differently than its releases of the iPod, iPhone, and iPad. For starters, Apple has already run \\u003Ca href=\\\"http://www.adweek.com/adfreak/apple-watch-gets-its-first-advertising-stylish-12-page-spread-vogue-163155\\\" target=\\\"_blank\\\"\\u003E12 pages of ads in Vogue\\u003C/a\\u003E, the world\\u0026#8217;s top fashion magazine. It held VIP events for influencers at Paris Fashion Week last fall. It brought in a bunch of actual celebrities to last year\\u0026#8217;s big keynote. While Apple has long seeded its products in Hollywood—the company \\u003Ca href=\\\"http://www.macrumors.com/2014/05/02/apple-buzz-marketing-manager/\\\" target=\\\"_blank\\\"\\u003Ecalls it “buzz marketing”\\u003C/a\\u003E—you can imagine there will also be more high-profile Apple Watch placements over the next few months.\\u003C/p\\u003E\\n\\u003Cp\\u003E\\u003Ca href=\\\"https://instagram.com/p/zpzkxjm84B/\\\" title=\\\"View on Instagram\\\"\\u003E\\u003Cimg src=\\\"http://instagr.am/p/am.com/media/?size=l\\\" alt=\\\"Instagram Photo\\\" /\\u003E\\u003C/a\\u003E\\u003C/p\\u003E\\n\\u003Cp\\u003EHere\\u0026#8217;s the thing: The iPhone didn\\u0026#8217;t become cool or the world\\u0026#8217;s best-selling phone because it was in Vogue or because celebrities used it. Nor did the iPod, or the iPad, or the Mac. They became cool because they were useful, well-designed, and elegant. But mostly useful. (Similarly, tie-ins with the fashion industry didn\\u0026#8217;t come close to saving Google Glass.)\\u003C/p\\u003E\\n\\u003Cp\\u003EIt\\u0026#8217;s fine for Apple to advertise the watch in Vogue—why not? That cool factor, if Apple can attain it, could probably move a bunch of units, especially this first version. But the watch\\u0026#8217;s long-term success will depend on its utility \\u003Cem\\u003Eand\\u003C/em\\u003E style—not just one or the other.\\u003C/p\\u003E\\n\\u003Ch3\\u003ERead this next: \\u003Ca href=\\\"http://qz.com/319703/2015-is-the-year-of-the-apple-watch/\\\" target=\\\"_blank\\\"\\u003E2015 is the year of the Apple Watch\\u003C/a\\u003E\\u003C/h3\\u003E\\u003Cimg alt=\\\"\\\" border=\\\"0\\\" src=\\\"http://pixel.wp.com/b.gif?host=qz.com\\u0026#038;blog=39587363\\u0026#038;post=356577\\u0026#038;subd=qzprod\\u0026#038;ref=\\u0026#038;feed=1\\\" width=\\\"1\\\" height=\\\"1\\\" /\\u003E\",\"comments\":\"http://qz.com/356577/the-apple-watch-what-we-dont-know-2/#comments\",\"pubDate\":\"2015-03-05T10:37:51-05:00\",\"category\":\"Internet of Everything\",\"guid\":\"http://qz.com/?p=356577\",\"dc_creator\":\"Dan Frommer\",\"media_content_url\":\"https://qzprod.files.wordpress.com/2015/03/apple-watch-photographer.jpg?w=640\",\"media_content_type\":\"html\",\"media_title\":\"apple-watch-photographer\",\"media_thumbnail_url\":\"https://qzprod.files.wordpress.com/2015/03/apple-watch-photographer.jpg?w=640\"}"], ["link", "http://qz.com/356577/the-apple-watch-what-we-dont-know-2/"], ["published_at", Thu, 05 Mar 2015 15:37:51 UTC +00:00], ["title", "The Apple Watch: What we don&#8217;t know"], ["updated_at", Thu, 05 Mar 2015 16:42:45 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mEntry Load (2.8ms)[0m  [1mSELECT "entries".* FROM "entries" WHERE "entries"."feed_id" = $1[0m  [["feed_id", 4]]
+Completed 200 OK in 622ms (Views: 606.9ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/api/feeds/6" for 127.0.0.1 at 2015-03-05 11:42:45 -0500
+Processing by Api::FeedsController#show as JSON
+  Parameters: {"id"=>"6"}
+  [1m[35mFeed Load (0.6ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = $1 LIMIT 1  [["id", "6"]]
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE "feeds" SET "updated_at" = '2015-03-05 16:42:45.184496' WHERE "feeds"."id" = 6[0m
+  [1m[35m (0.7ms)[0m  SELECT "entries"."guid" FROM "entries"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 05 Mar 2015 16:42:45 UTC +00:00], ["feed_id", 6], ["guid", "http://www.nytimes.com/2015/03/05/nyregion/yale-report-clears-police-officer-in-encounter-with-student.html"], ["json", "{\"title\":\"Yale Report Clears Police Officer in Encounter With Student\",\"link\":\"\\u003Ctitle\\u003EYale Report Clears Police Officer in Encounter With Student\\u003C/title\\u003E\\u003Clink\\u003Ehttp://rss.nytimes.com/c/34625/f/640367/s/440b31ab/sc/8/l/0L0Snytimes0N0C20A150C0A30C0A50Cnyregion0Cyale0Ereport0Eclears0Epolice0Eofficer0Ein0Eencounter0Ewith0Estudent0Bhtml0Dpartner0Frss0Gemc0Frss/story01.htm\",\"description\":\"The officer had approached the student, who was leaving a library, with his gun drawn and briefly detained him after reports of an intruder.\\u0026lt;img width='1' height='1' src='http://rss.nytimes.com/c/34625/f/640367/s/440b31ab/sc/8/mf.gif' border='0'/\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/222166819144/u/0/f/640367/c/34625/s/440b31ab/sc/8/rc/1/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/222166819144/u/0/f/640367/c/34625/s/440b31ab/sc/8/rc/1/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/222166819144/u/0/f/640367/c/34625/s/440b31ab/sc/8/rc/2/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/222166819144/u/0/f/640367/c/34625/s/440b31ab/sc/8/rc/2/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/222166819144/u/0/f/640367/c/34625/s/440b31ab/sc/8/rc/3/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/222166819144/u/0/f/640367/c/34625/s/440b31ab/sc/8/rc/3/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/222166819144/u/0/f/640367/c/34625/s/440b31ab/sc/8/a2.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/222166819144/u/0/f/640367/c/34625/s/440b31ab/sc/8/a2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi.feedsportal.com/r/222166819144/u/0/f/640367/c/34625/s/440b31ab/sc/8/a2t.img\\\" border=\\\"0\\\"/\\u0026gt;\",\"pubDate\":\"2015-03-04T23:13:54-05:00\",\"category\":\"Yale University\",\"guid\":\"http://www.nytimes.com/2015/03/05/nyregion/yale-report-clears-police-officer-in-encounter-with-student.html\",\"dc_creator\":\"By MARC SANTORA\"}"], ["link", "<title>Yale Report Clears Police Officer in Encounter With Student</title><link>http://rss.nytimes.com/c/34625/f/640367/s/440b31ab/sc/8/l/0L0Snytimes0N0C20A150C0A30C0A50Cnyregion0Cyale0Ereport0Eclears0Epolice0Eofficer0Ein0Eencounter0Ewith0Estudent0Bhtml0Dpartner0Frss0Gemc0Frss/story01.htm"], ["published_at", Thu, 05 Mar 2015 04:13:54 UTC +00:00], ["title", "Yale Report Clears Police Officer in Encounter With Student"], ["updated_at", Thu, 05 Mar 2015 16:42:45 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 274ms
+
+PG::StringDataRightTruncation - ERROR:  value too long for type character varying(255)
+:
+  activerecord (4.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:786:in `exec_cache'
+  activerecord (4.0.2) lib/active_record/connection_adapters/postgresql/database_statements.rb:139:in `block in exec_query'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:435:in `block in log'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:430:in `log'
+  activerecord (4.0.2) lib/active_record/connection_adapters/postgresql/database_statements.rb:137:in `exec_query'
+  activerecord (4.0.2) lib/active_record/connection_adapters/postgresql/database_statements.rb:184:in `exec_insert'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:96:in `insert'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/query_cache.rb:14:in `insert'
+  activerecord (4.0.2) lib/active_record/relation.rb:76:in `insert'
+  activerecord (4.0.2) lib/active_record/persistence.rb:509:in `create_record'
+  activerecord (4.0.2) lib/active_record/attribute_methods/dirty.rb:78:in `create_record'
+  activerecord (4.0.2) lib/active_record/callbacks.rb:306:in `block in create_record'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__1456628783766756474__create__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  activerecord (4.0.2) lib/active_record/callbacks.rb:306:in `create_record'
+  activerecord (4.0.2) lib/active_record/timestamp.rb:57:in `create_record'
+  activerecord (4.0.2) lib/active_record/persistence.rb:477:in `create_or_update'
+  activerecord (4.0.2) lib/active_record/callbacks.rb:302:in `block in create_or_update'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:383:in `_run__1456628783766756474__save__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  activerecord (4.0.2) lib/active_record/callbacks.rb:302:in `create_or_update'
+  activerecord (4.0.2) lib/active_record/persistence.rb:128:in `save!'
+  activerecord (4.0.2) lib/active_record/validations.rb:57:in `save!'
+  activerecord (4.0.2) lib/active_record/attribute_methods/dirty.rb:41:in `save!'
+  activerecord (4.0.2) lib/active_record/transactions.rb:275:in `block in save!'
+  activerecord (4.0.2) lib/active_record/transactions.rb:326:in `block in with_transaction_returning_status'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:202:in `block in transaction'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:210:in `within_new_transaction'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:202:in `transaction'
+  activerecord (4.0.2) lib/active_record/transactions.rb:209:in `transaction'
+  activerecord (4.0.2) lib/active_record/transactions.rb:323:in `with_transaction_returning_status'
+  activerecord (4.0.2) lib/active_record/transactions.rb:275:in `save!'
+  activerecord (4.0.2) lib/active_record/validations.rb:41:in `create!'
+  app/models/entry.rb:7:in `create_from_json!'
+  app/models/feed.rb:38:in `block in reload'
+  app/models/feed.rb:36:in `reload'
+  app/models/feed.rb:25:in `latest_entries'
+  activemodel (4.0.2) lib/active_model/serialization.rb:157:in `block in serializable_add_includes'
+  activemodel (4.0.2) lib/active_model/serialization.rb:156:in `serializable_add_includes'
+  activemodel (4.0.2) lib/active_model/serialization.rb:112:in `serializable_hash'
+  activerecord (4.0.2) lib/active_record/serialization.rb:17:in `serializable_hash'
+  activemodel (4.0.2) lib/active_model/serializers/json.rb:99:in `as_json'
+  activesupport (4.0.2) lib/active_support/json/encoding.rb:50:in `block in encode'
+  activesupport (4.0.2) lib/active_support/json/encoding.rb:81:in `check_for_circular_references'
+  activesupport (4.0.2) lib/active_support/json/encoding.rb:49:in `encode'
+  activesupport (4.0.2) lib/active_support/json/encoding.rb:34:in `encode'
+  activesupport (4.0.2) lib/active_support/core_ext/object/to_json.rb:16:in `to_json'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:90:in `block in <module:Renderers>'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:33:in `block in _handle_render_options'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/set.rb:263:in `each'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:30:in `_handle_render_options'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  app/controllers/api/feeds_controller.rb:7:in `show'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:383:in `_run__1586474546172825412__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__570486809239627131__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/api/feeds/7" for 127.0.0.1 at 2015-03-05 11:42:45 -0500
+Processing by Api::FeedsController#show as JSON
+  Parameters: {"id"=>"7"}
+  [1m[35mFeed Load (0.4ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mSQL (1.1ms)[0m  [1mUPDATE "feeds" SET "updated_at" = '2015-03-05 16:42:45.473618' WHERE "feeds"."id" = 7[0m
+  [1m[35m (0.6ms)[0m  SELECT "entries"."guid" FROM "entries"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 05 Mar 2015 16:42:45 UTC +00:00], ["feed_id", 7], ["guid", "http://buzzfeed.tumblr.com/post/112792934807"], ["json", "{\"title\":\"buzzfeedbooks:22 Contemporary Authors You Absolutely Should Be...\",\"link\":\"http://buzzfeed.tumblr.com/post/112792934807\",\"description\":\"\\u0026lt;img src=\\\"http://41.media.tumblr.com/a544b7b82ba55c255c285378dff50dd0/tumblr_nkqyqh9w9t1sbzdkqo1_400.jpg\\\"/\\u0026gt;\\u0026lt;br/\\u0026gt; \\u0026lt;br/\\u0026gt;\\u0026lt;img src=\\\"http://40.media.tumblr.com/94f66e3edea4ef12435d1168d1aabaa2/tumblr_nkqyqh9w9t1sbzdkqo2_400.jpg\\\"/\\u0026gt;\\u0026lt;br/\\u0026gt; \\u0026lt;br/\\u0026gt;\\u0026lt;img src=\\\"http://40.media.tumblr.com/a9e422b9b4154e00e86645b61811d537/tumblr_nkqyqh9w9t1sbzdkqo3_400.jpg\\\"/\\u0026gt;\\u0026lt;br/\\u0026gt; \\u0026lt;br/\\u0026gt;\\u0026lt;img src=\\\"http://40.media.tumblr.com/53ae791df349f7afaecd62945868b268/tumblr_nkqyqh9w9t1sbzdkqo4_400.jpg\\\"/\\u0026gt;\\u0026lt;br/\\u0026gt; \\u0026lt;br/\\u0026gt;\\u0026lt;img src=\\\"http://40.media.tumblr.com/3f1849fe2d581d1406c7eec97d635d9b/tumblr_nkqyqh9w9t1sbzdkqo5_400.jpg\\\"/\\u0026gt;\\u0026lt;br/\\u0026gt; \\u0026lt;br/\\u0026gt;\\u0026lt;img src=\\\"http://41.media.tumblr.com/13a68f17a96dcbef0411a59dc5f1faaf/tumblr_nkqyqh9w9t1sbzdkqo6_400.jpg\\\"/\\u0026gt;\\u0026lt;br/\\u0026gt; \\u0026lt;br/\\u0026gt;\\u0026lt;p\\u0026gt;\\u0026lt;a class=\\\"tumblr_blog\\\" href=\\\"http://buzzfeedbooks.tumblr.com/post/112791487063/22-contemporary-authors-you-absolutely-should-be\\\" target=\\\"_blank\\\"\\u0026gt;buzzfeedbooks\\u0026lt;/a\\u0026gt;:\\u0026lt;/p\\u0026gt;\\u0026lt;blockquote\\u0026gt;\\u0026lt;p\\u0026gt;\\u0026lt;a href=\\\"http://www.buzzfeed.com/isaacfitzgerald/these-writers-are-not-to-be-missed\\\" target=\\\"_blank\\\"\\u0026gt;22 Contemporary Authors You Absolutely Should Be Reading\\u0026lt;/a\\u0026gt;\\u0026lt;/p\\u0026gt;\\u0026lt;/blockquote\\u0026gt;\\n\\n\\u0026lt;p\\u0026gt;BOOKS BOOKS BOOKS BOOKS BOOKS BOOKS BOOKS BOOKS BOOKS BOOKS BOOKS BOOOOOOOOOOOOOOOOKS\\u0026lt;br/\\u0026gt;\\u0026lt;/p\\u0026gt;\",\"pubDate\":\"2015-03-05T11:41:46-05:00\",\"guid\":\"http://buzzfeed.tumblr.com/post/112792934807\"}"], ["link", "http://buzzfeed.tumblr.com/post/112792934807"], ["published_at", Thu, 05 Mar 2015 16:41:46 UTC +00:00], ["title", "buzzfeedbooks:22 Contemporary Authors You Absolutely Should Be..."], ["updated_at", Thu, 05 Mar 2015 16:42:45 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 05 Mar 2015 16:42:45 UTC +00:00], ["feed_id", 7], ["guid", "http://buzzfeed.tumblr.com/post/112790754902"], ["json", "{\"title\":\"buzzfeed:\\n\\nAnsel Elgort is taking over the official BuzzFeed...\",\"link\":\"http://buzzfeed.tumblr.com/post/112790754902\",\"description\":\"\\u0026lt;iframe class=\\\"vine-embed\\\" src=\\\"https://vine.co/v/O09q5O93dqx/embed/simple\\\"width=\\\"400\\\" height=\\\"400\\\" frameborder=\\\"0\\\"\\u0026gt;\\u0026lt;/iframe\\u0026gt;\\u0026lt;script async src=\\\"//platform.vine.co/static/scripts/embed.js\\\" charset=\\\"utf-8\\\"\\u0026gt;\\u0026lt;/script\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;p\\u0026gt;\\u0026lt;a href=\\\"http://buzzfeed.tumblr.com/post/112788998522/ansel-elgort-is-taking-over-the-official-buzzfeed\\\" class=\\\"tumblr_blog\\\" target=\\\"_blank\\\"\\u0026gt;buzzfeed\\u0026lt;/a\\u0026gt;:\\u0026lt;/p\\u0026gt;\\n\\n\\u0026lt;blockquote\\u0026gt;\\u0026lt;p\\u0026gt;Ansel Elgort is taking over the official BuzzFeed twitter! Tweet questions to him @BuzzFeed using #AnselFeed !\\u0026lt;br/\\u0026gt;\\u0026lt;/p\\u0026gt;\\u0026lt;/blockquote\\u0026gt;\\n\\n\\u0026lt;p\\u0026gt;aaaand we’re done. thanks to everyone who tweeted! :)\\u0026lt;/p\\u0026gt;\",\"pubDate\":\"2015-03-05T11:09:48-05:00\",\"guid\":\"http://buzzfeed.tumblr.com/post/112790754902\"}"], ["link", "http://buzzfeed.tumblr.com/post/112790754902"], ["published_at", Thu, 05 Mar 2015 16:09:48 UTC +00:00], ["title", "buzzfeed:\n\nAnsel Elgort is taking over the official BuzzFeed..."], ["updated_at", Thu, 05 Mar 2015 16:42:45 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 05 Mar 2015 16:42:45 UTC +00:00], ["feed_id", 7], ["guid", "http://buzzfeed.tumblr.com/post/112788998522"], ["json", "{\"title\":\"Ansel Elgort is taking over the official BuzzFeed twitter! Tweet...\",\"link\":\"http://buzzfeed.tumblr.com/post/112788998522\",\"description\":\"\\u0026lt;iframe class=\\\"vine-embed\\\" src=\\\"https://vine.co/v/O09q5O93dqx/embed/simple\\\"width=\\\"400\\\" height=\\\"400\\\" frameborder=\\\"0\\\"\\u0026gt;\\u0026lt;/iframe\\u0026gt;\\u0026lt;script async src=\\\"//platform.vine.co/static/scripts/embed.js\\\" charset=\\\"utf-8\\\"\\u0026gt;\\u0026lt;/script\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;p\\u0026gt;Ansel Elgort is taking over the official BuzzFeed twitter! Tweet questions to him @BuzzFeed using #AnselFeed !\\u0026lt;br/\\u0026gt;\\u0026lt;/p\\u0026gt;\",\"pubDate\":\"2015-03-05T10:42:42-05:00\",\"category\":\"ansel elgort\",\"guid\":\"http://buzzfeed.tumblr.com/post/112788998522\"}"], ["link", "http://buzzfeed.tumblr.com/post/112788998522"], ["published_at", Thu, 05 Mar 2015 15:42:42 UTC +00:00], ["title", "Ansel Elgort is taking over the official BuzzFeed twitter! Tweet..."], ["updated_at", Thu, 05 Mar 2015 16:42:45 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 05 Mar 2015 16:42:45 UTC +00:00], ["feed_id", 7], ["guid", "http://buzzfeed.tumblr.com/post/112788151942"], ["json", "{\"title\":\"buzzfeedbooks:The 8 Best Parts Of “Twilight”\",\"link\":\"http://buzzfeed.tumblr.com/post/112788151942\",\"description\":\"\\u0026lt;img src=\\\"http://36.media.tumblr.com/262ead909c1520bcc452402eaa59cc7c/tumblr_nknlsxq1w41sbzdkqo1_500.png\\\"/\\u0026gt;\\u0026lt;br/\\u0026gt; \\u0026lt;br/\\u0026gt;\\u0026lt;img src=\\\"http://41.media.tumblr.com/5abf7a787da5fb890ecf741905032965/tumblr_nknlsxq1w41sbzdkqo2_500.png\\\"/\\u0026gt;\\u0026lt;br/\\u0026gt; \\u0026lt;br/\\u0026gt;\\u0026lt;img src=\\\"http://41.media.tumblr.com/f3fcb6fef0b8a0f9b017efbd1bb49340/tumblr_nknlsxq1w41sbzdkqo3_500.png\\\"/\\u0026gt;\\u0026lt;br/\\u0026gt; \\u0026lt;br/\\u0026gt;\\u0026lt;img src=\\\"http://41.media.tumblr.com/9aba70a2dfc6437d807d15eb684dccdd/tumblr_nknlsxq1w41sbzdkqo4_500.png\\\"/\\u0026gt;\\u0026lt;br/\\u0026gt; \\u0026lt;br/\\u0026gt;\\u0026lt;p\\u0026gt;\\u0026lt;a class=\\\"tumblr_blog\\\" href=\\\"http://buzzfeedbooks.tumblr.com/post/112699915588/the-8-best-parts-of-twilight\\\" target=\\\"_blank\\\"\\u0026gt;buzzfeedbooks\\u0026lt;/a\\u0026gt;:\\u0026lt;/p\\u0026gt;\\u0026lt;blockquote\\u0026gt;\\u0026lt;p\\u0026gt;\\u0026lt;a href=\\\"http://www.buzzfeed.com/agh/i-wish-i-had-a-dracula-boyfriend\\\" target=\\\"_blank\\\"\\u0026gt;The 8 Best Parts Of “Twilight”\\u0026lt;/a\\u0026gt;\\u0026lt;/p\\u0026gt;\\u0026lt;/blockquote\\u0026gt;\",\"pubDate\":\"2015-03-05T10:29:08-05:00\",\"guid\":\"http://buzzfeed.tumblr.com/post/112788151942\"}"], ["link", "http://buzzfeed.tumblr.com/post/112788151942"], ["published_at", Thu, 05 Mar 2015 15:29:08 UTC +00:00], ["title", "buzzfeedbooks:The 8 Best Parts Of “Twilight”"], ["updated_at", Thu, 05 Mar 2015 16:42:45 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mEntry Load (0.8ms)[0m  [1mSELECT "entries".* FROM "entries" WHERE "entries"."feed_id" = $1[0m  [["feed_id", 7]]
+Completed 200 OK in 461ms (Views: 452.2ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/api/feeds/1" for 127.0.0.1 at 2015-03-05 11:42:45 -0500
+Processing by Api::FeedsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mFeed Load (0.4ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "feeds" SET "updated_at" = '2015-03-05 16:42:45.956130' WHERE "feeds"."id" = 1[0m
+  [1m[35m (0.7ms)[0m  SELECT "entries"."guid" FROM "entries"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 05 Mar 2015 16:42:46 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1425573760"], ["json", "{\"title\":\"Lorem ipsum 2015-03-05T16:42:40+00:00\",\"link\":\"http://example.com/test/1425573760\",\"description\":\"Commodo incididunt officia dolor minim.\",\"pubDate\":\"2015-03-05T11:42:40-05:00\",\"guid\":\"http://example.com/test/1425573760\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1425573760"], ["published_at", Thu, 05 Mar 2015 16:42:40 UTC +00:00], ["title", "Lorem ipsum 2015-03-05T16:42:40+00:00"], ["updated_at", Thu, 05 Mar 2015 16:42:46 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 05 Mar 2015 16:42:46 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1425573750"], ["json", "{\"title\":\"Lorem ipsum 2015-03-05T16:42:30+00:00\",\"link\":\"http://example.com/test/1425573750\",\"description\":\"Deserunt nisi velit elit commodo aliquip ex enim eiusmod sint labore veniam.\",\"pubDate\":\"2015-03-05T11:42:30-05:00\",\"guid\":\"http://example.com/test/1425573750\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1425573750"], ["published_at", Thu, 05 Mar 2015 16:42:30 UTC +00:00], ["title", "Lorem ipsum 2015-03-05T16:42:30+00:00"], ["updated_at", Thu, 05 Mar 2015 16:42:46 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 05 Mar 2015 16:42:46 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1425573740"], ["json", "{\"title\":\"Lorem ipsum 2015-03-05T16:42:20+00:00\",\"link\":\"http://example.com/test/1425573740\",\"description\":\"Aliquip eiusmod commodo incididunt enim minim cupidatat esse id sit sunt minim veniam sint ut.\",\"pubDate\":\"2015-03-05T11:42:20-05:00\",\"guid\":\"http://example.com/test/1425573740\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1425573740"], ["published_at", Thu, 05 Mar 2015 16:42:20 UTC +00:00], ["title", "Lorem ipsum 2015-03-05T16:42:20+00:00"], ["updated_at", Thu, 05 Mar 2015 16:42:46 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 05 Mar 2015 16:42:46 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1425573730"], ["json", "{\"title\":\"Lorem ipsum 2015-03-05T16:42:10+00:00\",\"link\":\"http://example.com/test/1425573730\",\"description\":\"Sint esse cillum sint sunt ullamco do.\",\"pubDate\":\"2015-03-05T11:42:10-05:00\",\"guid\":\"http://example.com/test/1425573730\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1425573730"], ["published_at", Thu, 05 Mar 2015 16:42:10 UTC +00:00], ["title", "Lorem ipsum 2015-03-05T16:42:10+00:00"], ["updated_at", Thu, 05 Mar 2015 16:42:46 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 05 Mar 2015 16:42:46 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1425573720"], ["json", "{\"title\":\"Lorem ipsum 2015-03-05T16:42:00+00:00\",\"link\":\"http://example.com/test/1425573720\",\"description\":\"Duis ea in sunt minim do irure in adipisicing sit anim ad exercitation consectetur.\",\"pubDate\":\"2015-03-05T11:42:00-05:00\",\"guid\":\"http://example.com/test/1425573720\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1425573720"], ["published_at", Thu, 05 Mar 2015 16:42:00 UTC +00:00], ["title", "Lorem ipsum 2015-03-05T16:42:00+00:00"], ["updated_at", Thu, 05 Mar 2015 16:42:46 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 05 Mar 2015 16:42:46 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1425573710"], ["json", "{\"title\":\"Lorem ipsum 2015-03-05T16:41:50+00:00\",\"link\":\"http://example.com/test/1425573710\",\"description\":\"Eu enim et occaecat quis.\",\"pubDate\":\"2015-03-05T11:41:50-05:00\",\"guid\":\"http://example.com/test/1425573710\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1425573710"], ["published_at", Thu, 05 Mar 2015 16:41:50 UTC +00:00], ["title", "Lorem ipsum 2015-03-05T16:41:50+00:00"], ["updated_at", Thu, 05 Mar 2015 16:42:46 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 05 Mar 2015 16:42:46 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1425573700"], ["json", "{\"title\":\"Lorem ipsum 2015-03-05T16:41:40+00:00\",\"link\":\"http://example.com/test/1425573700\",\"description\":\"Velit officia laboris proident aliquip.\",\"pubDate\":\"2015-03-05T11:41:40-05:00\",\"guid\":\"http://example.com/test/1425573700\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1425573700"], ["published_at", Thu, 05 Mar 2015 16:41:40 UTC +00:00], ["title", "Lorem ipsum 2015-03-05T16:41:40+00:00"], ["updated_at", Thu, 05 Mar 2015 16:42:46 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 05 Mar 2015 16:42:46 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1425573690"], ["json", "{\"title\":\"Lorem ipsum 2015-03-05T16:41:30+00:00\",\"link\":\"http://example.com/test/1425573690\",\"description\":\"Enim non incididunt pariatur culpa eu sunt fugiat commodo amet velit consequat.\",\"pubDate\":\"2015-03-05T11:41:30-05:00\",\"guid\":\"http://example.com/test/1425573690\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1425573690"], ["published_at", Thu, 05 Mar 2015 16:41:30 UTC +00:00], ["title", "Lorem ipsum 2015-03-05T16:41:30+00:00"], ["updated_at", Thu, 05 Mar 2015 16:42:46 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 05 Mar 2015 16:42:46 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1425573680"], ["json", "{\"title\":\"Lorem ipsum 2015-03-05T16:41:20+00:00\",\"link\":\"http://example.com/test/1425573680\",\"description\":\"Est deserunt Lorem consequat excepteur ut aliquip ut nisi fugiat excepteur aliquip.\",\"pubDate\":\"2015-03-05T11:41:20-05:00\",\"guid\":\"http://example.com/test/1425573680\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1425573680"], ["published_at", Thu, 05 Mar 2015 16:41:20 UTC +00:00], ["title", "Lorem ipsum 2015-03-05T16:41:20+00:00"], ["updated_at", Thu, 05 Mar 2015 16:42:46 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 05 Mar 2015 16:42:46 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1425573670"], ["json", "{\"title\":\"Lorem ipsum 2015-03-05T16:41:10+00:00\",\"link\":\"http://example.com/test/1425573670\",\"description\":\"Eiusmod non aliqua quis aliqua sit esse dolor reprehenderit eiusmod.\",\"pubDate\":\"2015-03-05T11:41:10-05:00\",\"guid\":\"http://example.com/test/1425573670\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1425573670"], ["published_at", Thu, 05 Mar 2015 16:41:10 UTC +00:00], ["title", "Lorem ipsum 2015-03-05T16:41:10+00:00"], ["updated_at", Thu, 05 Mar 2015 16:42:46 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mEntry Load (0.8ms)[0m  [1mSELECT "entries".* FROM "entries" WHERE "entries"."feed_id" = $1[0m  [["feed_id", 1]]
+Completed 200 OK in 295ms (Views: 280.8ms | ActiveRecord: 12.7ms)

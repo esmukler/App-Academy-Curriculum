@@ -9,8 +9,11 @@ NewsReader.Routers.FeedRouter = Backbone.Router.extend({
   },
 
   index: function() {
-    var indexView = new NewsReader.Views.FeedIndex({collection: this.collection});
-    this.$el.append(indexView.render().$el);
+    this.collection.fetch({
+      success: function () {
+        var indexView = new NewsReader.Views.FeedIndex({collection: this.collection});
+        this.$el.append(indexView.render().$el);
+      }.bind(this)
+    })
   }
-
 })
