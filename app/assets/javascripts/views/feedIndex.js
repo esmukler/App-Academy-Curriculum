@@ -6,7 +6,8 @@ NewsReader.Views.FeedIndex = Backbone.View.extend({
   },
 
   events: {
-    "click button.destroy-feed": "deleteFeed"
+    "click button.destroy-feed": "deleteFeed",
+    "submit form.new-feed" : "newFeed"
   },
 
   template: JST['feed_index'],
@@ -26,6 +27,23 @@ NewsReader.Views.FeedIndex = Backbone.View.extend({
     var id = $(event.currentTarget).data("id");
     var feed = this.collection.get(id);
     feed.destroy();
+  },
+
+  newFeed: function (event) {
+    $notice = this.$el.find("div#notice")
+    event.preventDefault();
+    var formData = $(event.currentTarget).serializeJSON();
+    this.collection.create(formData.feed, {
+      success: function () {
+        $notice.html("Successfully created feed");
+      },
+
+      error: function () {
+        $notice.html("Not a valid URL");
+      },
+
+      wait: true
+    });
   }
 
 })
