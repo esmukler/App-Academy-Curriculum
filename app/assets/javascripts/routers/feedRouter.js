@@ -10,22 +10,14 @@ NewsReader.Routers.FeedRouter = Backbone.Router.extend({
   },
 
   index: function() {
-    this.collection.fetch({
-      success: function () {
-        var indexView = new NewsReader.Views.FeedIndex({collection: this.collection});
-        this._swapView(indexView);
-      }.bind(this)
-    })
+    var indexView = new NewsReader.Views.FeedIndex({collection: this.collection});
+    this._swapView(indexView);
   },
 
   feedShow: function (id) {
     var model = this.collection.getOrFetch(id);
-    model.fetch({
-      success: function() {
-        var showView = new NewsReader.Views.FeedShow({ model: model });
-        this._swapView(showView);
-      }.bind(this)
-    })
+    var showView = new NewsReader.Views.FeedShow({ model: model });
+    this._swapView(showView);
   },
 
   _swapView: function (view) {

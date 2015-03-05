@@ -3,15 +3,14 @@ NewsReader.Collections.Feeds = Backbone.Collection.extend({
   model: NewsReader.Models.Feed,
 
   getOrFetch: function(id) {
-    if (id) {
-      return this.get(id);
+    var foundModel = this.get(id);
+    if (foundModel) {
+      foundModel.fetch();
+      return foundModel;
     } else {
-      var newModel = new NewsReader.Model.Feed
-      newModel.fetch({
-        success: function() {
-          this.add(newModel);
-        }.bind(this)
-      })
+      var newModel = new NewsReader.Models.Feed({ id: id });
+      newModel.fetch();
+      this.add(newModel);
       return newModel;
     }
   }
