@@ -35,6 +35,15 @@ li {
   clear: both;
 }
 
+li.card button.delete-card {
+  display: none;
+}
+
+li.card:hover button.delete-card {
+  display: block;
+}
+
+
 // .footer > li {
 //   float: left;
 // }
