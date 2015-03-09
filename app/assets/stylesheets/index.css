@@ -1,3 +1,9 @@
+ul.board-list {
+  background: green;
+  display: inline;
+}
+
+
 li.board,
 button.new-board {
   color: white;
