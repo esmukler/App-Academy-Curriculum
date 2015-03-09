@@ -29,7 +29,7 @@ button.new-board {
   font-size: 18px;
   width: 200px;
   min-height: 200px;
-  background: #005CE6;
+  background: #0E74AF;
   float: left;
   margin: 10px;
   padding: 10px;
@@ -37,17 +37,33 @@ button.new-board {
   display: inline;
 }
 
-li.board:hover,
-button.new-board:hover {
+li.board:hover {
   background: #0040A1;
+}
+
+button.new-board {
+  background: #E6E6E6;
+  color: black;
+}
+
+button.new-board:hover {
+  background: #A6A6A6;
+}
+
+.board-container {
+  background: #0E74AF;
+}
+
+.board-show-titles {
+  color: #F5F5F5;
 }
 
 .list {
   float: left;
   background: lightblue;
-  border: 1px solid black;
   padding: 5px;
   margin: 5px;
+  border-radius: 5px;
 }
 
 .group:after {
@@ -62,6 +78,35 @@ li.card button.delete-card {
 
 li.card:hover button.delete-card {
   display: block;
+}
+
+p.list-title {
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+li.list {
+  border-radius: 5px;
+}
+
+li.card {
+  font-family: sans-serif;
+  font-size: 12px;
+  background: white;
+  border-radius: 5px;
+  padding: 1px 5px;
+  margin: 5px;
+}
+
+p.card-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn-primary,
+.btn-danger,
+.btn-success {
+  border-radius: 5px;
 }
 
 

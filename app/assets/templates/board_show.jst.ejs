@@ -1,9 +1,8 @@
-<h1>Your Board: <%= board.escape("title") %></h1>
+<h1 class="board-show-titles">Your Board: <%= board.escape("title") %></h1>
 
-<h4>Created by User id#: <%= board.get("user_id") %></h4>
+<h4 class="board-show-titles">Created by User id#: <%= board.get("user_id") %></h4>
 
 <div class="list-container">
-  <h3>Lists:</h3>
   <ul class="lists"></ul>
 </div>
 
