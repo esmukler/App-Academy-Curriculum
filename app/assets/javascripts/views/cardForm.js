@@ -21,7 +21,6 @@ TrelloClone.Views.CardForm = Backbone.View.extend({
     this.model.set(formData.card);
     this.model.save({}, {
       success: function() {
-        console.log("successful card model save")
         that.collection.add(that.model, {merge: true});
       }
     })

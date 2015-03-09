@@ -8,6 +8,12 @@
   color: #F5F5F5;
 }
 
+ul.lists {
+  width: 100%;
+  display: block;
+  background: green;
+}
+
 li.list {
   float: left;
   background: lightblue;
@@ -37,7 +43,7 @@ li.card {
   background: white;
   border-radius: 5px;
   padding: 1px 5px;
-  margin: 5px;
+  margin: 10px 5px;
 }
 
 p.card-title {

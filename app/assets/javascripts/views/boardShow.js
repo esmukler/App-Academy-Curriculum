@@ -14,12 +14,7 @@ TrelloClone.Views.BoardShow = Backbone.View.extend({
     "click button.new-list": "newList",
     "click button.index" : "goToIndex",
     "click button.delete-board": "deleteBoard",
-    "sortupdate .lists": "updateOrder",
-    "sortstop .lists": "resort"
-  },
-
-  resort: function() {
-    console.log("stop")
+    "sortupdate .lists": "updateOrder"
   },
 
   render: function(newOrder) {
@@ -29,10 +24,9 @@ TrelloClone.Views.BoardShow = Backbone.View.extend({
 
     var lists = this.model.lists();
 
-
     lists.sort()
 
-    this.model.lists().each(function(list) {
+    lists.each(function(list) {
       var listShow = new TrelloClone.Views.ListShow({ model: list });
       $lists.append(listShow.render().$el)
       this._subViews.push(listShow);
@@ -61,9 +55,6 @@ TrelloClone.Views.BoardShow = Backbone.View.extend({
     }
     this.render();
   },
-
-
-
 
   newList: function(event) {
     var newList = new TrelloClone.Models.List()
