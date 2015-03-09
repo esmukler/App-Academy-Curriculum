@@ -1,9 +1,13 @@
 <h1>All the Boards!</h1>
 
+<ul class="board-list group">
 <% boards.each( function(board) { %>
-  <h3>
-    <a href="#boards/<%= board.id %>" ><%= board.escape("title") %></a>
-  </h3><br>
+  <li class="board" data-id="<%=board.id%>">
+    <%= board.escape("title") %>
+  </li><br>
 <% }) %>
+</ul>
 
-<button class="btn new-board">Make a new board!</button><br>
+<div class="new-board">
+  <button class="new-board">Make a new board!</button><br>
+</div>

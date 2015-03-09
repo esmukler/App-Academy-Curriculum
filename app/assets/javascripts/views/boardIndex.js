@@ -10,7 +10,14 @@ TrelloClone.Views.BoardIndex = Backbone.View.extend({
   className: "all-boards",
 
   events: {
-    "click button.new-board": "newBoard"
+    "click button.new-board": "newBoard",
+    "click li.board" : "goToBoard"
+  },
+
+  goToBoard: function(event) {
+    event.preventDefault();
+    var id = $(event.currentTarget).data("id");
+    Backbone.history.navigate("#boards/" + id, { trigger: true })
   },
 
   newBoard: function(event) {
@@ -18,8 +25,8 @@ TrelloClone.Views.BoardIndex = Backbone.View.extend({
       collection: this.collection
     });
     // this._subviews.push(formView);
-
-    this.$el.append(formView.render().$el);
+    var $newBoard = this.$el.find("div.new-board")
+    $newBoard.html(formView.render().$el);
   },
 
   render: function() {
