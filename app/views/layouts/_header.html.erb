@@ -13,7 +13,7 @@
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav navbar-right">
     <% if signed_in? %>
-      <li>Hello, <%= @current_user.email %></li>
+      <li class="welcome">Hello, <%= @current_user.email %></li>
       <li id='add-dropdown' class='dropdown'>
         <button
           class='dropdown-toggle navbar-btn btn btn-primary'
