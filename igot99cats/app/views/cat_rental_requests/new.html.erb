@@ -1,0 +1,31 @@
+<h1>Treat Yo'self to <%= @cat_rental_request.cat.name %> </h1>
+
+<form action="<%= cat_rental_requests_url %>" method="post">
+  <input type="hidden"
+         name="authenticity_token"
+         value="<%= form_authenticity_token %>">
+
+<input type="hidden" name="cat_rental_request[cat_id]"
+       id="cat_rental_request_cat_id" value="<%= @cat_rental_request.cat_id %>">
+
+<label for="cat_rental_request_start_date">Start Date:</label><br>
+<input type="date" name="cat_rental_request[start_date]"
+       id="cat_rental_request_start_date"
+       value="<%= @cat_rental_request.start_date %>">
+
+<br><br>
+
+<label for="cat_rental_request_end_date">End Date:</label><br>
+<input type="date" name="cat_rental_request[end_date]"
+       id="cat_rental_request_end_date"
+       value="<%= @cat_rental_request.end_date %>">
+
+<br><br>
+
+<input type="submit" value="Submit Request">
+
+</form>
+<br>
+<form action="<%= cat_url(@cat_rental_request.cat)%>" method="get">
+  <button>Cancel Request</button>
+</form>

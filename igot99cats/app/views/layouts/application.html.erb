@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IGot99Cats</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% if current_user && params[:controller] != "sessions"%>
+  <p style="font-size:10pt;"><%= "\'sup, #{current_user.username}" %>
+
+    <form action="<%= session_url %>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input type="hidden"
+           name="authenticity_token"
+           value="<%= form_authenticity_token %>">
+
+      <button>Log Out</button>
+    </form>
+
+<% else  %>
+
+    <form action="<%= new_session_url %>" method="get">
+      <button>Log In!</button>
+    </form>
+
+  </p>
+<% end %>
+
+<% if flash[:notice] %>
+    <br><em><%= flash[:notice] %></em><br>
+<% end %>
+
+
+<%= yield %>
+
+</body>
+</html>

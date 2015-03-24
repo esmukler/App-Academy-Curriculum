@@ -1,0 +1,99 @@
+<h1><%= @cat.name %></h1>
+
+<h2>About Dis Cat</h2>
+
+<table>
+  <tr>
+    <td>Age: <%= @cat.age %></td>
+  </tr>
+  <tr>
+    <td>Color: <%= @cat.color %></td>
+  </tr>
+  <tr>
+    <td>Sex: <%= @cat.sex %></td>
+  </tr>
+  <tr>
+    <td>Description: <%= @cat.description %></td>
+  </tr>
+</table>
+
+<% unless is_current_owner%>
+  <form action="<%= new_cat_rental_request_url %>"
+    method="get">
+    <br>
+    <input type="hidden" name="cat[id]" value="<%= @cat.id %>">
+    <button>Rent Dis Cat</button>
+  </form>
+<% end %>
+
+<% if @cat.active_requests.any? %>
+
+  <h2>Requests:</h2>
+  <table cellpadding= "8px">
+    <tr>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Status</th>
+      <th>Requester</th>
+    </tr>
+    <% @cat.active_requests.each do |request| %>
+
+    <tr>
+      <td> <%= request.start_date %> </td>
+      <td> <%= request.end_date %> </td>
+      <td> <%= request.status %> </td>
+      <td> <%= request.requester.username %> </td>
+      <% if request.status == "PENDING" && is_current_owner%>
+      <td>
+        <form action="<%= approve_cat_rental_request_url(request) %>"
+          method="post">
+          <input type="hidden"
+           name="authenticity_token"
+           value="<%= form_authenticity_token %>">
+          <input type="hidden" name="_method" value="put">
+          <button>Approve</button>
+        </form>
+
+        <form action="<%= deny_cat_rental_request_url(request) %>"
+          method="post">
+          <input type="hidden"
+           name="authenticity_token"
+           value="<%= form_authenticity_token %>">
+          <input type="hidden" name="_method" value="put">
+          <button>Deny</button>
+        </form>
+      </td>
+      <% end %>
+    </tr>
+
+    <% end %>
+  </table>
+
+  <br><br>
+
+<% else %>
+
+  <p> <%= @cat.name %>'s schedule is wiiide open. </p>
+
+<% end %>
+
+<% if is_current_owner %>
+
+  <form action="<%= edit_cat_url(@cat) %>" method="get">
+    <button>Edit Cat</button>
+  </form>
+
+  <form action="<%=cat_url(@cat) %>" method="post">
+    <input type="hidden"
+           name="authenticity_token"
+           value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <button>Delete Cat</button>
+
+  </form>
+
+<% end %>  
+
+<form action="<%= cats_url %>" method="get">
+  <button>Back to All Cats</button>
+</form>

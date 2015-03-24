@@ -1,0 +1,7 @@
+<% if @cat.errors %>
+  <ul>
+    <% @cat.errors.full_messages.each do |error| %>
+    <li><em><%= error %></em></li>
+    <% end %>
+  </ul>
+<% end %>
