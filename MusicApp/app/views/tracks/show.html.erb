@@ -1,0 +1,42 @@
+<h1>"<%= @track.name %>"</h1>
+<h4>by <%= @track.band.name %></h4>
+<h4>from <%= @track.album.name %></h4>
+
+<p>Lyrics:</p>
+<p><%= ugly_lyrics @track.lyrics %></p>
+
+<p>-----------</p>
+
+<%= render "notes/note" %>
+
+<p>-----------</p>
+
+<%= render "notes/form" %>
+
+<br><br>
+
+<form action="<%= edit_track_url(@track) %>" method="get">
+  <input type="submit" value="Edit Track">
+</form><br>
+
+<form action="<%= track_url(@track) %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="hidden"
+         name="authenticity_token"
+         value="<%= form_authenticity_token %>">
+  <input type="submit" value="Delete Track">
+</form>
+
+<br>
+
+<form action="<%= album_url(@track.album) %>" method="get">
+  <input type="submit" value="Back to <%= @track.album.name %>">
+</form><br>
+
+<form action="<%= band_url(@track.band) %>" method="get">
+  <input type="submit" value="Back to <%= @track.band.name %>">
+</form><br>
+
+<form action="<%= bands_url %>" method="get">
+  <input type="submit" value="Home">
+</form>

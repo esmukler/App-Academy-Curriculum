@@ -1,0 +1,40 @@
+<h1><%= @album.name %></h1>
+<h4>by <%= @album.band.name %></h4>
+
+<ul>
+<% @album.tracks.each do |track| %>
+  <li><a href="<%= track_url(track)%>"><%= track.name %>
+    <%= "(" + track.status + ")" if track.status == "bonus" %></a></li>
+  <br>
+<% end %>
+</ul>
+
+<form action="<%= new_album_track_url(@album) %>" method="get">
+  <input type="submit" value="Add a New Track to <%= @album.name %>">
+</form>
+
+<br>
+
+<form action="<%= edit_album_url(@album) %>" method="get">
+  <input type="submit" value="Edit Album">
+</form>
+
+<br>
+
+<form action="<%= album_url(@album) %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="hidden"
+         name="authenticity_token"
+         value="<%= form_authenticity_token %>">
+  <input type="submit" value="Delete Album">
+</form>
+
+<br>
+
+<form action="<%= band_url(@album.band) %>" method="get">
+  <input type="submit" value="Back to <%= @album.band.name %>">
+</form><br>
+
+<form action="<%= bands_url %>" method="get">
+  <input type="submit" value="Home">
+</form>

@@ -1,0 +1,35 @@
+<h1>Edit <%= @track.name %> </h1>
+
+<br><br>
+
+<form action="<%= track_url(@track) %>" method="post">
+  <input type="hidden"
+         name="authenticity_token"
+         value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="patch">
+
+  <label for="track_name">Track Name</label><br>
+  <input type="text" name="track[name]" value="<%= @track.name %>">
+
+  <br><br>
+
+  <% Track::STATUS.each do |status| %>
+    <label for="track_status"><%= status.capitalize %>:</label>
+    <input type="radio" name="track[status]" id="track_<%= status %>"
+            value="<%= status %>" <%= "checked" if @track.status == status %>>
+  <% end %>
+
+  <br><br>
+
+  <label for="track_lyrics">Lyrics:</label><br>
+    <textarea name="track[lyrics]" id="track_lyrics"><%= @track.lyrics %></textarea>
+
+  <br><br>
+
+  <input type="submit" value="Edit Track">
+
+</form>
+
+<form action="<%= track_url(@track) %>" method="get">
+  <input type="submit" value="Cancel" name="cancel">
+</form>

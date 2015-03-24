@@ -1,0 +1,17 @@
+<% @track.notes.order("created_at DESC").each do |note| %>
+  <p><%= note.body %></p>
+  <p>
+    <em>Posted by: <%= note.user.email %></em>
+
+  <% if note.user_id == current_user.id %>
+    <form id="delete_note" action="<%= note_url(note) %>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="Delete Comment">
+    </form>
+  <% end %>
+  </p>
+<% end %>
+
+<% if @track.notes.empty? %>
+  <p><em>No one has commented yet</em><p>
+<% end %>

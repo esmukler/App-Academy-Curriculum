@@ -1,0 +1,21 @@
+<h1>Create a new Artist:</h1>
+
+<br><br>
+
+<form action="<%= bands_url %>" method="post">
+  <input type="hidden"
+         name="authenticity_token"
+         value="<%= form_authenticity_token %>">
+
+  <label for="band_name">Artist Name:</label><br>
+  <input type="text" name="band[name]" value="<%= @band.name %>">
+
+  <br><br>
+
+  <input type="submit" value="Create Artist!">
+
+</form>
+
+<form action="<%= bands_url %>" method="get">
+  <input type="submit" value="Cancel" name="cancel">
+</form>
