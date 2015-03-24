@@ -1,0 +1,17 @@
+<h2><%= @sub.title %></h2>
+
+<h4><%= @sub.description %></h4>
+
+<h6>Moderated by: <%= @sub.moderator.username %></h6>
+
+<h4>Posts:</h4>
+
+<% @sub.posts.each do |post| %>
+<a href="<%= post_url(post) %>">
+<%= post.title %>
+</a>
+<br>
+<br>
+<% end %>
+<br>
+<a href="<%= subs_url %>">Back to Index</a>

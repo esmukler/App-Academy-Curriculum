@@ -1,0 +1,10 @@
+<li><a href="<%= comment_url(comment) %>"><%= comment.content %></a>
+  <% all.each do |child| %>
+    <% if child.parent_comment_id == comment.id %>
+    <ul>
+      <%= render "comment", { comment: child, all: all } %>
+    </ul>
+    <% end %>
+
+  <% end %>
+</li>

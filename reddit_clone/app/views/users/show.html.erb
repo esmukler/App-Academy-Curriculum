@@ -1,0 +1,18 @@
+<h2> <%= @user.username %></h2>
+
+<a href="<%= subs_url %>">All Subs</a>
+
+
+<table>
+  <% @user.moderated_subs.each do |sub| %>
+  <tr>
+    <td>
+      <a href="<%= sub_url(sub)%>"><%= sub.title %></a>
+    </td>
+    <td>
+      <a href="<%= edit_sub_url(sub) %>">Edit</a>
+    </td>
+  </tr>
+
+  <% end %>
+</table>

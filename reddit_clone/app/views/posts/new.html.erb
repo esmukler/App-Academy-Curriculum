@@ -1,0 +1,30 @@
+<h2>New post</h2>
+
+<form action="<%= posts_url %>" method="post">
+
+  <label for="post_title">Title:</label><br>
+  <input type="text" name="post[title]" value="<%= @post.title %>">
+  <br>
+  <label for="post_url">URL (optional):</label><br>
+  <input type="text" name="post[url]" value="<%= @post.url %>">
+  <br>
+  <label for="post_content">Content:</label><br>
+  <textarea name="post[content]"><%= @post.content %></textarea>
+  <br>
+
+  <label for="post_sub_id">Which subs would you like to add to?</label>
+    <br>
+    <br>
+    <% Sub.all.each do |sub| %>
+    <label for="post_sub_id"><%= sub.title %></label>
+    <input type="checkbox" name="post[sub_ids][]" value="<%=sub.id%>"
+    <%= "checked" if @post.sub_ids.include?(sub.id) %>
+    >
+    <br>
+    <% end %>
+
+    <br>
+    <br>
+  <button>Submit Post</button>
+
+</form>

@@ -1,0 +1,29 @@
+<h2><%= @post.title %></h2><br>
+<h4>Authored by: <%= @post.author.username.html_safe %><h4><br>
+<a href="<%= @post.url %>"><%=@post.url%></a><br>
+<p><%= @post.content %></p>
+<br>
+
+<% if @post.author_id == current_user.id %>
+  <a href="<%=edit_post_url(@post) %>">Edit Post</a>
+<% end %>
+
+<ul>
+<% @all_comments.each_with_index do |comment, i| %>
+  <% if comment.parent_comment_id.nil? %>
+    <%= render "comment", {comment: comment, all: @all_comments } %>
+  <% end %>
+<% end %>
+</ul>
+
+<br>
+
+<form action="<%= comments_url %>" method="post">
+  <label for="comment_content">Comment:</label><br>
+  <textarea name="comment[content]"><%= @comment.content %></textarea>
+  <br>
+  <input type="hidden" name="comment[post_id]" value="<%= @post.id %>">
+
+  <button>Submit</button>
+
+</form>

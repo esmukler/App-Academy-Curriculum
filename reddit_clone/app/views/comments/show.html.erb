@@ -1,0 +1,24 @@
+<h2> <%=@comment.post.title%></h2>
+
+<h4> <%=@comment.content%></h4>
+
+<h6><%=@comment.author.username%></h6>
+
+<ul>
+  <% @comment.child_comments.each do |comment| %>
+    <li> <%= comment.content %> </li>
+  <% end %>
+
+</ul>
+
+<form action="<%= comments_url %>" method="post">
+  <label for="comment_content">Comment:</label><br>
+  <textarea name="comment[content]"><%= @child_comment.content %></textarea>
+  <br>
+  <input type="hidden" name="comment[post_id]" value="<%= @comment.post_id %>">
+  <input type="hidden" name="comment[parent_comment_id]"
+                        value="<%= @comment.id%>">
+
+  <button>Submit</button>
+
+</form>
