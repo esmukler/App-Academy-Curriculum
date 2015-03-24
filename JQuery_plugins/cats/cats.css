@@ -1,0 +1,53 @@
+figure.carousel {
+  width: 200px;
+  height: 300px;
+  overflow: hidden;
+  border: 5px solid #000;
+  margin: 100px auto;
+  position: relative;
+}
+
+ul.items {
+  width: 800px;
+  height: 300px;
+  position: relative;
+}
+
+ul.items > li {
+  position: absolute;
+  float: left;
+  display: none;
+  transition: left 0.5s linear;
+}
+
+ul.items > li.active {
+  display: block;
+  left: 0%;
+}
+
+ul.items > li.right {
+  left: calc(100%/4);
+}
+
+ul.items > li.left {
+  left: calc(-100%/4);
+}
+
+
+section {
+  margin: auto;
+  display: block;
+  width: 200px;
+}
+
+section a {
+  display: block;
+}
+
+section a > img {
+  background-size: cover;
+  width: 75px;
+  margin-right: 20px;
+  height: auto;
+  float: left;
+}

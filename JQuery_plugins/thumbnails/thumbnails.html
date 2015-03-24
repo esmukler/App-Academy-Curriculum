@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Cool Website</title>
+    <script src="./jquery-1.11.2.min.js"></script>
+    <script src="./thumbnails.js"></script>
+    <link href="./thumbnails.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.17.2/build/cssreset/cssreset-min.css">
+  </head>
+
+  <body>
+
+    <figure class="thumbnails">
+      <figure class="active">
+        <img src=""/>
+      </figure>
+      <section class="gutter group">
+        <a class="left" href="javascript:void(0)">&lt</a>
+        <ul class="gutter-images group">
+          <li class="current"><img src="./logo0.jpg"/></li>
+          <li class="current"><img src="./logo1.svg"/></li>
+          <li class="current"><img src="./logo2.jpg"/></li>
+          <li class="current"><img src="./logo3.jpeg"/></li>
+          <li class="current"><img src="./logo4.png"/></li>
+          <li><img src="./logo4.png"/></li>
+          <li><img src="./logo3.jpeg"/></li>
+          <li><img src="./logo2.jpg"/></li>
+          <li><img src="./logo1.svg"/></li>
+          <li><img src="./logo0.jpg"/></li>
+
+
+        </ul>
+        <a class="right" href="javascript:void(0)">&gt</a>
+      </section>
+    </figure>
+
+    <script>
+      $(function() {
+        $('.thumbnails').thumbs();
+        //
+        // var tabs = new window.$.Tabs($('body'));
+      })
+    </script>
+  </body>
+</html>

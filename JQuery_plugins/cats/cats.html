@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Cool Website</title>
+    <script src="./jquery-1.11.2.min.js"></script>
+    <script src="./cats.js"></script>
+    <link href="./cats.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.17.2/build/cssreset/cssreset-min.css">
+  </head>
+
+  <body>
+    <figure class="carousel">
+      <ul class="items group">
+        <li class="active"><img src="http://placekitten.com/g/200/300"/></li>
+        <li class="active right"><img src="http://placecorgi.com/200/300"/></li>
+        <li><img src="http://placekitten.com/g/201/300"/></li>
+        <li class="active left"><img src="http://placecorgi.com/201/300"/></li>
+      </ul>
+    </figure>
+    <section class="arrows group">
+      <a href="javascript:void(0)" class="slide-left"><img src="./left-arrow-gray-hi.png" alt="" /></a>
+      <a href="javascript:void(0)" class="slide-right"><img src="./arrow_right_grey.png"/></a>
+    </section>
+
+    <script>
+      $(function() {
+        $('.carousel').cats();
+      })
+    </script>
+  </body>
+</html>
