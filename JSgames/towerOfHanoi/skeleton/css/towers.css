@@ -1,0 +1,72 @@
+html, ul, li, p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  text-align: inherit;
+}
+
+body {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.grid {
+  margin: 100px auto;
+  border-bottom: 5px solid silver;
+  width: 420px;
+}
+
+.group:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+li {
+  margin: 5px 40px;
+  font-size: 62px;
+  line-height: 90px;
+  vertical-align: middle;
+  width: 60px;
+  height: 30px;
+  float: left;
+  background: lightgrey;
+  border-radius: 10px;
+}
+
+.grid > li:hover {
+  background: yellow;
+}
+
+li.small {
+  border: 5px solid black;
+  background: blue;
+  margin: 0 50px;
+  width: 30px;
+}
+
+li.medium {
+  border: 5px solid black;
+  background: red;
+  margin: 0 35px;
+  width: 60px;
+}
+
+li.large {
+  border: 5px solid black;
+  background: green;
+  margin: 0 20px;
+  width: 90px;
+}
+
+li.selected {
+  background: orange;
+}
+
+button {
+
+}
