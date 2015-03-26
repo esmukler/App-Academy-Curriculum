@@ -1,0 +1,13 @@
+<h1 class="board-show-titles">Your Board: <%= board.escape("title") %></h1>
+
+<h4 class="board-show-titles">Created by User id#: <%= board.get("user_id") %></h4>
+
+<div class="list-container">
+  <ul class="lists sortable"></ul>
+</div>
+
+<ul class="footer group">
+  <li><button class="btn-success new-list">Add a new list!</button></li>
+  <li><button class="btn-danger delete-board">Delete this Board</button></li>
+  <li><button class="btn-primary index">Other Boards</button></li>
+</ul>

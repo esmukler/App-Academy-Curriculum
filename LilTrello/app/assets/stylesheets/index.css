@@ -1,0 +1,32 @@
+ul.board-list {
+  background: green;
+  display: inline;
+}
+
+
+li.board,
+button.new-board {
+  color: white;
+  font-size: 18px;
+  width: 200px;
+  min-height: 200px;
+  background: #0E74AF;
+  float: left;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline;
+}
+
+li.board:hover {
+  background: #0040A1;
+}
+
+button.new-board {
+  background: #E6E6E6;
+  color: black;
+}
+
+button.new-board:hover {
+  background: #A6A6A6;
+}
